@@ -42,7 +42,7 @@ export default function HomePage({
               <path d="M18 2H6v7a6 6 0 0 0 12 0V2Z" />
             </svg>
             <h1 style={{ cursor: "pointer" }} onClick={() => navigate("/home")}>
-              QuizMaster Pro
+              Quiz by JAMILI
             </h1>
           </div>
 
