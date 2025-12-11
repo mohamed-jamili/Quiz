@@ -35,7 +35,7 @@ export default function WelcomePage({ onStart, t, lang, setLang }) {
           <path d="M18 2H6v7a6 6 0 0 0 12 0V2Z" />
         </svg>
 
-        <h1 className="welcome-title">QuizMaster Pro</h1>
+        <h1 className="welcome-title">Quiz by JAMILI</h1>
         <p className="welcome-subtitle">{t.welcome}</p>
 
         <div className="name-input-container">
