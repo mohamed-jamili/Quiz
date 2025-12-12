@@ -1636,3 +1636,28 @@ button {
 [dir="rtl"] .menu-item:hover {
   transform: translateX(-4px);
 }
+/* Hide stars-wallet and theme-btn on mobile */
+@media (max-width: 768px) {
+  .stars-wallet,
+  .theme-btn {
+    display: none !important;
+  }
+}
+/* Mobile adjustments */
+@media (max-width: 768px) {
+
+  /* Hide stars-wallet & theme-btn */
+  .stars-wallet,
+  .theme-btn {
+    display: none !important;
+  }
+
+  /* Move user-info to the right side */
+  .nav-right {
+    justify-content: flex-end !important;
+  }
+
+  .user-info {
+    margin-left: auto !important;
+  }
+}
