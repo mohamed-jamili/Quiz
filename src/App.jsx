@@ -8,63 +8,38 @@ import { translations } from "./projet/translations";
 
 function AppContent() {
   const navigate = useNavigate();
-
-  const [userName, setUserName] = useState("");
-  const [gender, setGender] = useState("");
-  const [theme, setTheme] = useState("dark");
-  const [lang, setLang] = useState("ar");
-  const [totalStars, setTotalStars] = useState(0);
-
-  const [progress, setProgress] = useState({
-    unlockedLevels: 1,
-    levelScores: {},
-    achievements: [],
-    history: []
-  });
+  
+  // Language State Management
+  const [lang, setLang] = useState(localStorage.getItem("quizLang") || "en");
 
   useEffect(() => {
-    const savedName = localStorage.getItem("quizUserName");
-    const savedGender = localStorage.getItem("quizGender");
-    const savedTheme = localStorage.getItem("theme");
-    const savedProgress = localStorage.getItem("quizProgress");
-    const savedLang = localStorage.getItem("quizLang");
-    const savedStars = localStorage.getItem("quizStars");
+    localStorage.setItem("quizLang", lang);
+    document.documentElement.lang = lang;
+    document.documentElement.dir = lang === "ar" ? "rtl" : "ltr";
+  }, [lang]);
 
-    if (savedTheme) setTheme(savedTheme);
-    if (savedLang) setLang(savedLang);
-    if (savedStars) setTotalStars(parseInt(savedStars));
-    if (savedProgress) {
-      const parsed = JSON.parse(savedProgress);
-      setProgress({
-        unlockedLevels: 1,
-        levelScores: {},
-        achievements: [],
-        history: [],
-        ...parsed
-      });
-    }
-    
-    if (savedName) setUserName(savedName);
-    if (savedGender) setGender(savedGender);
-  }, []);
+  const t = (key) => {
+      return translations[lang]?.[key] || key;
+  };
+
+  const [userName, setUserName] = useState(localStorage.getItem("quizUserName") || "");
+  const [theme, setTheme] = useState(localStorage.getItem("theme") || "dark");
+  const [totalStars, setTotalStars] = useState(parseInt(localStorage.getItem("quizStars") || "0"));
+
+  const [progress, setProgress] = useState(() => {
+    const saved = localStorage.getItem("quizProgress");
+    return saved ? JSON.parse(saved) : {
+      unlockedLevels: 1,
+      levelScores: {},
+      achievements: [],
+      history: []
+    };
+  });
 
   useEffect(() => {
     localStorage.setItem("theme", theme);
     document.documentElement.setAttribute('data-theme', theme);
   }, [theme]);
-
-  useEffect(() => {
-    localStorage.setItem("quizLang", lang);
-    if (lang === 'ar') {
-      document.body.classList.add('rtl');
-      document.documentElement.lang = 'ar';
-      document.documentElement.dir = 'rtl';
-    } else {
-      document.body.classList.remove('rtl');
-      document.documentElement.lang = lang;
-      document.documentElement.dir = 'ltr';
-    }
-  }, [lang]);
 
   useEffect(() => {
     localStorage.setItem("quizStars", totalStars);
@@ -74,20 +49,16 @@ function AppContent() {
     localStorage.setItem("quizProgress", JSON.stringify(progress));
   }, [progress]);
 
-  const handleStart = (name, selectedGender) => {
-    if (!name.trim() || !selectedGender) return;
+  const handleStart = (name) => {
+    if (!name.trim()) return;
     setUserName(name);
-    setGender(selectedGender);
     localStorage.setItem("quizUserName", name);
-    localStorage.setItem("quizGender", selectedGender);
     navigate("/home");
   };
 
   const handleChangeName = () => {
-    localStorage.removeItem("quizUserName");
-    localStorage.removeItem("quizGender");
     setUserName("");
-    setGender("");
+    localStorage.removeItem("quizUserName");
     navigate("/");
   };
 
@@ -106,7 +77,7 @@ function AppContent() {
       const newHistory = [
         { level, score, stars, date: new Date().toISOString() },
         ...prev.history
-      ].slice(0, 50);
+      ].slice(50);
 
       return {
         unlockedLevels: newUnlocked,
@@ -117,16 +88,14 @@ function AppContent() {
     });
   };
 
-  const t = translations[lang];
-
   return (
     <Routes>
       <Route path="/" element={
         <WelcomePage 
           onStart={handleStart} 
-          t={t} 
-          lang={lang} 
-          setLang={setLang} 
+          t={translations[lang]}
+          lang={lang}
+          setLang={setLang}
         />
       } />
       
@@ -141,10 +110,10 @@ function AppContent() {
               onChangeName={handleChangeName}
               theme={theme}
               setTheme={setTheme}
+              totalStars={totalStars}
               lang={lang}
               setLang={setLang}
-              totalStars={totalStars}
-              t={t}
+              t={t} // Passing function for dynamic keys if needed, or object
             />
           ) : (
             <Navigate to="/" />
@@ -161,9 +130,8 @@ function AppContent() {
               onLevelComplete={handleLevelComplete} 
               totalStars={totalStars}
               setTotalStars={setTotalStars}
-              t={t}
               lang={lang}
-              gender={gender}
+              t={translations[lang]}
             />
           ) : (
             <Navigate to="/" />
@@ -177,7 +145,7 @@ function AppContent() {
           userName ? (
             <StatsPage 
               progress={progress} 
-              t={t} 
+              t={t}
             />
           ) : (
             <Navigate to="/" />
@@ -189,6 +157,7 @@ function AppContent() {
     </Routes>
   );
 }
+
 export default function App() {
   return (
     <BrowserRouter>
