@@ -9,8 +9,7 @@ export default function Quiz({
   totalStars,
   setTotalStars,
   t,
-  lang,
-  gender
+  lang
 }) {
   const { level } = useParams();
   const navigate = useNavigate();
@@ -29,8 +28,8 @@ export default function Quiz({
   const [showExitModal, setShowExitModal] = useState(false);
 
   useEffect(() => {
-    // Load questions based on gender
-    const allQuestions = getQuestions(gender);
+    // Load questions (unified source)
+    const allQuestions = getQuestions();
     if (allQuestions[currentLevel]) {
       setQuestions(allQuestions[currentLevel].questions);
     } else {
@@ -46,7 +45,7 @@ export default function Quiz({
     setIsCorrect(null);
     setStreak(0);
     setTimeLeft(30); // Reset timer logic
-  }, [currentLevel, gender, navigate]);
+  }, [currentLevel, navigate]);
 
   // Timer Effect
   useEffect(() => {
@@ -161,11 +160,11 @@ export default function Quiz({
     const isPass = score >= 5;
 
     return (
-      <div className="app-container">
+      <div className="app-container result-page">
         <div className="welcome-container">
-          <div className="welcome-card" style={{textAlign: 'center'}}>
+          <div className="welcome-card result-card">
             
-            <div style={{fontSize: '4rem', marginBottom: '1rem'}}>
+            <div className="result-emoji">
               {isPass ? '🎉' : '😢'}
             </div>
             
@@ -173,34 +172,34 @@ export default function Quiz({
               {isPass ? t.congrats : t.gameOver || "Game Over"}
             </h2>
             
-            <div className="score-display" style={{justifyContent: 'center', fontSize: '1.5rem', margin: '1.5rem 0'}}>
+            <div className="score-display-large">
               <span>{t.score}: {score}/10</span>
             </div>
 
-            <div style={{fontSize: '2rem', marginBottom: '2rem'}}>
+            <div className="stars-result-container">
               {Array.from({ length: 3 }).map((_, i) => (
-                <span key={i} style={{ opacity: i < earnedStars ? 1 : 0.3 }}>⭐</span>
+                <span key={i} className={`star-result ${i < earnedStars ? 'earned' : 'empty'}`}>⭐</span>
               ))}
             </div>
 
-            <p style={{color: 'var(--text-dim)', marginBottom: '2rem'}}>
+            <p className="result-message">
               {isPass 
                 ? (score === 10 ? (t.perfect || "Perfect!") : (t.goodJob || "Good Job!"))
                 : (t.tryAgainMsg || "Try Again!")}
             </p>
 
-            <div style={{display: 'flex', flexDirection: 'column', gap: '1rem'}}>
+            <div className="result-actions">
                {isPass && currentLevel < 50 && (
-                <button className="primary-btn" onClick={() => navigate(`/quiz/${currentLevel + 1}`)}>
+                <button className="primary-btn pulse-btn" onClick={() => navigate(`/quiz/${currentLevel + 1}`)}>
                   {t.nextLevel} ➡️
                 </button>
               )}
               
-              <div style={{display: 'flex', gap: '1rem'}}>
-                <button className="theme-btn" onClick={() => window.location.reload()} style={{flex: 1, justifyContent: 'center'}}>
+              <div className="secondary-actions">
+                <button className="theme-btn" onClick={() => window.location.reload()}>
                   🔄 {t.retry}
                 </button>
-                <button className="theme-btn" onClick={() => navigate("/home")} style={{flex: 1, justifyContent: 'center'}}>
+                <button className="theme-btn" onClick={() => navigate("/home")}>
                   🏠 {t.home}
                 </button>
               </div>
@@ -213,11 +212,11 @@ export default function Quiz({
   }
 
   return (
-    <div className="app-container">
-       <nav className="navbar" style={{position: 'static', marginBottom: '0'}}>
+    <div className="app-container quiz-page">
+       <nav className="navbar">
         <div className="nav-content">
           <div className="nav-left">
-             <div className="nav-logo" style={{fontSize: '1.2rem', fontWeight: 'bold'}}>
+             <div className="nav-logo-text-small">
                {t.level} {currentLevel} • {questions[0]?.category[lang]}
             </div>
           </div>
@@ -228,11 +227,11 @@ export default function Quiz({
              </div>
           </div>
 
-          <div className="nav-right" style={{display: 'flex', gap: '10px'}}>
+          <div className="nav-right">
              <div className="stars-wallet">
               ⭐ {totalStars}
             </div>
-            <button className="theme-btn" onClick={handleExitRequest}>
+            <button className="theme-btn icon-btn" onClick={handleExitRequest}>
               ⬅️ {t.back || "Back"}
             </button>
           </div>
@@ -248,9 +247,9 @@ export default function Quiz({
         </div>
 
         <div className="question-card">
-          <div style={{display: 'flex', justifyContent: 'space-between', marginBottom: '1rem', color: 'var(--text-dim)'}}>
-            <span>Question {currentQuestion + 1}/10</span>
-            <span>🔥 {streak}</span>
+          <div className="question-header">
+            <span className="question-number">Question {currentQuestion + 1}/10</span>
+            <span className="streak-badge">🔥 {streak}</span>
           </div>
 
           <h2 className="question-text">
@@ -273,7 +272,7 @@ export default function Quiz({
                   onClick={() => handleAnswer(index)}
                   disabled={selectedOption !== null}
                 >
-                  <span style={{opacity: 0.7, marginRight: '10px'}}>{String.fromCharCode(65 + index)}.</span>
+                  <span className="option-letter">{String.fromCharCode(65 + index)}.</span>
                   {opt}
                 </button>
               );
@@ -282,7 +281,7 @@ export default function Quiz({
 
           <div className="quiz-actions">
             <button 
-              className="action-btn" 
+              className="action-btn hint-btn" 
               onClick={handleBuyAnswer}
               disabled={totalStars < 10 || selectedOption !== null}
               title="Cost: 10 Stars"
@@ -290,7 +289,7 @@ export default function Quiz({
               💡 {t.buyAnswer || "Answer"} (-10 ⭐)
             </button>
              <button 
-              className="action-btn" 
+              className="action-btn skip-btn" 
               onClick={handleSkip}
               disabled={selectedOption !== null}
             >
@@ -307,12 +306,11 @@ export default function Quiz({
             <h3>⚠️ {t.exitConfirmTitle || "Quit Quiz?"}</h3>
             <p>{t.exitConfirmMsg || "Are you sure you want to quit? Your progress for this level will be lost."}</p>
             <div className="modal-actions">
-              <button className="option-btn" style={{flex:1, justifyContent: 'center'}} onClick={cancelExit}>
+              <button className="option-btn cancel-btn" onClick={cancelExit}>
                 {t.cancel || "Cancel"}
               </button>
               <button 
-                className="primary-btn" 
-                style={{flex:1, background: 'var(--primary-dark)'}} 
+                className="primary-btn quit-btn" 
                 onClick={confirmExit}
               >
                 {t.quit || "Quit"}
