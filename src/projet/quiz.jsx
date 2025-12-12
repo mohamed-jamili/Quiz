@@ -1,62 +1,62 @@
-import { useParams, useNavigate } from "react-router-dom";
-import { useEffect, useState } from "react";
-import { questionsData } from "./data";
 
-export default function Quiz({ userName, onLevelComplete, totalStars, setTotalStars, t, lang }) {
+import { useState, useEffect } from "react";
+import { useParams, useNavigate } from "react-router-dom";
+import { getQuestions } from "./data";
+
+export default function Quiz({
+  userName,
+  onLevelComplete,
+  totalStars,
+  setTotalStars,
+  t,
+  lang,
+  gender
+}) {
   const { level } = useParams();
   const navigate = useNavigate();
-  const levelNum = parseInt(level) || 1;
-  // Fallback to level 1 data if specific level data missing, but we generated up to 50.
-  const sourceData = questionsData[levelNum] || questionsData[1];
+  const currentLevel = parseInt(level);
 
   const [questions, setQuestions] = useState([]);
-  const [currentQ, setCurrentQ] = useState(0);
-  const [selected, setSelected] = useState(null);
+  const [currentQuestion, setCurrentQuestion] = useState(0);
   const [score, setScore] = useState(0);
-  const [timeLeft, setTimeLeft] = useState(15);
   const [showResult, setShowResult] = useState(false);
-  const [showExit, setShowExit] = useState(false);
-  const [fiftyUsed, setFiftyUsed] = useState(false);
-  const [hidden, setHidden] = useState([]);
+  const [selectedOption, setSelectedOption] = useState(null);
+  const [isCorrect, setIsCorrect] = useState(null);
+  const [streak, setStreak] = useState(0);
   
-  // Stars earned in this session
-  const [sessionStars, setSessionStars] = useState(0);
+  // New features state
+  const [timeLeft, setTimeLeft] = useState(30);
+  const [showExitModal, setShowExitModal] = useState(false);
 
-  // Helper to get localized text
-  const getQText = (q) => {
-    if (!q) return "";
-    if (typeof q === 'string') return q; 
-    return q[lang] || q['en'] || "";
-  };
-
-  const getOptions = (opts) => {
-    if (!opts) return [];
-    if (Array.isArray(opts)) return opts;
-    return opts[lang] || opts['en'] || [];
-  };
-
-  // Initialize and Shuffle Questions
   useEffect(() => {
-    if (sourceData && sourceData.questions) {
-      // Clone and shuffle
-      const shuffled = [...sourceData.questions]
-        .sort(() => Math.random() - 0.5)
-        .slice(0, 10); // Ensure max 10 questions
-      setQuestions(shuffled);
+    // Load questions based on gender
+    const allQuestions = getQuestions(gender);
+    if (allQuestions[currentLevel]) {
+      setQuestions(allQuestions[currentLevel].questions);
+    } else {
+      // Fallback if level doesn't exist
+      navigate("/home");
     }
-  }, [levelNum, sourceData]);
+    
+    // Reset state
+    setCurrentQuestion(0);
+    setScore(0);
+    setShowResult(false);
+    setSelectedOption(null);
+    setIsCorrect(null);
+    setStreak(0);
+    setTimeLeft(30); // Reset timer logic
+  }, [currentLevel, gender, navigate]);
 
-  const question = questions[currentQ];
-  const qText = question ? getQText(question.q) : "";
-  const options = question ? getOptions(question.opts) : [];
-
-  // Timer
+  // Timer Effect
   useEffect(() => {
-    if (selected !== null || showResult || !question) return;
+    if (showResult || selectedOption !== null || !questions.length || showExitModal) return;
 
     const timer = setInterval(() => {
-      setTimeLeft(prev => {
+      setTimeLeft((prev) => {
         if (prev <= 1) {
+          clearInterval(timer);
+          handleTimeOut();
           return 0;
         }
         return prev - 1;
@@ -64,206 +64,217 @@ export default function Quiz({ userName, onLevelComplete, totalStars, setTotalSt
     }, 1000);
 
     return () => clearInterval(timer);
-  }, [currentQ, selected, showResult, question]);
+  }, [currentQuestion, showResult, selectedOption, questions, showExitModal]);
 
-  // Handle Timeout
+  // Reset timer on new question
   useEffect(() => {
-    if (timeLeft === 0 && selected === null && !showResult && question) {
-      handleAnswer(null, true);
-    }
-  }, [timeLeft]);
+    setTimeLeft(30);
+  }, [currentQuestion]);
 
-  // Reset for new question
-  useEffect(() => {
-    setSelected(null);
-    setHidden([]);
-    setTimeLeft(15);
-  }, [currentQ]);
-
-  const handleAnswer = (idx, timeout = false) => {
-    if (selected !== null) return;
-
-    setSelected(timeout ? -1 : idx);
-
-    const isCorrect = !timeout && idx === question.correct;
-    let newScore = score;
+  const handleTimeOut = () => {
+    // Treat timeout as wrong answer
+    setSelectedOption(-1); // -1 indicates timeout/no selection
+    setIsCorrect(false);
+    setStreak(0);
     
-    if (isCorrect) {
-      const bonus = timeLeft >= 10 ? 2 : timeLeft >= 5 ? 1 : 0;
-      // Stars: +1 for correct answer
-      setTotalStars(prev => prev + 1);
-      setSessionStars(prev => prev + 1);
+    setTimeout(() => {
+      nextQuestion(score);
+    }, 1500);
+  };
 
-      // Score calculation (kept for level unlocking logic)
-      newScore = score + 1 + bonus; 
-      setScore(newScore);
+  const handleAnswer = (optionIndex) => {
+    if (selectedOption !== null) return;
+
+    setSelectedOption(optionIndex);
+    const correctNode = questions[currentQuestion].correct;
+    
+    const isRight = optionIndex === correctNode;
+    setIsCorrect(isRight);
+
+    if (isRight) {
+      setScore(score + 1);
+      setStreak(streak + 1);
+    } else {
+      setStreak(0);
     }
 
     setTimeout(() => {
-      if (currentQ < questions.length - 1) {
-        setCurrentQ(prev => prev + 1);
+      nextQuestion(score + (isRight ? 1 : 0));
+    }, 1500); 
+  };
+
+  const nextQuestion = (currentScore) => {
+      if (currentQuestion < questions.length - 1) {
+        setCurrentQuestion(currentQuestion + 1);
+        setSelectedOption(null);
+        setIsCorrect(null);
       } else {
-        setShowResult(true);
-        // Pass total score for unlocking, and sessionStars just for info if needed
-        onLevelComplete(levelNum, newScore, sessionStars + (isCorrect ? 1 : 0)); 
+        finishQuiz(currentScore);
       }
-    }, 1000);
   };
 
   const handleSkip = () => {
-    if (selected !== null) return;
-    if (currentQ < questions.length - 1) setCurrentQ(prev => prev + 1);
-    else {
-        setShowResult(true);
-        onLevelComplete(levelNum, score, sessionStars);
+     if (selectedOption !== null) return;
+     nextQuestion(score); // No points for skip
+  };
+
+  const handleBuyAnswer = () => {
+     if (selectedOption !== null || totalStars < 10) return;
+     
+     // Deduct stars
+     setTotalStars(prev => prev - 10);
+     
+     // Show answer: simluate click on correct option
+     const correctNode = questions[currentQuestion].correct;
+     handleAnswer(correctNode);
+  };
+
+  const finishQuiz = (finalScore) => {
+    const earnedStars = finalScore >= 9 ? 3 : finalScore >= 7 ? 2 : finalScore >= 5 ? 1 : 0;
+    
+    // Only update if not already completed/shown
+    if (!showResult) {
+       onLevelComplete(currentLevel, finalScore, earnedStars);
+       setShowResult(true);
     }
   };
 
-  const handleRetry = () => {
-    // Re-shuffle on retry? logic says "exit changes order", retry implies same level. 
-    // Usually retry reloads the level. Let's trigger re-shuffle by resetting state.
-    // We can just navigate to self or reset questions from source again.
-    const shuffled = [...sourceData.questions]
-        .sort(() => Math.random() - 0.5)
-        .slice(0, 10);
-    setQuestions(shuffled);
-    setCurrentQ(0);
-    setSelected(null);
-    setScore(0);
-    setSessionStars(0);
-    setShowResult(false);
-    setFiftyUsed(false);
-    setHidden([]);
-    setTimeLeft(15);
+  const handleExitRequest = () => {
+    setShowExitModal(true);
   };
 
-  const useFifty = () => {
-    if (fiftyUsed || selected !== null) return;
-    const currentOptions = getOptions(question.opts);
-    const wrong = currentOptions.map((_, i) => i).filter(i => i !== question.correct);
-    // Hide 2 random wrong answers
-    const shuffledWrong = wrong.sort(() => Math.random() - 0.5).slice(0, 2);
-    setHidden(shuffledWrong);
-    setFiftyUsed(true);
+  const confirmExit = () => {
+    setShowExitModal(false);
+    navigate("/home");
   };
 
-  const buyAnswer = () => {
-    if (selected !== null || totalStars < 10) return;
-    
-    // Deduct stars
-    setTotalStars(prev => prev - 10);
-    
-    // Auto answer correctly
-    handleAnswer(question.correct);
+  const cancelExit = () => {
+    setShowExitModal(false);
   };
 
-  if (!question && !showResult && questions.length > 0) return <div>Loading...</div>;
-  if (questions.length === 0 && !showResult) return <div>Loading Questions...</div>;
+  if (!questions || questions.length === 0) return <div className="app-container"><div className="main-content">Loading...</div></div>;
 
-  // Result Screen
+  const questionData = questions[currentQuestion];
+
   if (showResult) {
+    const earnedStars = score >= 9 ? 3 : score >= 7 ? 2 : score >= 5 ? 1 : 0;
+    const isPass = score >= 5;
+
     return (
       <div className="app-container">
-        <div className="quiz-content">
-          <div className="result-card">
-            <svg className="trophy-big" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-              <path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"></path>
-              <path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"></path>
-              <path d="M4 22h16"></path>
-              <path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"></path>
-              <path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"></path>
-              <path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"></path>
-            </svg>
-
-            <h2 className="result-title">{t.level} {levelNum} Complete!</h2>
-            <p className="result-score">{score}</p>
-            <p className="result-subtitle">{t.stars}: +{sessionStars}</p>
-
-            {score >= 5 ? ( 
-              <div className="result-message">
-                <p className="success-msg">🎉 {t.congrats} {userName}!</p>
-                <p className="result-subtitle">{t.unlockNext}</p>
-              </div>
-            ) : (
-              <div className="result-message">
-                <p className="result-subtitle">{t.keepTrying} {userName}!</p>
-                <p className="result-subtitle">{t.needScore}</p> 
-              </div>
-            )}
-
-            <div className="result-actions">
-              <button onClick={handleRetry} className="retry-btn">{t.retry}</button>
-              <button onClick={() => navigate("/home")} className="back-btn">{t.home}</button>
+        <div className="welcome-container">
+          <div className="welcome-card" style={{textAlign: 'center'}}>
+            
+            <div style={{fontSize: '4rem', marginBottom: '1rem'}}>
+              {isPass ? '🎉' : '😢'}
             </div>
+            
+            <h2 className="main-title">
+              {isPass ? t.congrats : t.gameOver || "Game Over"}
+            </h2>
+            
+            <div className="score-display" style={{justifyContent: 'center', fontSize: '1.5rem', margin: '1.5rem 0'}}>
+              <span>{t.score}: {score}/10</span>
+            </div>
+
+            <div style={{fontSize: '2rem', marginBottom: '2rem'}}>
+              {Array.from({ length: 3 }).map((_, i) => (
+                <span key={i} style={{ opacity: i < earnedStars ? 1 : 0.3 }}>⭐</span>
+              ))}
+            </div>
+
+            <p style={{color: 'var(--text-dim)', marginBottom: '2rem'}}>
+              {isPass 
+                ? (score === 10 ? (t.perfect || "Perfect!") : (t.goodJob || "Good Job!"))
+                : (t.tryAgainMsg || "Try Again!")}
+            </p>
+
+            <div style={{display: 'flex', flexDirection: 'column', gap: '1rem'}}>
+               {isPass && currentLevel < 50 && (
+                <button className="primary-btn" onClick={() => navigate(`/quiz/${currentLevel + 1}`)}>
+                  {t.nextLevel} ➡️
+                </button>
+              )}
+              
+              <div style={{display: 'flex', gap: '1rem'}}>
+                <button className="theme-btn" onClick={() => window.location.reload()} style={{flex: 1, justifyContent: 'center'}}>
+                  🔄 {t.retry}
+                </button>
+                <button className="theme-btn" onClick={() => navigate("/home")} style={{flex: 1, justifyContent: 'center'}}>
+                  🏠 {t.home}
+                </button>
+              </div>
+            </div>
+
           </div>
         </div>
       </div>
     );
   }
 
-  // Main Quiz
   return (
     <div className="app-container">
-      <nav className="navbar">
-        <div className="nav-content quiz-nav">
-          <button onClick={() => setShowExit(true)} className="home-btn">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
-              <path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
-              <polyline points="9 22 9 12 15 12 15 22"></polyline>
-            </svg>
-            <span>{t.exit}</span>
-          </button>
+       <nav className="navbar" style={{position: 'static', marginBottom: '0'}}>
+        <div className="nav-content">
+          <div className="nav-left">
+             <div className="nav-logo" style={{fontSize: '1.2rem', fontWeight: 'bold'}}>
+               {t.level} {currentLevel} • {questions[0]?.category[lang]}
+            </div>
+          </div>
+          
+          <div className="nav-center">
+             <div className={`timer-badge ${timeLeft <= 5 ? 'danger' : timeLeft <= 10 ? 'warning' : ''}`}>
+               ⏳ {timeLeft}s
+             </div>
+          </div>
 
-          <div className="quiz-info">
+          <div className="nav-right" style={{display: 'flex', gap: '10px'}}>
              <div className="stars-wallet">
-              <span>⭐ {totalStars}</span>
+              ⭐ {totalStars}
             </div>
-            <div className="user-badge">
-              <div className="user-avatar-small">{userName[0]?.toUpperCase()}</div>
-              <span>{userName}</span>
-            </div>
-            <span className="level-badge">{t.level} {levelNum}</span>
-            <span className="score-badge">{t.score}: {score}</span>
-            <span className="timer-badge">⏱ {timeLeft}s</span>
+            <button className="theme-btn" onClick={handleExitRequest}>
+              ⬅️ {t.back || "Back"}
+            </button>
           </div>
         </div>
       </nav>
 
-      <div className="quiz-content">
-        <div className="quiz-card">
-          <div className="progress-section">
-            <div className="progress-info">
-              <span className="question-count">{t.question} {currentQ + 1}/{questions.length}</span>
-              <span className="category-badge">{question.category}</span>
-            </div>
-            <div className="progress-bar">
-              <div 
-                className="progress-fill" 
-                style={{ width: `${((currentQ + 1) / questions.length) * 100}%` }}
-              />
-            </div>
+      <div className="quiz-container">
+        <div className="progress-bar-container">
+          <div 
+            className="progress-bar-fill" 
+            style={{ width: `${((currentQuestion) / 10) * 100}%` }}
+          ></div>
+        </div>
+
+        <div className="question-card">
+          <div style={{display: 'flex', justifyContent: 'space-between', marginBottom: '1rem', color: 'var(--text-dim)'}}>
+            <span>Question {currentQuestion + 1}/10</span>
+            <span>🔥 {streak}</span>
           </div>
 
-          <h2 className="question-text">{qText}</h2>
+          <h2 className="question-text">
+            {questionData.q[lang]}
+          </h2>
 
           <div className="options-grid">
-            {options.map((option, idx) => {
-              if (hidden.includes(idx)) return null;
-
+            {questionData.opts[lang].map((opt, index) => {
               let btnClass = "option-btn";
-              if (selected !== null) {
-                if (idx === question.correct) btnClass += " correct";
-                else if (idx === selected) btnClass += " incorrect";
+              if (selectedOption !== null) {
+                if (index === questionData.correct) btnClass += " correct";
+                else if (index === selectedOption) btnClass += " incorrect";
+                else if (selectedOption === -1 && index === questionData.correct) btnClass += " correct"; // Show correct if timed out
               }
-
+              
               return (
                 <button
-                  key={idx}
-                  onClick={() => handleAnswer(idx)}
-                  disabled={selected !== null}
+                  key={index}
                   className={btnClass}
+                  onClick={() => handleAnswer(index)}
+                  disabled={selectedOption !== null}
                 >
-                  {option}
+                  <span style={{opacity: 0.7, marginRight: '10px'}}>{String.fromCharCode(65 + index)}.</span>
+                  {opt}
                 </button>
               );
             })}
@@ -271,48 +282,46 @@ export default function Quiz({ userName, onLevelComplete, totalStars, setTotalSt
 
           <div className="quiz-actions">
             <button 
-              onClick={buyAnswer} 
-              className="buy-btn" 
-              disabled={selected !== null || totalStars < 10}
-              title={totalStars < 10 ? t.notEnoughStars : t.buyAnswer}
+              className="action-btn" 
+              onClick={handleBuyAnswer}
+              disabled={totalStars < 10 || selectedOption !== null}
+              title="Cost: 10 Stars"
             >
-              🔑 {t.buyAnswer}
+              💡 {t.buyAnswer || "Answer"} (-10 ⭐)
             </button>
-            <button 
-              onClick={useFifty} 
-              className="skip-btn" 
-              disabled={fiftyUsed || selected !== null}
+             <button 
+              className="action-btn" 
+              onClick={handleSkip}
+              disabled={selectedOption !== null}
             >
-              💡 {t.fiftyFifty}
-            </button>
-            <button 
-              onClick={handleSkip} 
-              className="skip-btn" 
-              disabled={selected !== null}
-            >
-              ⏭ {t.skip}
+              ⏭️ {t.skip || "Skip"}
             </button>
           </div>
         </div>
       </div>
 
-
-      {showExit && (
-        <div className="modal-overlay" onClick={() => setShowExit(false)}>
-          <div className="modal-content" onClick={(e) => e.stopPropagation()}>
-            <h3 className="modal-title">{t.exitConfirmTitle}</h3>
-            <p className="modal-text">{t.exitConfirmText}</p>
+      {/* Exit Confirmation Modal */}
+      {showExitModal && (
+        <div className="modal-overlay">
+          <div className="confirmation-modal">
+            <h3>⚠️ {t.exitConfirmTitle || "Quit Quiz?"}</h3>
+            <p>{t.exitConfirmMsg || "Are you sure you want to quit? Your progress for this level will be lost."}</p>
             <div className="modal-actions">
-              <button onClick={() => navigate("/home")} className="modal-btn danger">
-                {t.exitBtn}
+              <button className="option-btn" style={{flex:1, justifyContent: 'center'}} onClick={cancelExit}>
+                {t.cancel || "Cancel"}
               </button>
-              <button onClick={() => setShowExit(false)} className="modal-btn">
-                {t.continue}
+              <button 
+                className="primary-btn" 
+                style={{flex:1, background: 'var(--primary-dark)'}} 
+                onClick={confirmExit}
+              >
+                {t.quit || "Quit"}
               </button>
             </div>
           </div>
         </div>
       )}
+
     </div>
   );
 }
