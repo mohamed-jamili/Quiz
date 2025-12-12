@@ -1,198 +1,1198 @@
-// ==========================================
-// MALE QUESTIONS DATABASE - EXPANDED
-// ==========================================
-
 export const maleQuestions = [
   // ===== ANIME =====
-  { q: { en: 'Who is the main character in Naruto?', fr: 'Qui est le personnage principal de Naruto?', ar: 'من هو الشخصية الرئيسية في ناروتو؟' }, opts: { en: ['Sasuke', 'Kakashi', 'Naruto Uzumaki', 'Sakura'], fr: ['Sasuke', 'Kakashi', 'Naruto Uzumaki', 'Sakura'], ar: ['ساسكي', 'كاكاشي', 'ناروتو أوزوماكي', 'ساكورا'] }, correct: 2, category: { en: 'Anime', fr: 'Anime', ar: 'أنمي' } },
-  { q: { en: 'Which anime has "Sharingan"?', fr: 'Quel anime a "Sharingan"?', ar: 'أي أنمي يحتوي على "الشارينغان"؟' }, opts: { en: ['Bleach', 'Naruto', 'One Piece', 'Dragon Ball'], fr: ['Bleach', 'Naruto', 'One Piece', 'Dragon Ball'], ar: ['بليتش', 'ناروتو', 'ون بيس', 'دراغون بول'] }, correct: 1, category: { en: 'Anime', fr: 'Anime', ar: 'أنمي' } },
-  { q: { en: 'Luffy\'s power in One Piece?', fr: 'Le pouvoir de Luffy dans One Piece?', ar: 'قوة لوفي في ون بيس؟' }, opts: { en: ['Fire', 'Rubber', 'Ice', 'Lightning'], fr: ['Feu', 'Caoutchouc', 'Glace', 'Foudre'], ar: ['نار', 'مطاط', 'ثلج', 'برق'] }, correct: 1, category: { en: 'Anime', fr: 'Anime', ar: 'أنمي' } },
-  { q: { en: 'What is the name of Goku\'s signature attack?', fr: 'Quel est le nom de l\'attaque signature de Goku?', ar: 'ما اسم هجوم غوكو المميز؟' }, opts: { en: ['Rasengan', 'Kamehameha', 'Hadouken', 'Spirit Bomb'], fr: ['Rasengan', 'Kamehameha', 'Hadouken', 'Boule d\'énergie'], ar: ['راسينغان', 'كاميهاميها', 'هادوكين', 'قنبلة الروح'] }, correct: 1, category: { en: 'Anime', fr: 'Anime', ar: 'أنمي' } },
-  { q: { en: 'Who is the captain of the Survey Corps in Attack on Titan?', fr: 'Qui est le capitaine du Bataillon d\'exploration?', ar: 'من هو قائد فيلق الاستكشاف في هجوم العمالقة؟' }, opts: { en: ['Erwin', 'Levi', 'Eren', 'Mikasa'], fr: ['Erwin', 'Levi', 'Eren', 'Mikasa'], ar: ['إروين', 'ليفاي', 'إيرين', 'ميكاسا'] }, correct: 1, category: { en: 'Anime', fr: 'Anime', ar: 'أنمي' } },
+  {
+    q: {
+      en: "Who is the main character in Naruto?",
+      fr: "Qui est le personnage principal de Naruto?",
+      ar: "من هو الشخصية الرئيسية في ناروتو؟",
+    },
+    opts: {
+      en: ["Sasuke", "Kakashi", "Naruto Uzumaki", "Sakura"],
+      fr: ["Sasuke", "Kakashi", "Naruto Uzumaki", "Sakura"],
+      ar: ["ساسكي", "كاكاشي", "ناروتو أوزوماكي", "ساكورا"],
+    },
+    correct: 2,
+    category: { en: "Anime", fr: "Anime", ar: "أنمي" },
+  },
+  {
+    q: {
+      en: 'Which anime has "Sharingan"?',
+      fr: 'Quel anime a "Sharingan"?',
+      ar: 'أي أنمي يحتوي على "الشارينغان"؟',
+    },
+    opts: {
+      en: ["Bleach", "Naruto", "One Piece", "Dragon Ball"],
+      fr: ["Bleach", "Naruto", "One Piece", "Dragon Ball"],
+      ar: ["بليتش", "ناروتو", "ون بيس", "دراغون بول"],
+    },
+    correct: 1,
+    category: { en: "Anime", fr: "Anime", ar: "أنمي" },
+  },
+  {
+    q: {
+      en: "Luffy's power in One Piece?",
+      fr: "Le pouvoir de Luffy dans One Piece?",
+      ar: "قوة لوفي في ون بيس؟",
+    },
+    opts: {
+      en: ["Fire", "Rubber", "Ice", "Lightning"],
+      fr: ["Feu", "Caoutchouc", "Glace", "Foudre"],
+      ar: ["نار", "مطاط", "ثلج", "برق"],
+    },
+    correct: 1,
+    category: { en: "Anime", fr: "Anime", ar: "أنمي" },
+  },
+  {
+    q: {
+      en: "What is the name of Goku's signature attack?",
+      fr: "Quel est le nom de l'attaque signature de Goku?",
+      ar: "ما اسم هجوم غوكو المميز؟",
+    },
+    opts: {
+      en: ["Rasengan", "Kamehameha", "Hadouken", "Spirit Bomb"],
+      fr: ["Rasengan", "Kamehameha", "Hadouken", "Boule d'énergie"],
+      ar: ["راسينغان", "كاميهاميها", "هادوكين", "قنبلة الروح"],
+    },
+    correct: 1,
+    category: { en: "Anime", fr: "Anime", ar: "أنمي" },
+  },
+  {
+    q: {
+      en: "Who is the captain of the Survey Corps in Attack on Titan?",
+      fr: "Qui est le capitaine du Bataillon d'exploration?",
+      ar: "من هو قائد فيلق الاستكشاف في هجوم العمالقة؟",
+    },
+    opts: {
+      en: ["Erwin", "Levi", "Eren", "Mikasa"],
+      fr: ["Erwin", "Levi", "Eren", "Mikasa"],
+      ar: ["إروين", "ليفاي", "إيرين", "ميكاسا"],
+    },
+    correct: 1,
+    category: { en: "Anime", fr: "Anime", ar: "أنمي" },
+  },
 
   // ===== MOVIES =====
-  { q: { en: 'Who directed Inception?', fr: 'Qui a réalisé Inception?', ar: 'من أخرج فيلم Inception؟' }, opts: { en: ['Spielberg', 'Nolan', 'Cameron', 'Tarantino'], fr: ['Spielberg', 'Nolan', 'Cameron', 'Tarantino'], ar: ['سبيلبرغ', 'نولان', 'كاميرون', 'تارانتينو'] }, correct: 1, category: { en: 'Movies', fr: 'Films', ar: 'أفلام' } },
-  { q: { en: 'Which movie won Best Picture 2020?', fr: 'Quel film a gagné en 2020?', ar: 'أي فيلم فاز بجائزة أفضل فيلم 2020؟' }, opts: { en: ['1917', 'Joker', 'Parasite', 'Once Upon'], fr: ['1917', 'Joker', 'Parasite', 'Once Upon'], ar: ['1917', 'جوكر', 'باراسايت', 'Once Upon'] }, correct: 2, category: { en: 'Movies', fr: 'Films', ar: 'أفلام' } },
-  { q: { en: 'Who played Iron Man in the MCU?', fr: 'Qui a joué Iron Man?', ar: 'من لعب دور آيرون مان في MCU؟' }, opts: { en: ['Chris Evans', 'Robert Downey Jr', 'Chris Hemsworth', 'Mark Ruffalo'], fr: ['Chris Evans', 'Robert Downey Jr', 'Chris Hemsworth', 'Mark Ruffalo'], ar: ['كريس إيفانز', 'روبرت داوني جونيور', 'كريس هيمسوورث', 'مارك روفالو'] }, correct: 1, category: { en: 'Movies', fr: 'Films', ar: 'أفلام' } },
-  { q: { en: 'What year was The Matrix released?', fr: 'En quelle année Matrix est-il sorti?', ar: 'في أي سنة صدر فيلم ذا ماتريكس؟' }, opts: { en: ['1997', '1998', '1999', '2000'], fr: ['1997', '1998', '1999', '2000'], ar: ['1997', '1998', '1999', '2000'] }, correct: 2, category: { en: 'Movies', fr: 'Films', ar: 'أفلام' } },
+  {
+    q: {
+      en: "Who directed Inception?",
+      fr: "Qui a réalisé Inception?",
+      ar: "من أخرج فيلم Inception؟",
+    },
+    opts: {
+      en: ["Spielberg", "Nolan", "Cameron", "Tarantino"],
+      fr: ["Spielberg", "Nolan", "Cameron", "Tarantino"],
+      ar: ["سبيلبرغ", "نولان", "كاميرون", "تارانتينو"],
+    },
+    correct: 1,
+    category: { en: "Movies", fr: "Films", ar: "أفلام" },
+  },
+  {
+    q: {
+      en: "Which movie won Best Picture 2020?",
+      fr: "Quel film a gagné en 2020?",
+      ar: "أي فيلم فاز بجائزة أفضل فيلم 2020؟",
+    },
+    opts: {
+      en: ["1917", "Joker", "Parasite", "Once Upon"],
+      fr: ["1917", "Joker", "Parasite", "Once Upon"],
+      ar: ["1917", "جوكر", "باراسايت", "Once Upon"],
+    },
+    correct: 2,
+    category: { en: "Movies", fr: "Films", ar: "أفلام" },
+  },
+  {
+    q: {
+      en: "Who played Iron Man in the MCU?",
+      fr: "Qui a joué Iron Man?",
+      ar: "من لعب دور آيرون مان في MCU؟",
+    },
+    opts: {
+      en: [
+        "Chris Evans",
+        "Robert Downey Jr",
+        "Chris Hemsworth",
+        "Mark Ruffalo",
+      ],
+      fr: [
+        "Chris Evans",
+        "Robert Downey Jr",
+        "Chris Hemsworth",
+        "Mark Ruffalo",
+      ],
+      ar: ["كريس إيفانز", "روبرت داوني جونيور", "كريس هيمسوورث", "مارك روفالو"],
+    },
+    correct: 1,
+    category: { en: "Movies", fr: "Films", ar: "أفلام" },
+  },
+  {
+    q: {
+      en: "What year was The Matrix released?",
+      fr: "En quelle année Matrix est-il sorti?",
+      ar: "في أي سنة صدر فيلم ذا ماتريكس؟",
+    },
+    opts: {
+      en: ["1997", "1998", "1999", "2000"],
+      fr: ["1997", "1998", "1999", "2000"],
+      ar: ["1997", "1998", "1999", "2000"],
+    },
+    correct: 2,
+    category: { en: "Movies", fr: "Films", ar: "أفلام" },
+  },
 
   // ===== GEOGRAPHY & CAPITALS =====
-  { q: { en: 'Capital of Morocco?', fr: 'Capitale du Maroc?', ar: 'عاصمة المغرب؟' }, opts: { en: ['Casablanca', 'Rabat', 'Marrakech', 'Fes'], fr: ['Casablanca', 'Rabat', 'Marrakech', 'Fès'], ar: ['الدار البيضاء', 'الرباط', 'مراكش', 'فاس'] }, correct: 1, category: { en: 'Geography', fr: 'Géographie', ar: 'جغرافيا' } },
-  { q: { en: 'Capital of Japan?', fr: 'Capitale du Japon?', ar: 'عاصمة اليابان؟' }, opts: { en: ['Osaka', 'Kyoto', 'Tokyo', 'Hiroshima'], fr: ['Osaka', 'Kyoto', 'Tokyo', 'Hiroshima'], ar: ['أوساكا', 'كيوتو', 'طوكيو', 'هيروشيما'] }, correct: 2, category: { en: 'Geography', fr: 'Géographie', ar: 'جغرافيا' } },
-  { q: { en: 'Capital of Germany?', fr: 'Capitale de l\'Allemagne?', ar: 'عاصمة ألمانيا؟' }, opts: { en: ['Munich', 'Hamburg', 'Berlin', 'Frankfurt'], fr: ['Munich', 'Hambourg', 'Berlin', 'Francfort'], ar: ['ميونخ', 'هامبورغ', 'برلين', 'فرانكفورت'] }, correct: 2, category: { en: 'Geography', fr: 'Géographie', ar: 'جغرافيا' } },
-  { q: { en: 'Capital of Spain?', fr: 'Capitale de l\'Espagne?', ar: 'عاصمة إسبانيا؟' }, opts: { en: ['Barcelona', 'Madrid', 'Valencia', 'Seville'], fr: ['Barcelone', 'Madrid', 'Valence', 'Séville'], ar: ['برشلونة', 'مدريد', 'فالنسيا', 'إشبيلية'] }, correct: 1, category: { en: 'Geography', fr: 'Géographie', ar: 'جغرافيا' } },
-  { q: { en: 'Capital of Saudi Arabia?', fr: 'Capitale de l\'Arabie Saoudite?', ar: 'عاصمة السعودية؟' }, opts: { en: ['Jeddah', 'Riyadh', 'Mecca', 'Medina'], fr: ['Djeddah', 'Riyad', 'La Mecque', 'Médine'], ar: ['جدة', 'الرياض', 'مكة', 'المدينة'] }, correct: 1, category: { en: 'Geography', fr: 'Géographie', ar: 'جغرافيا' } },
+  {
+    q: {
+      en: "Capital of Morocco?",
+      fr: "Capitale du Maroc?",
+      ar: "عاصمة المغرب؟",
+    },
+    opts: {
+      en: ["Casablanca", "Rabat", "Marrakech", "Fes"],
+      fr: ["Casablanca", "Rabat", "Marrakech", "Fès"],
+      ar: ["الدار البيضاء", "الرباط", "مراكش", "فاس"],
+    },
+    correct: 1,
+    category: { en: "Geography", fr: "Géographie", ar: "جغرافيا" },
+  },
+  {
+    q: {
+      en: "Capital of Japan?",
+      fr: "Capitale du Japon?",
+      ar: "عاصمة اليابان؟",
+    },
+    opts: {
+      en: ["Osaka", "Kyoto", "Tokyo", "Hiroshima"],
+      fr: ["Osaka", "Kyoto", "Tokyo", "Hiroshima"],
+      ar: ["أوساكا", "كيوتو", "طوكيو", "هيروشيما"],
+    },
+    correct: 2,
+    category: { en: "Geography", fr: "Géographie", ar: "جغرافيا" },
+  },
+  {
+    q: {
+      en: "Capital of Germany?",
+      fr: "Capitale de l'Allemagne?",
+      ar: "عاصمة ألمانيا؟",
+    },
+    opts: {
+      en: ["Munich", "Hamburg", "Berlin", "Frankfurt"],
+      fr: ["Munich", "Hambourg", "Berlin", "Francfort"],
+      ar: ["ميونخ", "هامبورغ", "برلين", "فرانكفورت"],
+    },
+    correct: 2,
+    category: { en: "Geography", fr: "Géographie", ar: "جغرافيا" },
+  },
+  {
+    q: {
+      en: "Capital of Spain?",
+      fr: "Capitale de l'Espagne?",
+      ar: "عاصمة إسبانيا؟",
+    },
+    opts: {
+      en: ["Barcelona", "Madrid", "Valencia", "Seville"],
+      fr: ["Barcelone", "Madrid", "Valence", "Séville"],
+      ar: ["برشلونة", "مدريد", "فالنسيا", "إشبيلية"],
+    },
+    correct: 1,
+    category: { en: "Geography", fr: "Géographie", ar: "جغرافيا" },
+  },
+  {
+    q: {
+      en: "Capital of Saudi Arabia?",
+      fr: "Capitale de l'Arabie Saoudite?",
+      ar: "عاصمة السعودية؟",
+    },
+    opts: {
+      en: ["Jeddah", "Riyadh", "Mecca", "Medina"],
+      fr: ["Djeddah", "Riyad", "La Mecque", "Médine"],
+      ar: ["جدة", "الرياض", "مكة", "المدينة"],
+    },
+    correct: 1,
+    category: { en: "Geography", fr: "Géographie", ar: "جغرافيا" },
+  },
 
   // ===== TECHNOLOGY =====
-  { q: { en: 'What does CPU stand for?', fr: 'Que signifie CPU?', ar: 'ماذا يعني CPU؟' }, opts: { en: ['Central Processing Unit', 'Computer Personal Unit', 'Central Program', 'Core Processing'], fr: ['Unité Centrale', 'Unité Personnelle', 'Programme Central', 'Traitement Core'], ar: ['وحدة المعالجة المركزية', 'وحدة الحاسوب الشخصية', 'البرنامج المركزي', 'معالج النواة'] }, correct: 0, category: { en: 'Technology', fr: 'Technologie', ar: 'تكنولوجيا' } },
-  { q: { en: 'Who founded Apple?', fr: 'Qui a fondé Apple?', ar: 'من أسس شركة أبل؟' }, opts: { en: ['Bill Gates', 'Steve Jobs', 'Elon Musk', 'Mark Zuckerberg'], fr: ['Bill Gates', 'Steve Jobs', 'Elon Musk', 'Mark Zuckerberg'], ar: ['بيل غيتس', 'ستيف جوبز', 'إيلون ماسك', 'مارك زوكربيرغ'] }, correct: 1, category: { en: 'Technology', fr: 'Technologie', ar: 'تكنولوجيا' } },
+  {
+    q: {
+      en: "What does CPU stand for?",
+      fr: "Que signifie CPU?",
+      ar: "ماذا يعني CPU؟",
+    },
+    opts: {
+      en: [
+        "Central Processing Unit",
+        "Computer Personal Unit",
+        "Central Program",
+        "Core Processing",
+      ],
+      fr: [
+        "Unité Centrale",
+        "Unité Personnelle",
+        "Programme Central",
+        "Traitement Core",
+      ],
+      ar: [
+        "وحدة المعالجة المركزية",
+        "وحدة الحاسوب الشخصية",
+        "البرنامج المركزي",
+        "معالج النواة",
+      ],
+    },
+    correct: 0,
+    category: { en: "Technology", fr: "Technologie", ar: "تكنولوجيا" },
+  },
+  {
+    q: {
+      en: "Who founded Apple?",
+      fr: "Qui a fondé Apple?",
+      ar: "من أسس شركة أبل؟",
+    },
+    opts: {
+      en: ["Bill Gates", "Steve Jobs", "Elon Musk", "Mark Zuckerberg"],
+      fr: ["Bill Gates", "Steve Jobs", "Elon Musk", "Mark Zuckerberg"],
+      ar: ["بيل غيتس", "ستيف جوبز", "إيلون ماسك", "مارك زوكربيرغ"],
+    },
+    correct: 1,
+    category: { en: "Technology", fr: "Technologie", ar: "تكنولوجيا" },
+  },
 
   // ===== SCIENCE =====
-  { q: { en: 'Speed of light?', fr: 'Vitesse de la lumière?', ar: 'سرعة الضوء؟' }, opts: { en: ['300,000 km/s', '150,000 km/s', '500,000 km/s', '100,000 km/s'], fr: ['300 000 km/s', '150 000 km/s', '500 000 km/s', '100 000 km/s'], ar: ['300,000 كم/ث', '150,000 كم/ث', '500,000 كم/ث', '100,000 كم/ث'] }, correct: 0, category: { en: 'Science', fr: 'Science', ar: 'علوم' } },
-  { q: { en: 'How many planets in solar system?', fr: 'Combien de planètes dans le système solaire?', ar: 'كم عدد الكواكب في النظام الشمسي؟' }, opts: { en: ['7', '8', '9', '10'], fr: ['7', '8', '9', '10'], ar: ['7', '8', '9', '10'] }, correct: 1, category: { en: 'Science', fr: 'Science', ar: 'علوم' } },
+  {
+    q: {
+      en: "Speed of light?",
+      fr: "Vitesse de la lumière?",
+      ar: "سرعة الضوء؟",
+    },
+    opts: {
+      en: ["300,000 km/s", "150,000 km/s", "500,000 km/s", "100,000 km/s"],
+      fr: ["300 000 km/s", "150 000 km/s", "500 000 km/s", "100 000 km/s"],
+      ar: ["300,000 كم/ث", "150,000 كم/ث", "500,000 كم/ث", "100,000 كم/ث"],
+    },
+    correct: 0,
+    category: { en: "Science", fr: "Science", ar: "علوم" },
+  },
+  {
+    q: {
+      en: "How many planets in solar system?",
+      fr: "Combien de planètes dans le système solaire?",
+      ar: "كم عدد الكواكب في النظام الشمسي؟",
+    },
+    opts: {
+      en: ["7", "8", "9", "10"],
+      fr: ["7", "8", "9", "10"],
+      ar: ["7", "8", "9", "10"],
+    },
+    correct: 1,
+    category: { en: "Science", fr: "Science", ar: "علوم" },
+  },
 
   // ===== HISTORY =====
-  { q: { en: 'When did WW2 end?', fr: 'Quand la 2e GM s\'est terminée?', ar: 'متى انتهت الحرب العالمية الثانية؟' }, opts: { en: ['1943', '1944', '1945', '1946'], fr: ['1943', '1944', '1945', '1946'], ar: ['1943', '1944', '1945', '1946'] }, correct: 2, category: { en: 'History', fr: 'Histoire', ar: 'تاريخ' } },
+  {
+    q: {
+      en: "When did WW2 end?",
+      fr: "Quand la 2e GM s'est terminée?",
+      ar: "متى انتهت الحرب العالمية الثانية؟",
+    },
+    opts: {
+      en: ["1943", "1944", "1945", "1946"],
+      fr: ["1943", "1944", "1945", "1946"],
+      ar: ["1943", "1944", "1945", "1946"],
+    },
+    correct: 2,
+    category: { en: "History", fr: "Histoire", ar: "تاريخ" },
+  },
 
   // ===== GAMING =====
-  { q: { en: 'Year Minecraft released?', fr: 'Année de sortie de Minecraft?', ar: 'سنة إصدار ماينكرافت؟' }, opts: { en: ['2009', '2010', '2011', '2012'], fr: ['2009', '2010', '2011', '2012'], ar: ['2009', '2010', '2011', '2012'] }, correct: 2, category: { en: 'Gaming', fr: 'Jeux', ar: 'ألعاب' } },
-  { q: { en: 'Who is Mario\'s brother?', fr: 'Qui est le frère de Mario?', ar: 'من هو أخو ماريو؟' }, opts: { en: ['Wario', 'Luigi', 'Yoshi', 'Toad'], fr: ['Wario', 'Luigi', 'Yoshi', 'Toad'], ar: ['واريو', 'لويجي', 'يوشي', 'تود'] }, correct: 1, category: { en: 'Gaming', fr: 'Jeux', ar: 'ألعاب' } },
+  {
+    q: {
+      en: "Year Minecraft released?",
+      fr: "Année de sortie de Minecraft?",
+      ar: "سنة إصدار ماينكرافت؟",
+    },
+    opts: {
+      en: ["2009", "2010", "2011", "2012"],
+      fr: ["2009", "2010", "2011", "2012"],
+      ar: ["2009", "2010", "2011", "2012"],
+    },
+    correct: 2,
+    category: { en: "Gaming", fr: "Jeux", ar: "ألعاب" },
+  },
+  {
+    q: {
+      en: "Who is Mario's brother?",
+      fr: "Qui est le frère de Mario?",
+      ar: "من هو أخو ماريو؟",
+    },
+    opts: {
+      en: ["Wario", "Luigi", "Yoshi", "Toad"],
+      fr: ["Wario", "Luigi", "Yoshi", "Toad"],
+      ar: ["واريو", "لويجي", "يوشي", "تود"],
+    },
+    correct: 1,
+    category: { en: "Gaming", fr: "Jeux", ar: "ألعاب" },
+  },
 
   // ===== SPORTS =====
-  { q: { en: 'Players in football team?', fr: 'Joueurs dans une équipe?', ar: 'عدد اللاعبين في فريق كرة القدم؟' }, opts: { en: ['9', '10', '11', '12'], fr: ['9', '10', '11', '12'], ar: ['9', '10', '11', '12'] }, correct: 2, category: { en: 'Sport', fr: 'Sport', ar: 'رياضة' } },
-  { q: { en: 'Olympic rings count?', fr: 'Nombre d\'anneaux olympiques?', ar: 'عدد حلقات الأولمبياد؟' }, opts: { en: ['4', '5', '6', '7'], fr: ['4', '5', '6', '7'], ar: ['4', '5', '6', '7'] }, correct: 1, category: { en: 'Sport', fr: 'Sport', ar: 'رياضة' } },
-  { q: { en: 'Messi nationality?', fr: 'Nationalité de Messi?', ar: 'جنسية ميسي؟' }, opts: { en: ['Brazil', 'Argentina', 'Spain', 'Portugal'], fr: ['Brésil', 'Argentine', 'Espagne', 'Portugal'], ar: ['البرازيل', 'الأرجنتين', 'إسبانيا', 'البرتغال'] }, correct: 1, category: { en: 'Sport', fr: 'Sport', ar: 'رياضة' } },
-  { q: { en: 'Which country hosted 2022 World Cup?', fr: 'Quel pays a accueilli la Coupe du monde 2022?', ar: 'أي بلد استضاف كأس العالم 2022؟' }, opts: { en: ['Russia', 'Brazil', 'Qatar', 'UAE'], fr: ['Russie', 'Brésil', 'Qatar', 'Émirats'], ar: ['روسيا', 'البرازيل', 'قطر', 'الإمارات'] }, correct: 2, category: { en: 'Sport', fr: 'Sport', ar: 'رياضة' } },
-  { q: { en: 'Ronaldo first club?', fr: 'Premier club de Ronaldo?', ar: 'أول نادي لرونالدو؟' }, opts: { en: ['Real Madrid', 'Manchester United', 'Sporting CP', 'Juventus'], fr: ['Real Madrid', 'Manchester United', 'Sporting CP', 'Juventus'], ar: ['ريال مدريد', 'مانشستر يونايتد', 'سبورتينغ', 'يوفنتوس'] }, correct: 2, category: { en: 'Sport', fr: 'Sport', ar: 'رياضة' } },
-  
-  // ===== NEW BOYS CONTENT - Personality & Lifestyle =====
-  { q: { en: 'What type of guy are you?', fr: 'Quel type de gars es-tu?', ar: 'أي نوع من الرجال أنت؟' }, opts: { en: ["Leader", "Thinker", "Adventurer", "Loyal Friend"], fr: ["Leader", "Penseur", "Aventurier", "Ami loyal"], ar: ["قائد", "مفكر", "مغامر", "صديق مخلص"] }, correct: 0, category: { en: 'Personality', fr: 'Personnalité', ar: 'شخصية' } },
-  { q: { en: 'What motivates you the most?', fr: 'Qu\'est-ce qui te motive le plus?', ar: 'ما الذي يحفزك أكثر؟' }, opts: { en: ["Success", "Family", "Adventure", "Knowledge"], fr: ["Succès", "Famille", "Aventure", "Savoir"], ar: ["النجاح", "العائلة", "المغامرة", "المعرفة"] }, correct: 0, category: { en: 'Personality', fr: 'Personnalité', ar: 'شخصية' } },
-  { q: { en: 'Are you Sigma, Alpha, or Beta?', fr: 'Es-tu Sigma, Alpha ou Beta?', ar: 'هل أنت سيجما، ألفا، أم بيتا؟' }, opts: { en: ["Sigma", "Alpha", "Beta", "None"], fr: ["Sigma", "Alpha", "Beta", "Aucun"], ar: ["سيجما", "ألفا", "بيتا", "لا شيء"] }, correct: 0, category: { en: 'Personality', fr: 'Personnalité', ar: 'شخصية' } },
-  { q: { en: 'What is your real personality?', fr: 'Quelle est ta vraie personnalité?', ar: 'ما هي شخصيتك الحقيقية؟' }, opts: { en: ["Optimistic", "Pessimistic", "Realistic", "Idealistic"], fr: ["Optimiste", "Pessimiste", "Réaliste", "Idéaliste"], ar: ["متفائل", "متشائم", "واقعي", "مثالي"] }, correct: 0, category: { en: 'Personality', fr: 'Personnalité', ar: 'شخصية' } },
-  { q: { en: 'What is your hidden strength?', fr: 'Quelle est ta force cachée?', ar: 'ما هي قوتك الخفية؟' }, opts: { en: ["Patience", "Creativity", "Courage", "Empathy"], fr: ["Patience", "Créativité", "Courage", "Empathie"], ar: ["الصبر", "الإبداع", "الشجاعة", "التعاطف"] }, correct: 0, category: { en: 'Personality', fr: 'Personnalité', ar: 'شخصية' } },
-  { q: { en: 'Are you introvert or extrovert?', fr: 'Es-tu introverti ou extraverti?', ar: 'هل أنت منطوي أم منفتح؟' }, opts: { en: ["Introvert", "Extrovert", "Ambivert", "Depends on mood"], fr: ["Introverti", "Extraverti", "Ambivert", "Ça dépend"], ar: ["منطوي", "منفتح", "وسطي", "يعتمد على المزاج"] }, correct: 0, category: { en: 'Personality', fr: 'Personnalité', ar: 'شخصية' } },
-  { q: { en: 'What is your life energy level?', fr: 'Quel est ton niveau d\'énergie?', ar: 'ما هو مستوى طاقتك؟' }, opts: { en: ["High", "Medium", "Low", "Varies"], fr: ["Élevé", "Moyen", "Faible", "Variable"], ar: ["عالي", "متوسط", "منخفض", "متغير"] }, correct: 0, category: { en: 'Personality', fr: 'Personnalité', ar: 'شخصية' } },
-  { q: { en: 'Are you more emotional or logical?', fr: 'Es-tu plus émotionnel ou logique?', ar: 'هل أنت عاطفي أم منطقي أكثر؟' }, opts: { en: ["Emotional", "Logical", "Balanced", "Depends on situation"], fr: ["Émotionnel", "Logique", "Équilibré", "Ça dépend"], ar: ["عاطفي", "منطقي", "متوازن", "يعتمد على الموقف"] }, correct: 0, category: { en: 'Personality', fr: 'Personnalité', ar: 'شخصية' } },
-  { q: { en: 'What is your mindset type?', fr: 'Quel est ton type d\'état d\'esprit?', ar: 'ما هو نوع عقليتك؟' }, opts: { en: ["Growth", "Fixed", "Creative", "Analytical"], fr: ["Croissance", "Fixe", "Créatif", "Analytique"], ar: ["نمو", "ثابت", "إبداعي", "تحليلي"] }, correct: 0, category: { en: 'Personality', fr: 'Personnalité', ar: 'شخصية' } },
-  { q: { en: 'How confident are you?', fr: 'Quelle est ta confiance en toi?', ar: 'ما مدى ثقتك بنفسك؟' }, opts: { en: ["Very confident", "Somewhat confident", "Not confident", "Unsure"], fr: ["Très confiant", "Assez confiant", "Peu confiant", "Incertain"], ar: ["واثق جداً", "واثق إلى حد ما", "غير واثق", "غير متأكد"] }, correct: 0, category: { en: 'Personality', fr: 'Personnalité', ar: 'شخصية' } },
+  {
+    q: {
+      en: "Players in football team?",
+      fr: "Joueurs dans une équipe?",
+      ar: "عدد اللاعبين في فريق كرة القدم؟",
+    },
+    opts: {
+      en: ["9", "10", "11", "12"],
+      fr: ["9", "10", "11", "12"],
+      ar: ["9", "10", "11", "12"],
+    },
+    correct: 2,
+    category: { en: "Sport", fr: "Sport", ar: "رياضة" },
+  },
+  {
+    q: {
+      en: "Olympic rings count?",
+      fr: "Nombre d'anneaux olympiques?",
+      ar: "عدد حلقات الأولمبياد؟",
+    },
+    opts: {
+      en: ["4", "5", "6", "7"],
+      fr: ["4", "5", "6", "7"],
+      ar: ["4", "5", "6", "7"],
+    },
+    correct: 1,
+    category: { en: "Sport", fr: "Sport", ar: "رياضة" },
+  },
+  {
+    q: {
+      en: "Messi nationality?",
+      fr: "Nationalité de Messi?",
+      ar: "جنسية ميسي؟",
+    },
+    opts: {
+      en: ["Brazil", "Argentina", "Spain", "Portugal"],
+      fr: ["Brésil", "Argentine", "Espagne", "Portugal"],
+      ar: ["البرازيل", "الأرجنتين", "إسبانيا", "البرتغال"],
+    },
+    correct: 1,
+    category: { en: "Sport", fr: "Sport", ar: "رياضة" },
+  },
+  {
+    q: {
+      en: "Which country hosted 2022 World Cup?",
+      fr: "Quel pays a accueilli la Coupe du monde 2022?",
+      ar: "أي بلد استضاف كأس العالم 2022؟",
+    },
+    opts: {
+      en: ["Russia", "Brazil", "Qatar", "UAE"],
+      fr: ["Russie", "Brésil", "Qatar", "Émirats"],
+      ar: ["روسيا", "البرازيل", "قطر", "الإمارات"],
+    },
+    correct: 2,
+    category: { en: "Sport", fr: "Sport", ar: "رياضة" },
+  },
+  {
+    q: {
+      en: "Ronaldo first club?",
+      fr: "Premier club de Ronaldo?",
+      ar: "أول نادي لرونالدو؟",
+    },
+    opts: {
+      en: ["Real Madrid", "Manchester United", "Sporting CP", "Juventus"],
+      fr: ["Real Madrid", "Manchester United", "Sporting CP", "Juventus"],
+      ar: ["ريال مدريد", "مانشستر يونايتد", "سبورتينغ", "يوفنتوس"],
+    },
+    correct: 2,
+    category: { en: "Sport", fr: "Sport", ar: "رياضة" },
+  },
 
-  // ===== NEW BOYS CONTENT - Sports & Fitness =====
-  { q: { en: 'Which sport fits your personality?', fr: 'Quel sport te correspond?', ar: 'أي رياضة تناسب شخصيتك؟' }, opts: { en: ["Football", "Basketball", "Swimming", "Martial Arts"], fr: ["Football", "Basket", "Natation", "Arts martiaux"], ar: ["كرة القدم", "كرة السلة", "السباحة", "فنون قتالية"] }, correct: 0, category: { en: 'Sport', fr: 'Sport', ar: 'رياضة' } },
-  { q: { en: 'Which legendary player are you?', fr: 'Quel joueur de légende es-tu?', ar: 'أي لاعب أسطوري أنت؟' }, opts: { en: ["Messi", "Ronaldo", "Neymar", "Mbappe"], fr: ["Messi", "Ronaldo", "Neymar", "Mbappe"], ar: ["ميسي", "رونالدو", "نيمار", "مبابي"] }, correct: 0, category: { en: 'Sport', fr: 'Sport', ar: 'رياضة' } },
-  { q: { en: 'Are you a natural athlete?', fr: 'Es-tu un athlète né?', ar: 'هل أنت رياضي بالفطرة؟' }, opts: { en: ["Yes", "No", "Sometimes", "Not sure"], fr: ["Oui", "Non", "Parfois", "Pas sûr"], ar: ["نعم", "لا", "أحياناً", "لست متأكداً"] }, correct: 0, category: { en: 'Sport', fr: 'Sport', ar: 'رياضة' } },
-  { q: { en: 'What is your football IQ level?', fr: 'Quel est ton QI footballistique?', ar: 'ما هو مستوى ذكائك الكروي؟' }, opts: { en: ["High", "Medium", "Low", "Beginner"], fr: ["Élevé", "Moyen", "Faible", "Débutant"], ar: ["عالي", "متوسط", "منخفض", "مبتدئ"] }, correct: 0, category: { en: 'Sport', fr: 'Sport', ar: 'رياضة' } },
-  { q: { en: 'Are you built for gym or calisthenics?', fr: 'Es-tu fait pour la gym ou la calisthénie?', ar: 'هل أنت مناسب للجيم أم تمارين وزن الجسم؟' }, opts: { en: ["Gym", "Calisthenics", "Both", "Neither"], fr: ["Gym", "Calisthénie", "Les deux", "Aucun"], ar: ["جيم", "تمارين وزن الجسم", "كلاهما", "لا شيء"] }, correct: 0, category: { en: 'Sport', fr: 'Sport', ar: 'رياضة' } },
-  { q: { en: 'What is your fitness discipline level?', fr: 'Quel est ton niveau de discipline sportive?', ar: 'ما هو مستوى انضباطك الرياضي؟' }, opts: { en: ["High", "Medium", "Low", "Inconsistent"], fr: ["Élevé", "Moyen", "Faible", "Inconstant"], ar: ["عالي", "متوسط", "منخفض", "غير منتظم"] }, correct: 0, category: { en: 'Sport', fr: 'Sport', ar: 'رياضة' } },
-  { q: { en: 'Which position fits you in football?', fr: 'Quelle position te convient au football?', ar: 'أي مركز يناسبك في كرة القدم؟' }, opts: { en: ["Forward", "Midfielder", "Defender", "Goalkeeper"], fr: ["Attaquant", "Milieu", "Défenseur", "Gardien"], ar: ["مهاجم", "وسط", "مدافع", "حارس مرمى"] }, correct: 0, category: { en: 'Sport', fr: 'Sport', ar: 'رياضة' } },
-  { q: { en: 'Are you fast, strong, or technical?', fr: 'Es-tu rapide, fort ou technique?', ar: 'هل أنت سريع، قوي، أم تقني؟' }, opts: { en: ["Fast", "Strong", "Technical", "All"], fr: ["Rapide", "Fort", "Technique", "Tout"], ar: ["سريع", "قوي", "تقني", "كل شيء"] }, correct: 0, category: { en: 'Sport', fr: 'Sport', ar: 'رياضة' } },
-  { q: { en: 'What sport should you master?', fr: 'Quel sport devrais-tu maîtriser?', ar: 'أي رياضة يجب أن تتقنها؟' }, opts: { en: ["Football", "Tennis", "Boxing", "Skateboarding"], fr: ["Football", "Tennis", "Boxe", "Skateboard"], ar: ["كرة القدم", "التنس", "الملاكمة", "التزلج"] }, correct: 0, category: { en: 'Sport', fr: 'Sport', ar: 'رياضة' } },
-  { q: { en: 'What is your competitive level?', fr: 'Quel est ton niveau de compétitivité?', ar: 'ما هو مستوى تنافسيتك؟' }, opts: { en: ["Very Competitive", "Somewhat Competitive", "Not Competitive", "Casual"], fr: ["Très compétitif", "Assez compétitif", "Peu compétitif", "Loisir"], ar: ["تنافسي جداً", "تنافسي إلى حد ما", "غير تنافسي", "عادي"] }, correct: 0, category: { en: 'Sport', fr: 'Sport', ar: 'رياضة' } },
+  // ==== هنا تم حذف كل أسئلة الشخصية ====
 
-  // ===== NEW BOYS CONTENT - Movies, Anime & Gaming =====
-  { q: { en: 'Which anime character are you?', fr: 'Quel personnage d\'anime es-tu?', ar: 'أي شخصية أنمي أنت؟' }, opts: { en: ["Naruto", "Luffy", "Goku", "Ichigo"], fr: ["Naruto", "Luffy", "Goku", "Ichigo"], ar: ["ناروتو", "لوفي", "غوكو", "إيتشيغو"] }, correct: 0, category: { en: 'Anime', fr: 'Anime', ar: 'أنمي' } },
-  { q: { en: 'Are you more Naruto, Luffy, or Goku?', fr: 'Es-tu plus Naruto, Luffy ou Goku?', ar: 'هل أنت أشبه بناروتو، لوفي، أم غوكو؟' }, opts: { en: ["Naruto", "Luffy", "Goku", "None"], fr: ["Naruto", "Luffy", "Goku", "Aucun"], ar: ["ناروتو", "لوفي", "غوكو", "لا شيء"] }, correct: 0, category: { en: 'Anime', fr: 'Anime', ar: 'أنمي' } },
-  { q: { en: 'What gaming style fits you?', fr: 'Quel style de jeu te convient?', ar: 'أي أسلوب ألعاب يناسبك؟' }, opts: { en: ["Strategist", "Aggressive", "Support", "Casual"], fr: ["Stratège", "Agressif", "Support", "Casual"], ar: ["استراتيجي", "عدواني", "داعم", "عادي"] }, correct: 0, category: { en: 'Gaming', fr: 'Jeux', ar: 'ألعاب' } },
-  { q: { en: 'What video game character matches you?', fr: 'Quel personnage de jeu vidéo te correspond?', ar: 'أي شخصية ألعاب فيديو تشبهك؟' }, opts: { en: ["Mario", "Link", "Master Chief", "Kratos"], fr: ["Mario", "Link", "Master Chief", "Kratos"], ar: ["ماريو", "لينك", "ماستر شيف", "كراتوس"] }, correct: 0, category: { en: 'Gaming', fr: 'Jeux', ar: 'ألعاب' } },
-  { q: { en: 'Which movie hero represents you?', fr: 'Quel héros de film te représente?', ar: 'أي بطل أفلام يمثلك؟' }, opts: { en: ["Iron Man", "Batman", "Spider-Man", "Captain America"], fr: ["Iron Man", "Batman", "Spider-Man", "Captain America"], ar: ["الرجل الحديدي", "باتمان", "الرجل العنكبوت", "كابتن أمريكا"] }, correct: 0, category: { en: 'Movies', fr: 'Films', ar: 'أفلام' } },
-  { q: { en: 'Are you a strategist or fighter?', fr: 'Es-tu stratège ou combattant?', ar: 'هل أنت استراتيجي أم مقاتل؟' }, opts: { en: ["Strategist", "Fighter", "Both", "Neither"], fr: ["Stratège", "Combattant", "Les deux", "Aucun"], ar: ["استراتيجي", "مقاتل", "كلاهما", "لا شيء"] }, correct: 0, category: { en: 'Personality', fr: 'Personnalité', ar: 'شخصية' } },
-  { q: { en: 'What is your gamer personality?', fr: 'Quelle est ta personnalité de joueur?', ar: 'ما هي شخصيتك كلاعب؟' }, opts: { en: ["Casual", "Competitive", "Streamer", "Explorer"], fr: ["Casual", "Compétitif", "Streamer", "Explorateur"], ar: ["عادي", "تنافسي", "بث مباشر", "مستكشف"] }, correct: 0, category: { en: 'Gaming', fr: 'Jeux', ar: 'ألعاب' } },
-  { q: { en: 'What anime arc describes your life?', fr: 'Quel arc d\'anime décrit ta vie?', ar: 'أي قوس أنمي يصف حياتك؟' }, opts: { en: ["Chunin Exam", "Marineford", "Frieza Saga", "Hunter Exam"], fr: ["Examen Chunin", "Marineford", "Saga Frieza", "Examen des Chasseurs"], ar: ["امتحان التشونين", "مارينفورد", "ملحمة فريزا", "امتحان الصيادين"] }, correct: 0, category: { en: 'Anime', fr: 'Anime', ar: 'أنمي' } },
-  { q: { en: 'Which villain are you?', fr: 'Quel méchant es-tu?', ar: 'أي شرير أنت؟' }, opts: { en: ["Joker", "Frieza", "Dio", "Light Yagami"], fr: ["Joker", "Frieza", "Dio", "Light Yagami"], ar: ["الجوكر", "فريزا", "ديو", "لايت ياغامي"] }, correct: 0, category: { en: 'Movies', fr: 'Films', ar: 'أفلام' } },
-  { q: { en: 'What is your power level?', fr: 'Quel est ton niveau de puissance?', ar: 'ما هو مستوى قوتك؟' }, opts: { en: ["Over 9000", "Average", "Below Average", "Unknown"], fr: ["Plus de 9000", "Moyen", "En dessous", "Inconnu"], ar: ["أكثر من 9000", "متوسط", "أقل من المتوسط", "مجهول"] }, correct: 0, category: { en: 'Anime', fr: 'Anime', ar: 'أنمي' } },
+  // ===== FOOTBALL HISTORY QUESTIONS =====
+  // === FIFA WORLD CUP ===
+  {
+    q: {
+      en: "Which country won the FIRST FIFA World Cup in 1930?",
+      fr: "Quel pays a gagné la PREMIÈRE Coupe du Monde en 1930?",
+      ar: "أي دولة فازت بكأس العالم الأولى عام 1930؟",
+    },
+    opts: {
+      en: ["Brazil", "Uruguay", "Argentina", "Italy"],
+      fr: ["Brésil", "Uruguay", "Argentine", "Italie"],
+      ar: ["البرازيل", "الأوروغواي", "الأرجنتين", "إيطاليا"],
+    },
+    correct: 1,
+    category: { en: "World Cup", fr: "Coupe du Monde", ar: "كأس العالم" },
+  },
+  {
+    q: {
+      en: "Who scored the 'Hand of God' goal in 1986?",
+      fr: "Qui a marqué le but 'Main de Dieu' en 1986?",
+      ar: "من سجل هدف 'يد الله' عام 1986؟",
+    },
+    opts: {
+      en: ["Maradona", "Pelé", "Messi", "Ronaldo"],
+      fr: ["Maradona", "Pelé", "Messi", "Ronaldo"],
+      ar: ["مارادونا", "بيليه", "ميسي", "رونالدو"],
+    },
+    correct: 0,
+    category: { en: "World Cup", fr: "Coupe du Monde", ar: "كأس العالم" },
+  },
+  {
+    q: {
+      en: "How many World Cups has Brazil won?",
+      fr: "Combien de Coupes du Monde le Brésil a-t-il gagnées?",
+      ar: "كم كأس عالم فازت بها البرازيل؟",
+    },
+    opts: {
+      en: ["3", "4", "5", "6"],
+      fr: ["3", "4", "5", "6"],
+      ar: ["3", "4", "5", "6"],
+    },
+    correct: 2,
+    category: { en: "World Cup", fr: "Coupe du Monde", ar: "كأس العالم" },
+  },
+  {
+    q: {
+      en: "Who won the 2022 FIFA World Cup?",
+      fr: "Qui a gagné la Coupe du Monde 2022?",
+      ar: "من فاز بكأس العالم 2022؟",
+    },
+    opts: {
+      en: ["France", "Argentina", "Croatia", "Morocco"],
+      fr: ["France", "Argentine", "Croatie", "Maroc"],
+      ar: ["فرنسا", "الأرجنتين", "كرواتيا", "المغرب"],
+    },
+    correct: 1,
+    category: { en: "World Cup", fr: "Coupe du Monde", ar: "كأس العالم" },
+  },
+  {
+    q: {
+      en: "Which country hosted the 2010 World Cup?",
+      fr: "Quel pays a accueilli la Coupe du Monde 2010?",
+      ar: "أي دولة استضافت كأس العالم 2010؟",
+    },
+    opts: {
+      en: ["South Africa", "Germany", "Brazil", "Russia"],
+      fr: ["Afrique du Sud", "Allemagne", "Brésil", "Russie"],
+      ar: ["جنوب إفريقيا", "ألمانيا", "البرازيل", "روسيا"],
+    },
+    correct: 0,
+    category: { en: "World Cup", fr: "Coupe du Monde", ar: "كأس العالم" },
+  },
 
-  // ===== NEW BOYS CONTENT - Future & Ambition =====
-  { q: { en: 'What career fits you best?', fr: 'Quelle carrière te convient?', ar: 'أي مهنة تناسبك؟' }, opts: { en: ["Entrepreneur", "Engineer", "Artist", "Scientist"], fr: ["Entrepreneur", "Ingénieur", "Artiste", "Scientifique"], ar: ["ريادي", "مهندس", "فنان", "عالم"] }, correct: 0, category: { en: 'Career', fr: 'Carrière', ar: 'مسار مهني' } },
-  { q: { en: 'Are you entrepreneurial or traditional?', fr: 'Es-tu entrepreneurial ou traditionnel?', ar: 'هل أنت ريادي أم تقليدي؟' }, opts: { en: ["Entrepreneurial", "Traditional", "Hybrid", "Undecided"], fr: ["Entrepreneurial", "Traditionnel", "Hybride", "Indécis"], ar: ["ريادي", "تقليدي", "هجين", "غير محدد"] }, correct: 0, category: { en: 'Career', fr: 'Carrière', ar: 'مسار مهني' } },
-  { q: { en: 'What is your financial mindset?', fr: 'Quelle est ta mentalité financière?', ar: 'ما هي عقلية المال لديك؟' }, opts: { en: ["Saver", "Spender", "Investor", "Avoider"], fr: ["Épargnant", "Dépensier", "Investisseur", "Évitant"], ar: ["مدخر", "مصرف", "مستثمر", "متجنب"] }, correct: 0, category: { en: 'Career', fr: 'Carrière', ar: 'مسار مهني' } },
-  { q: { en: 'How ambitious are you really?', fr: 'À quel point es-tu ambitieux?', ar: 'ما مدى طموحك حقاً؟' }, opts: { en: ["Very", "Somewhat", "Not much", "Unsure"], fr: ["Très", "Assez", "Pas beaucoup", "Incertain"], ar: ["كثيراً", "إلى حد ما", "قليلاً", "غير متأكد"] }, correct: 0, category: { en: 'Career', fr: 'Carrière', ar: 'مسار مهني' } },
-  { q: { en: 'Are you a leader or follower?', fr: 'Es-tu leader ou suiveur?', ar: 'هل أنت قائد أم تابع؟' }, opts: { en: ["Leader", "Follower", "Both", "Neither"], fr: ["Leader", "Suiveur", "Les deux", "Aucun"], ar: ["قائد", "تابع", "كلاهما", "لا شيء"] }, correct: 0, category: { en: 'Personality', fr: 'Personnalité', ar: 'شخصية' } },
-  { q: { en: 'What is your future lifestyle?', fr: 'Quel sera ton style de vie futur?', ar: 'ما هو أسلوب حياتك المستقبلي؟' }, opts: { en: ["Luxurious", "Simple", "Adventurous", "Balanced"], fr: ["Luxueux", "Simple", "Aventureux", "Équilibré"], ar: ["فاخر", "بسيط", "مغامر", "متوازن"] }, correct: 0, category: { en: 'Career', fr: 'Carrière', ar: 'مسار مهني' } },
-  { q: { en: 'How disciplined are you?', fr: 'Quelle est ta discipline?', ar: 'ما مدى انضباطك؟' }, opts: { en: ["Highly Disciplined", "Somewhat Disciplined", "Undisciplined", "Inconsistent"], fr: ["Très discipliné", "Assez discipliné", "Indiscipliné", "Inconstant"], ar: ["منضبط جداً", "منضبط إلى حد ما", "غير منضبط", "غير منتظم"] }, correct: 0, category: { en: 'Personality', fr: 'Personnalité', ar: 'شخصية' } },
-  { q: { en: 'What is your long-term potential?', fr: 'Quel est ton potentiel à long terme?', ar: 'ما هي قدراتك طويلة المدى؟' }, opts: { en: ["High", "Medium", "Low", "Unknown"], fr: ["Élevé", "Moyen", "Faible", "Inconnu"], ar: ["عالي", "متوسط", "منخفض", "مجهول"] }, correct: 0, category: { en: 'Career', fr: 'Carrière', ar: 'مسار مهني' } },
-  { q: { en: 'How smart are you really?', fr: 'À quel point es-tu intelligent?', ar: 'ما مدى ذكائك حقاً؟' }, opts: { en: ["Very Smart", "Average", "Below Average", "Don't Know"], fr: ["Très intelligent", "Moyen", "En dessous", "Je ne sais pas"], ar: ["ذكي جداً", "متوسط", "أقل من المتوسط", "لا أعرف"] }, correct: 0, category: { en: 'Personality', fr: 'Personnalité', ar: 'شخصية' } },
-  { q: { en: 'What is your success path?', fr: 'Quel est ton chemin vers le succès?', ar: 'ما هو طريقك للنجاح؟' }, opts: { en: ["Hard Work", "Luck", "Connections", "Talent"], fr: ["Travail dur", "Chance", "Relations", "Talent"], ar: ["العمل الجاد", "الحظ", "العلاقات", "الموهبة"] }, correct: 0, category: { en: 'Career', fr: 'Carrière', ar: 'مسار مهني' } },
+  // === BALLON D'OR ===
+  {
+    q: {
+      en: "Who has won the most Ballon d'Or awards?",
+      fr: "Qui a gagné le plus de Ballon d'Or?",
+      ar: "من فاز بأكبر عدد من جوائز الكرة الذهبية؟",
+    },
+    opts: {
+      en: ["Lionel Messi", "Cristiano Ronaldo", "Pelé", "Maradona"],
+      fr: ["Lionel Messi", "Cristiano Ronaldo", "Pelé", "Maradona"],
+      ar: ["ليونيل ميسي", "كريستيانو رونالدو", "بيليه", "مارادونا"],
+    },
+    correct: 0,
+    category: { en: "Awards", fr: "Prix", ar: "جوائز" },
+  },
+  {
+    q: {
+      en: "Which year did CR7 win his first Ballon d'Or?",
+      fr: "En quelle année CR7 a-t-il gagné son premier Ballon d'Or?",
+      ar: "في أي عام فاز رونالدو بأول كرة ذهبية؟",
+    },
+    opts: {
+      en: ["2007", "2008", "2009", "2010"],
+      fr: ["2007", "2008", "2009", "2010"],
+      ar: ["2007", "2008", "2009", "2010"],
+    },
+    correct: 1,
+    category: { en: "Awards", fr: "Prix", ar: "جوائز" },
+  },
 
-  // ===== NEW BOYS CONTENT - Relationships =====
-  { q: { en: 'What type of boyfriend are you?', fr: 'Quel genre de petit ami es-tu?', ar: 'أي نوع من الأصدقاء أنت؟' }, opts: { en: ["Romantic", "Funny", "Loyal", "Protective"], fr: ["Romantique", "Drôle", "Loyal", "Protecteur"], ar: ["رومانسي", "مضحك", "مخلص", "حامي"] }, correct: 0, category: { en: 'Relationships', fr: 'Relations', ar: 'علاقات' } },
-  { q: { en: 'Are you loyal or toxic?', fr: 'Es-tu loyal ou toxique?', ar: 'هل أنت مخلص أم سام؟' }, opts: { en: ["Loyal", "Toxic", "Sometimes Toxic", "Not Sure"], fr: ["Loyal", "Toxique", "Parfois toxique", "Pas sûr"], ar: ["مخلص", "سام", "سام أحياناً", "لست متأكداً"] }, correct: 0, category: { en: 'Relationships', fr: 'Relations', ar: 'علاقات' } },
-  { q: { en: 'How romantic are you?', fr: 'À quel point es-tu romantique?', ar: 'ما مدى رومانسيتك؟' }, opts: { en: ["Very", "Somewhat", "Not romantic", "Unsure"], fr: ["Très", "Assez", "Peu romantique", "Incertain"], ar: ["كثيراً", "إلى حد ما", "غير رومانسي", "غير متأكد"] }, correct: 0, category: { en: 'Relationships', fr: 'Relations', ar: 'علاقات' } },
-  { q: { en: 'What is your flirting style?', fr: 'Quel est ton style de flirt?', ar: 'ما هو أسلوب تدليعك؟' }, opts: { en: ["Playful", "Serious", "Shy", "Confident"], fr: ["Joueur", "Sérieux", "Timide", "Confiant"], ar: ["مرح", "جاد", "خجول", "واثق"] }, correct: 0, category: { en: 'Relationships', fr: 'Relations', ar: 'علاقات' } },
-  { q: { en: 'Are you emotionally stable?', fr: 'Es-tu émotionnellement stable?', ar: 'هل أنت مستقر عاطفياً؟' }, opts: { en: ["Yes", "No", "Sometimes", "Not sure"], fr: ["Oui", "Non", "Parfois", "Pas sûr"], ar: ["نعم", "لا", "أحياناً", "لست متأكداً"] }, correct: 0, category: { en: 'Relationships', fr: 'Relations', ar: 'علاقات' } },
-  { q: { en: 'Do you fall in love fast?', fr: 'Tombes-tu amoureux vite?', ar: 'هل تقع في الحب بسرعة؟' }, opts: { en: ["Yes", "No", "Sometimes", "Rarely"], fr: ["Oui", "Non", "Parfois", "Rarement"], ar: ["نعم", "لا", "أحياناً", "نادراً"] }, correct: 0, category: { en: 'Relationships', fr: 'Relations', ar: 'علاقات' } },
-  { q: { en: 'What type of girl fits you?', fr: 'Quel type de fille te convient?', ar: 'أي نوع من الفتيات يناسبك؟' }, opts: { en: ["Kind", "Independent", "Funny", "Supportive"], fr: ["Gentille", "Indépendante", "Drôle", "Soutien"], ar: ["لطيفة", "مستقلة", "مضحكة", "داعمة"] }, correct: 0, category: { en: 'Relationships', fr: 'Relations', ar: 'علاقات' } },
-  { q: { en: 'Are you ready for a relationship?', fr: 'Es-tu prêt pour une relation?', ar: 'هل أنت جاهز لعلاقة؟' }, opts: { en: ["Yes", "No", "Maybe", "Not sure"], fr: ["Oui", "Non", "Peut-être", "Pas sûr"], ar: ["نعم", "لا", "ربما", "لست متأكداً"] }, correct: 0, category: { en: 'Relationships', fr: 'Relations', ar: 'علاقات' } },
-  { q: { en: 'What makes you attractive?', fr: 'Qu\'est-ce qui te rend attirant?', ar: 'ما الذي يجعلك جذاباً؟' }, opts: { en: ["Personality", "Looks", "Sense of Humor", "Confidence"], fr: ["Personnalité", "Apparence", "Sens de l\'humour", "Confiance"], ar: ["الشخصية", "المظهر", "حس الدعابة", "الثقة"] }, correct: 0, category: { en: 'Relationships', fr: 'Relations', ar: 'علاقات' } },
-  { q: { en: 'Are you overprotective or chill?', fr: 'Es-tu surprotecteur ou détendu?', ar: 'هل أنت شديد الحماية أم مسترخي؟' }, opts: { en: ["Overprotective", "Chill", "Depends", "Neither"], fr: ["Surprotecteur", "Détendu", "Ça dépend", "Aucun"], ar: ["شديد الحماية", "مسترخي", "يعتمد", "لا شيء"] }, correct: 0, category: { en: 'Relationships', fr: 'Relations', ar: 'علاقات' } },
-];
+  // === UEFA CHAMPIONS LEAGUE ===
+  {
+    q: {
+      en: "Which club has won the most UCL titles?",
+      fr: "Quel club a gagné le plus de Ligues des Champions?",
+      ar: "أي نادي فاز بأكبر عدد من ألقاب دوري الأبطال؟",
+    },
+    opts: {
+      en: ["Barcelona", "Real Madrid", "Bayern Munich", "AC Milan"],
+      fr: ["Barcelone", "Real Madrid", "Bayern Munich", "AC Milan"],
+      ar: ["برشلونة", "ريال مدريد", "بايرن ميونخ", "ميلان"],
+    },
+    correct: 1,
+    category: { en: "UCL", fr: "LDC", ar: "دوري الأبطال" },
+  },
+  {
+    q: {
+      en: "Real Madrid's 'La Decima' was won in which year?",
+      fr: "La 'Décima' du Real Madrid a été gagnée en quelle année?",
+      ar: "في أي عام فاز ريال مدريد بالديسيما؟",
+    },
+    opts: {
+      en: ["2012", "2014", "2016", "2018"],
+      fr: ["2012", "2014", "2016", "2018"],
+      ar: ["2012", "2014", "2016", "2018"],
+    },
+    correct: 1,
+    category: { en: "UCL", fr: "LDC", ar: "دوري الأبطال" },
+  },
+  {
+    q: {
+      en: "Who scored the UCL final winner for Liverpool in 2005?",
+      fr: "Qui a marqué le but victorieux en finale 2005 pour Liverpool?",
+      ar: "من سجل الهدف الفائز في نهائي 2005 لليفربول؟",
+    },
+    opts: {
+      en: ["Gerrard", "Smicer", "Alonso", "Baros"],
+      fr: ["Gerrard", "Smicer", "Alonso", "Baros"],
+      ar: ["جيرارد", "سميسر", "ألونسو", "باروس"],
+    },
+    correct: 1,
+    category: { en: "UCL", fr: "LDC", ar: "دوري الأبطال" },
+  },
 
-export const femaleQuestions = [
-  // ===== PERSONALITY =====
-  { q: { en: 'What personality type is creative and spontaneous?', fr: 'Quel type est créatif et spontané?', ar: 'أي نوع شخصية إبداعي وعفوي؟' }, opts: { en: ['INTJ', 'ENFP', 'ISTJ', 'ESTP'], fr: ['INTJ', 'ENFP', 'ISTJ', 'ESTP'], ar: ['INTJ', 'ENFP', 'ISTJ', 'ESTP'] }, correct: 1, category: { en: 'Personality', fr: 'Personnalité', ar: 'شخصية' } },
-  { q: { en: 'Introvert vs Extrovert?', fr: 'Introverti vs Extraverti?', ar: 'منطوي مقابل منفتح؟' }, opts: { en: ['Energy from inside', 'Energy from outside', 'Both', 'Neither'], fr: ['Énergie intérieure', 'Énergie extérieure', 'Les deux', 'Aucun'], ar: ['طاقة من الداخل', 'طاقة من الخارج', 'كلاهما', 'لا شيء'] }, correct: 0, category: { en: 'Personality', fr: 'Personnalité', ar: 'شخصية' } },
+  // === LEGENDS & RECORDS ===
+  {
+    q: {
+      en: "Who is the all-time top scorer for Portugal?",
+      fr: "Qui est le meilleur buteur de tous les temps du Portugal?",
+      ar: "من هو الهداف التاريخي للبرتغال؟",
+    },
+    opts: {
+      en: ["Eusebio", "Cristiano Ronaldo", "Figo", "Nani"],
+      fr: ["Eusebio", "Cristiano Ronaldo", "Figo", "Nani"],
+      ar: ["أوسيبيو", "كريستيانو رونالدو", "فيغو", "ناني"],
+    },
+    correct: 1,
+    category: { en: "Records", fr: "Records", ar: "أرقام قياسية" },
+  },
+  {
+    q: {
+      en: "Which goalkeeper has most clean sheets?",
+      fr: "Quel gardien a le plus de clean sheets?",
+      ar: "أي حارس لديه أكبر عدد من المباريات النظيفة؟",
+    },
+    opts: {
+      en: ["Buffon", "Casillas", "Neuer", "Van der Sar"],
+      fr: ["Buffon", "Casillas", "Neuer", "Van der Sar"],
+      ar: ["بوفون", "كاسياس", "نوير", "فان در سار"],
+    },
+    correct: 0,
+    category: { en: "Records", fr: "Records", ar: "أرقام قياسية" },
+  },
+  {
+    q: {
+      en: "Fastest hat-trick in Premier League history?",
+      fr: "Le triplé le plus rapide de l'histoire de la Premier League?",
+      ar: "أسرع هاتريك في تاريخ البريميرليج؟",
+    },
+    opts: {
+      en: [
+        "2:56 - Sadio Mané",
+        "4:33 - Aguero",
+        "3:14 - Fowler",
+        "5:17 - Van Nistelrooy",
+      ],
+      fr: [
+        "2:56 - Sadio Mané",
+        "4:33 - Aguero",
+        "3:14 - Fowler",
+        "5:17 - Van Nistelrooy",
+      ],
+      ar: [
+        "2:56 - ساديو ماني",
+        "4:33 - أغويرو",
+        "3:14 - فاولر",
+        "5:17 - فان نستلروي",
+      ],
+    },
+    correct: 0,
+    category: { en: "Records", fr: "Records", ar: "أرقام قياسية" },
+  },
+  {
+    q: {
+      en: "Most expensive football transfer ever?",
+      fr: "Le transfert le plus cher de l'histoire?",
+      ar: "أغلى انتقال في تاريخ كرة القدم؟",
+    },
+    opts: {
+      en: [
+        "Neymar to PSG",
+        "Mbappé to PSG",
+        "Coutinho to Barça",
+        "Ronaldo to Juve",
+      ],
+      fr: [
+        "Neymar au PSG",
+        "Mbappé au PSG",
+        "Coutinho au Barça",
+        "Ronaldo à la Juve",
+      ],
+      ar: [
+        "نيمار إلى باريس",
+        "مبابي إلى باريس",
+        "كوتينيو إلى برشلونة",
+        "رونالدو إلى يوفنتوس",
+      ],
+    },
+    correct: 0,
+    category: { en: "Records", fr: "Records", ar: "أرقام قياسية" },
+  },
 
-  // ===== LOVE =====
-  { q: { en: 'Love language: Acts of service?', fr: 'Langage d\'amour: Services?', ar: 'لغة الحب: أفعال الخدمة؟' }, opts: { en: ['Doing things', 'Words', 'Gifts', 'Touch'], fr: ['Faire des choses', 'Mots', 'Cadeaux', 'Contact'], ar: ['فعل الأشياء', 'الكلمات', 'الهدايا', 'اللمس'] }, correct: 0, category: { en: 'Love', fr: 'Amour', ar: 'حب' } },
-  { q: { en: 'Best first date idea?', fr: 'Meilleure idée de premier rendez-vous?', ar: 'أفضل فكرة للموعد الأول؟' }, opts: { en: ['Coffee', 'Movies', 'Walk', 'Dinner'], fr: ['Café', 'Cinéma', 'Promenade', 'Dîner'], ar: ['قهوة', 'سينما', 'مشي', 'عشاء'] }, correct: 0, category: { en: 'Love', fr: 'Amour', ar: 'حب' } },
+  // === HISTORIC MOMENTS ===
+  {
+    q: {
+      en: "The 'Miracle of Istanbul' refers to which final?",
+      fr: "Le 'Miracle d'Istanbul' se réfère à quelle finale?",
+      ar: "'معجزة إسطنبول' تشير إلى أي نهائي؟",
+    },
+    opts: {
+      en: [
+        "2005 UCL Final",
+        "2006 World Cup Final",
+        "1999 UCL Final",
+        "2012 UCL Final",
+      ],
+      fr: [
+        "Finale LDC 2005",
+        "Finale CM 2006",
+        "Finale LDC 1999",
+        "Finale LDC 2012",
+      ],
+      ar: [
+        "نهائي دوري الأبطال 2005",
+        "نهائي كأس العالم 2006",
+        "نهائي دوري الأبطال 1999",
+        "نهائي دوري الأبطال 2012",
+      ],
+    },
+    correct: 0,
+    category: { en: "History", fr: "Histoire", ar: "تاريخ" },
+  },
+  {
+    q: {
+      en: "Who scored the 'Phantom Goal' in 1966 World Cup?",
+      fr: "Qui a marqué le 'But Fantôme' en 1966?",
+      ar: "من سجل 'الهدف الشبح' في كأس العالم 1966؟",
+    },
+    opts: {
+      en: ["Geoff Hurst", "Bobby Charlton", "Gordon Banks", "Bobby Moore"],
+      fr: ["Geoff Hurst", "Bobby Charlton", "Gordon Banks", "Bobby Moore"],
+      ar: ["جيف هيرست", "بوبي تشارلتون", "غوردون بانكس", "بوبي مور"],
+    },
+    correct: 0,
+    category: { en: "History", fr: "Histoire", ar: "تاريخ" },
+  },
+  {
+    q: {
+      en: "First African player to win Ballon d'Or?",
+      fr: "Premier joueur africain à gagner le Ballon d'Or?",
+      ar: "أول لاعب إفريقي يفوز بالكرة الذهبية؟",
+    },
+    opts: {
+      en: ["George Weah", "Samuel Eto'o", "Didier Drogba", "Yaya Touré"],
+      fr: ["George Weah", "Samuel Eto'o", "Didier Drogba", "Yaya Touré"],
+      ar: ["جورج ويا", "صامويل إيتو", "ديديه دروجبا", "يابا توريه"],
+    },
+    correct: 0,
+    category: { en: "History", fr: "Histoire", ar: "تاريخ" },
+  },
+  {
+    q: {
+      en: "The 'Invincibles' refers to which team?",
+      fr: "Les 'Invincibles' se réfèrent à quelle équipe?",
+      ar: "'المنيعون' تشير إلى أي فريق؟",
+    },
+    opts: {
+      en: [
+        "Arsenal 2003-04",
+        "AC Milan 1991-92",
+        "Barcelona 2010-11",
+        "Bayern 2012-13",
+      ],
+      fr: [
+        "Arsenal 2003-04",
+        "AC Milan 1991-92",
+        "Barcelone 2010-11",
+        "Bayern 2012-13",
+      ],
+      ar: [
+        "آرسنال 2003-04",
+        "ميلان 1991-92",
+        "برشلونة 2010-11",
+        "بايرن 2012-13",
+      ],
+    },
+    correct: 0,
+    category: { en: "History", fr: "Histoire", ar: "تاريخ" },
+  },
 
-  // ===== FASHION =====
-  { q: { en: 'What is haute couture?', fr: 'Qu\'est-ce que la haute couture?', ar: 'ما هي الأزياء الراقية؟' }, opts: { en: ['High fashion', 'Casual wear', 'Sportswear', 'Vintage'], fr: ['Haute mode', 'Décontracté', 'Sportif', 'Vintage'], ar: ['الموضة الراقية', 'ملابس عادية', 'ملابس رياضية', 'قديم'] }, correct: 0, category: { en: 'Fashion', fr: 'Mode', ar: 'موضة' } },
-  { q: { en: 'Little black dress icon?', fr: 'Icône de la petite robe noire?', ar: 'أيقونة الفستان الأسود الصغير؟' }, opts: { en: ['Chanel', 'Dior', 'Prada', 'Gucci'], fr: ['Chanel', 'Dior', 'Prada', 'Gucci'], ar: ['شانيل', 'ديور', 'برادا', 'غوتشي'] }, correct: 0, category: { en: 'Fashion', fr: 'Mode', ar: 'موضة' } },
+  // === MOROCCAN FOOTBALL ===
+  {
+    q: {
+      en: "Morocco's best World Cup performance?",
+      fr: "Meilleure performance du Maroc en Coupe du Monde?",
+      ar: "أفضل أداء للمغرب في كأس العالم؟",
+    },
+    opts: {
+      en: [
+        "Quarter-finals 2022",
+        "Round of 16 1986",
+        "Group stage 1998",
+        "4th place 2022",
+      ],
+      fr: ["Quarts 2022", "8èmes 1986", "Groupes 1998", "4ème place 2022"],
+      ar: [
+        "ربع نهائي 2022",
+        "دور الـ16 1986",
+        "دور المجموعات 1998",
+        "المركز الرابع 2022",
+      ],
+    },
+    correct: 0,
+    category: { en: "Morocco", fr: "Maroc", ar: "المغرب" },
+  },
+  {
+    q: {
+      en: "Which Moroccan won the UCL with Real Madrid?",
+      fr: "Quel Marocain a gagné la LDC avec le Real Madrid?",
+      ar: "أي مغربي فاز بدوري الأبطال مع ريال مدريد؟",
+    },
+    opts: {
+      en: [
+        "Achraf Hakimi",
+        "Noussair Mazraoui",
+        "Medhi Benatia",
+        "Abdelhamid Sabiri",
+      ],
+      fr: [
+        "Achraf Hakimi",
+        "Noussair Mazraoui",
+        "Medhi Benatia",
+        "Abdelhamid Sabiri",
+      ],
+      ar: ["أشرف حكيمي", "نصير مزراوي", "مهدي بنعطية", "عبد الحميد صابيري"],
+    },
+    correct: 0,
+    category: { en: "Morocco", fr: "Maroc", ar: "المغرب" },
+  },
 
-  // ===== BEAUTY =====
-  { q: { en: 'What is contouring?', fr: 'Qu\'est-ce que le contouring?', ar: 'ما هو الكونتور؟' }, opts: { en: ['Face shaping makeup', 'Lip color', 'Eye shadow', 'Nail art'], fr: ['Maquillage sculptant', 'Rouge à lèvres', 'Ombre à paupières', 'Nail art'], ar: ['مكياج لتشكيل الوجه', 'لون الشفاه', 'ظل العيون', 'فن الأظافر'] }, correct: 0, category: { en: 'Beauty', fr: 'Beauté', ar: 'جمال' } },
-  { q: { en: 'SPF in skincare protects from?', fr: 'SPF protège de quoi?', ar: 'SPF في العناية بالبشرة يحمي من؟' }, opts: { en: ['Sun', 'Wind', 'Cold', 'Heat'], fr: ['Soleil', 'Vent', 'Froid', 'Chaleur'], ar: ['الشمس', 'الرياح', 'البرد', 'الحرارة'] }, correct: 0, category: { en: 'Beauty', fr: 'Beauté', ar: 'جمال' } },
+  // === FOOTBALL TACTICS ===
+  {
+    q: {
+      en: "Which manager invented 'Total Football'?",
+      fr: "Quel entraîneur a inventé le 'Football Total'?",
+      ar: "أي مدرب اخترع 'الكرة الشاملة'؟",
+    },
+    opts: {
+      en: ["Rinus Michels", "Johan Cruyff", "Pep Guardiola", "Arrigo Sacchi"],
+      fr: ["Rinus Michels", "Johan Cruyff", "Pep Guardiola", "Arrigo Sacchi"],
+      ar: ["رينوس ميشيلز", "يوهان كرويف", "بيب جوارديولا", "أريغو ساكي"],
+    },
+    correct: 0,
+    category: { en: "Tactics", fr: "Tactiques", ar: "تكتيكات" },
+  },
+  {
+    q: {
+      en: "The 'Tiki-Taka' style is associated with which team?",
+      fr: "Le style 'Tiki-Taka' est associé à quelle équipe?",
+      ar: "أسلوب 'تيكي تاكا' مرتبط بأي فريق؟",
+    },
+    opts: {
+      en: ["Barcelona 2008-12", "Spain 2008-12", "Both", "Neither"],
+      fr: ["Barcelone 2008-12", "Espagne 2008-12", "Les deux", "Aucun"],
+      ar: ["برشلونة 2008-12", "إسبانيا 2008-12", "كلاهما", "لا شيء"],
+    },
+    correct: 2,
+    category: { en: "Tactics", fr: "Tactiques", ar: "تكتيكات" },
+  },
 
-  // ===== K-POP =====
-  { q: { en: 'BTS stands for?', fr: 'BTS signifie?', ar: 'BTS تعني؟' }, opts: { en: ['Bangtan Sonyeondan', 'Best Time Songs', 'Big Time Stars', 'Beyond The Stars'], fr: ['Bangtan Sonyeondan', 'Best Time Songs', 'Big Time Stars', 'Beyond The Stars'], ar: ['بانغتان سونيوندان', 'أفضل وقت الأغاني', 'نجوم الوقت الكبير', 'ما وراء النجوم'] }, correct: 0, category: { en: 'K-pop', fr: 'K-pop', ar: 'كيه بوب' } },
-  { q: { en: 'Blackpink member count?', fr: 'Nombre de membres Blackpink?', ar: 'عدد أعضاء بلاك بينك؟' }, opts: { en: ['3', '4', '5', '6'], fr: ['3', '4', '5', '6'], ar: ['3', '4', '5', '6'] }, correct: 1, category: { en: 'K-pop', fr: 'K-pop', ar: 'كيه بوب' } },
+  // === GOAL SCORING RECORDS ===
+  {
+    q: {
+      en: "Who has most goals in a calendar year?",
+      fr: "Qui a le plus de buts dans une année civile?",
+      ar: "من لديه أكبر عدد أهداف في سنة ميلادية؟",
+    },
+    opts: {
+      en: [
+        "Messi (91 in 2012)",
+        "Ronaldo (69 in 2013)",
+        "Lewandowski (69 in 2021)",
+        "Haaland (68 in 2023)",
+      ],
+      fr: [
+        "Messi (91 en 2012)",
+        "Ronaldo (69 en 2013)",
+        "Lewandowski (69 en 2021)",
+        "Haaland (68 en 2023)",
+      ],
+      ar: [
+        "ميسي (91 عام 2012)",
+        "رونالدو (69 عام 2013)",
+        "ليفاندوفسكي (69 عام 2021)",
+        "هالاند (68 عام 2023)",
+      ],
+    },
+    correct: 0,
+    category: { en: "Records", fr: "Records", ar: "أرقام قياسية" },
+  },
+  {
+    q: {
+      en: "Fastest goal in World Cup history?",
+      fr: "But le plus rapide de l'histoire de la Coupe du Monde?",
+      ar: "أسرع هدف في تاريخ كأس العالم؟",
+    },
+    opts: {
+      en: [
+        "11 seconds - Hakan Şükür",
+        "23 seconds - Clint Dempsey",
+        "42 seconds - Bryan Robson",
+        "1:07 - Bernard Lacombe",
+      ],
+      fr: [
+        "11 secondes - Hakan Şükür",
+        "23 secondes - Clint Dempsey",
+        "42 secondes - Bryan Robson",
+        "1:07 - Bernard Lacombe",
+      ],
+      ar: [
+        "11 ثانية - هاكان شوكور",
+        "23 ثانية - كلينت ديمبسي",
+        "42 ثانية - بريان روبسون",
+        "1:07 - برنار لاكومب",
+      ],
+    },
+    correct: 0,
+    category: { en: "Records", fr: "Records", ar: "أرقام قياسية" },
+  },
 
-  // ===== DISNEY =====
-  { q: { en: 'First Disney princess?', fr: 'Première princesse Disney?', ar: 'أول أميرة ديزني؟' }, opts: { en: ['Cinderella', 'Snow White', 'Aurora', 'Ariel'], fr: ['Cendrillon', 'Blanche-Neige', 'Aurore', 'Ariel'], ar: ['سندريلا', 'سنو وايت', 'أورورا', 'أريل'] }, correct: 1, category: { en: 'Disney', fr: 'Disney', ar: 'ديزني' } },
-  { q: { en: 'Elsa\'s sister name?', fr: 'Nom de la sœur d\'Elsa?', ar: 'اسم أخت إلسا؟' }, opts: { en: ['Anna', 'Belle', 'Jasmine', 'Rapunzel'], fr: ['Anna', 'Belle', 'Jasmine', 'Raiponce'], ar: ['آنا', 'بيل', 'ياسمين', 'رابونزل'] }, correct: 0, category: { en: 'Disney', fr: 'Disney', ar: 'ديزني' } },
+  // === CLASSIC DERBIES ===
+  {
+    q: {
+      en: "El Clásico is between which two clubs?",
+      fr: "El Clásico est entre quels deux clubs?",
+      ar: "الكلاسيكو بين أي ناديين؟",
+    },
+    opts: {
+      en: [
+        "Real Madrid vs Barcelona",
+        "Barcelona vs Atlético",
+        "Real vs Sevilla",
+        "Barcelona vs Valencia",
+      ],
+      fr: [
+        "Real Madrid vs Barcelone",
+        "Barcelone vs Atlético",
+        "Real vs Séville",
+        "Barcelone vs Valence",
+      ],
+      ar: [
+        "ريال مدريد ضد برشلونة",
+        "برشلونة ضد أتلتيكو",
+        "ريال ضد إشبيلية",
+        "برشلونة ضد فالنسيا",
+      ],
+    },
+    correct: 0,
+    category: { en: "Derbies", fr: "Derbies", ar: "كلاسيكيات" },
+  },
+  {
+    q: {
+      en: "The 'Old Firm' derby is in which city?",
+      fr: "Le derby 'Old Firm' est dans quelle ville?",
+      ar: "دربي 'أولد فيرم' في أي مدينة؟",
+    },
+    opts: {
+      en: ["Glasgow", "Manchester", "Liverpool", "London"],
+      fr: ["Glasgow", "Manchester", "Liverpool", "Londres"],
+      ar: ["غلاسكو", "مانشستر", "ليفربول", "لندن"],
+    },
+    correct: 0,
+    category: { en: "Derbies", fr: "Derbies", ar: "كلاسيكيات" },
+  },
 
-  // ===== FOOD & OTHERS =====
-  { q: { en: 'Sushi originated in?', fr: 'Origine des sushis?', ar: 'أصل السوشي؟' }, opts: { en: ['China', 'Japan', 'Korea', 'Thailand'], fr: ['Chine', 'Japon', 'Corée', 'Thaïlande'], ar: ['الصين', 'اليابان', 'كوريا', 'تايلاند'] }, correct: 1, category: { en: 'Food', fr: 'Nourriture', ar: 'طعام' } },
+  // === GOALKEEPING GREATNESS ===
+  {
+    q: {
+      en: "Which keeper saved 3 penalties in WC shootout?",
+      fr: "Quel gardien a arrêté 3 penalties en tirs au but en CM?",
+      ar: "أي حارس أوقف 3 ركلات جزاء في ركلات الترجيح بكأس العالم؟",
+    },
+    opts: {
+      en: [
+        "Ricardo (POR 2006)",
+        "Neuer (GER 2006)",
+        "Buffon (ITA 2006)",
+        "Casillas (ESP 2010)",
+      ],
+      fr: [
+        "Ricardo (POR 2006)",
+        "Neuer (ALL 2006)",
+        "Buffon (ITA 2006)",
+        "Casillas (ESP 2010)",
+      ],
+      ar: [
+        "ريكاردو (البرتغال 2006)",
+        "نوير (ألمانيا 2006)",
+        "بوفون (إيطاليا 2006)",
+        "كاسياس (إسبانيا 2010)",
+      ],
+    },
+    correct: 0,
+    category: { en: "Goalkeepers", fr: "Gardiens", ar: "حراس المرمى" },
+  },
+  {
+    q: {
+      en: "Who scored from a goal kick in 1996?",
+      fr: "Qui a marqué depuis un coup de pied de but en 1996?",
+      ar: "من سجل من ركلة مرمى عام 1996؟",
+    },
+    opts: {
+      en: ["Asmir Begović", "Tim Howard", "Pat Jennings", "Peter Schmeichel"],
+      fr: ["Asmir Begović", "Tim Howard", "Pat Jennings", "Peter Schmeichel"],
+      ar: ["أسمير بيغوفيتش", "تيم هاوارد", "بات جينينغز", "بيتر شمايكل"],
+    },
+    correct: 0,
+    category: { en: "Goalkeepers", fr: "Gardiens", ar: "حراس المرمى" },
+  },
 
-  // ===== NEW GIRLS CONTENT - Personality & Aesthetic =====
-  { q: { en: "What type of girl are you?", fr: "Quel type de fille es-tu?", ar: "أي نوع من الفتيات أنت؟" }, opts: { en: ["Creative", "Adventurous", "Shy", "Confident"], fr: ["Créative", "Aventureuse", "Timide", "Confiante"], ar: ["مبدعة", "مغامرة", "خجولة", "واثقة"] }, correct: 0, category: { en: 'Personality', fr: 'Personnalité', ar: 'شخصية' } },
-  { q: { en: "What is your aesthetic?", fr: "Quelle est ton esthétique?", ar: "ما هو ذوقك الجمالي؟" }, opts: { en: ["Vintage", "Minimalist", "Boho", "Glam"], fr: ["Vintage", "Minimaliste", "Bohème", "Glamour"], ar: ["أنتيك", "بسيط", "بوهيمي", "جذاب"] }, correct: 0, category: { en: 'Fashion', fr: 'Mode', ar: 'موضة' } },
-  { q: { en: "What is your love language?", fr: "Quel est ton langage d'amour?", ar: "ما هي لغة الحب الخاصة بك؟" }, opts: { en: ["Words of Affirmation", "Acts of Service", "Receiving Gifts", "Physical Touch", "Quality Time"], fr: ["Paroles valorisantes", "Actes de service", "Recevoir des cadeaux", "Contact physique", "Temps de qualité"], ar: ["كلمات التشجيع", "أفعال الخدمة", "تلقي الهدايا", "اللمس الجسدي", "الوقت النوعي"] }, correct: 0, category: { en: 'Love', fr: 'Amour', ar: 'حب' } },
-  { q: { en: "Which flower matches your personality?", fr: "Quelle fleur correspond à ta personnalité?", ar: "أي زهرة تطابق شخصيتك؟" }, opts: { en: ["Rose", "Sunflower", "Lily", "Orchid"], fr: ["Rose", "Tournesol", "Lys", "Orchidée"], ar: ["وردة", "عباد الشمس", "زنبق", "أوركيد"] }, correct: 0, category: { en: 'Personality', fr: 'Personnalité', ar: 'شخصية' } },
-  { q: { en: "What hairstyle fits you?", fr: "Quelle coiffure te va?", ar: "أي تسريحة تناسبك؟" }, opts: { en: ["Long and Wavy", "Short Bob", "Curly Afro", "Straight and Sleek"], fr: ["Long et ondulé", "Bob court", "Afro bouclé", "Lisse et brillant"], ar: ["طويل ومموج", "بوب قصير", "أفرو مجعد", "ناعم ومستقيم"] }, correct: 0, category: { en: 'Beauty', fr: 'Beauté', ar: 'جمال' } },
-  { q: { en: "What color represents your soul?", fr: "Quelle couleur représente ton âme?", ar: "أي لون يمثل روحك؟" }, opts: { en: ["Blue", "Red", "Purple", "Green"], fr: ["Bleu", "Rouge", "Violet", "Vert"], ar: ["أزرق", "أحمر", "بنفسجي", "أخضر"] }, correct: 0, category: { en: 'Personality', fr: 'Personnalité', ar: 'شخصية' } },
-  { q: { en: "What is your hidden personality?", fr: "Quelle est ta personnalité cachée?", ar: "ما هي شخصيتك الخفية؟" }, opts: { en: ["Introverted", "Optimistic", "Mysterious", "Energetic"], fr: ["Introverti", "Optimiste", "Mystérieux", "Énergique"], ar: ["منطوي", "متفائل", "غامض", "نشيط"] }, correct: 0, category: { en: 'Personality', fr: 'Personnalité', ar: 'شخصية' } },
-  { q: { en: "How romantic are you?", fr: "À quel point es-tu romantique?", ar: "ما مدى رومانسيتك؟" }, opts: { en: ["Very Romantic", "Somewhat Romantic", "Not Romantic", "I Don't Know"], fr: ["Très romantique", "Assez romantique", "Pas romantique", "Je ne sais pas"], ar: ["رومانسي جداً", "رومانسي بعض الشيء", "غير رومانسي", "لا أعرف"] }, correct: 0, category: { en: 'Personality', fr: 'Personnalité', ar: 'شخصية' } },
-  { q: { en: "What is your emotional type?", fr: "Quel est ton type émotionnel?", ar: "ما هو نوعك العاطفي؟" }, opts: { en: ["Sensitive", "Stable", "Moody", "Calm"], fr: ["Sensible", "Stable", "De mauvaise humeur", "Calme"], ar: ["حساس", "مستقر", "متقلب المزاج", "هادئ"] }, correct: 0, category: { en: 'Personality', fr: 'Personnalité', ar: 'شخصية' } },
-  { q: { en: "Are you soft girl or baddie?", fr: "Es-tu soft girl ou baddie?", ar: "هل أنت فتاة ناعمة أم فتاة قوية؟" }, opts: { en: ["Soft Girl", "Baddie", "Both", "Neither"], fr: ["Soft Girl", "Baddie", "Les deux", "Aucun"], ar: ["فتاة ناعمة", "فتاة قوية", "كلاهما", "لا شيء"] }, correct: 0, category: { en: 'Personality', fr: 'Personnalité', ar: 'شخصية' } },
+  // === YOUNG TALENTS ===
+  {
+    q: {
+      en: "Youngest Ballon d'Or winner ever?",
+      fr: "Le plus jeune gagnant du Ballon d'Or?",
+      ar: "أصغر فائز بالكرة الذهبية؟",
+    },
+    opts: {
+      en: ["Ronaldo Nazário (21)", "Messi (22)", "Mbappé (19)", "Owen (22)"],
+      fr: ["Ronaldo Nazário (21)", "Messi (22)", "Mbappé (19)", "Owen (22)"],
+      ar: ["رونالدو نازاريو (21)", "ميسي (22)", "مبابي (19)", "أوين (22)"],
+    },
+    correct: 0,
+    category: { en: "Young", fr: "Jeunes", ar: "شباب" },
+  },
+  {
+    q: {
+      en: "Who scored a hat-trick on World Cup debut?",
+      fr: "Qui a marqué un triplé à ses débuts en Coupe du Monde?",
+      ar: "من سجل هاتريك في أول مباراة له بكأس العالم؟",
+    },
+    opts: {
+      en: [
+        "Miroslav Klose (2002)",
+        "Ronaldo (1998)",
+        "Mbappé (2018)",
+        "James Rodríguez (2014)",
+      ],
+      fr: [
+        "Miroslav Klose (2002)",
+        "Ronaldo (1998)",
+        "Mbappé (2018)",
+        "James Rodríguez (2014)",
+      ],
+      ar: [
+        "ميروسلاف كلوزه (2002)",
+        "رونالدو (1998)",
+        "مبابي (2018)",
+        "خاميس رودريغيز (2014)",
+      ],
+    },
+    correct: 0,
+    category: { en: "Young", fr: "Jeunes", ar: "شباب" },
+  },
 
-  // ===== NEW GIRLS CONTENT - Fashion & Makeup =====
-  { q: { en: "What makeup style suits you?", fr: "Quel maquillage te va?", ar: "أي مكياج يناسبك؟" }, opts: { en: ["Natural", "Glam", "Bold", "Minimal"], fr: ["Naturel", "Glamour", "Audacieux", "Minimal"], ar: ["طبيعي", "جذاب", "جريء", "بسيط"] }, correct: 0, category: { en: 'Beauty', fr: 'Beauté', ar: 'جمال' } },
-  { q: { en: "What is your fashion style?", fr: "Quel est ton style vestimentaire?", ar: "ما هو أسلوبك في الملابس؟" }, opts: { en: ["Casual", "Chic", "Sporty", "Bohemian"], fr: ["Décontracté", "Chic", "Sportif", "Bohème"], ar: ["عادي", "أنيق", "رياضي", "بوهيمي"] }, correct: 0, category: { en: 'Fashion', fr: 'Mode', ar: 'موضة' } },
-  { q: { en: "Which perfume describes you?", fr: "Quel parfum te décrit?", ar: "أي عطر يصفك؟" }, opts: { en: ["Floral", "Citrus", "Woody", "Fresh"], fr: ["Floral", "Citronné", "Boisé", "Fraîcheur"], ar: ["زهور", "حمضيات", "خشبي", "منعش"] }, correct: 0, category: { en: 'Beauty', fr: 'Beauté', ar: 'جمال' } },
-  { q: { en: "What nail style matches your vibe?", fr: "Quel style d'ongles correspond à ton vibe?", ar: "أي أسلوب أظافر يناسب جوهرك؟" }, opts: { en: ["French Tips", "Matte", "Glitter", "Short & Natural"], fr: ["French Tips", "Mat", "Paillettes", "Court et naturel"], ar: ["فرنسي", "غير لامع", "لامع", "قصير وطبيعي"] }, correct: 0, category: { en: 'Beauty', fr: 'Beauté', ar: 'جمال' } },
-  { q: { en: "Which outfit fits your mood?", fr: "Quelle tenue correspond à ton humeur?", ar: "أي زي يناسب مزاجك؟" }, opts: { en: ["Dress", "Jeans & T-shirt", "Athleisure", "Skirt & Blouse"], fr: ["Robe", "Jeans & T-shirt", "Athleisure", "Jupe & Chemisier"], ar: ["فستان", "جينز وتي شيرت", "رياضي", "تنورة وبلوزة"] }, correct: 0, category: { en: 'Fashion', fr: 'Mode', ar: 'موضة' } },
-  { q: { en: "Which accessories fit your personality?", fr: "Quels accessoires correspondent à ta personnalité?", ar: "أي إكسسوارات تناسب شخصيتك؟" }, opts: { en: ["Statement Earrings", "Delicate Necklace", "Bracelets", "Rings"], fr: ["Boucles d'oreilles voyantes", "Collier délicat", "Bracelets", "Bagues"], ar: ["أقراط بارزة", "قلادة رقيقة", "أساور", "خواتم"] }, correct: 0, category: { en: 'Fashion', fr: 'Mode', ar: 'موضة' } },
-  { q: { en: "Are you vintage, modern, or classy?", fr: "Es-tu vintage, moderne ou classe?", ar: "هل أنت أنتيك، عصري، أم أنيق؟" }, opts: { en: ["Vintage", "Modern", "Classy", "Eclectic"], fr: ["Vintage", "Moderne", "Classe", "Éclectique"], ar: ["أنتيك", "عصري", "أنيق", "متنوع"] }, correct: 0, category: { en: 'Fashion', fr: 'Mode', ar: 'موضة' } },
-  { q: { en: "Which fashion era are you?", fr: "De quelle époque de mode es-tu?", ar: "من أي عصر موضة أنت؟" }, opts: { en: ["70s", "80s", "90s", "2000s"], fr: ["Années 70", "Années 80", "Années 90", "Années 2000"], ar: ["السبعينيات", "الثمانينيات", "التسعينيات", "الألفية"] }, correct: 0, category: { en: 'Fashion', fr: 'Mode', ar: 'موضة' } },
+  // === AFRICAN LEGENDS ===
+  {
+    q: {
+      en: "First African team in World Cup quarter-finals?",
+      fr: "Première équipe africaine en quarts de finale de CM?",
+      ar: "أول فريق إفريقي يصل لربع نهائي كأس العالم؟",
+    },
+    opts: {
+      en: ["Cameroon 1990", "Senegal 2002", "Ghana 2010", "Morocco 2022"],
+      fr: ["Cameroun 1990", "Sénégal 2002", "Ghana 2010", "Maroc 2022"],
+      ar: ["الكاميرون 1990", "السنغال 2002", "غانا 2010", "المغرب 2022"],
+    },
+    correct: 0,
+    category: { en: "Africa", fr: "Afrique", ar: "إفريقيا" },
+  },
+  {
+    q: {
+      en: "Which African player has most UCL titles?",
+      fr: "Quel joueur africain a le plus de titres en LDC?",
+      ar: "أي لاعب إفريقي لديه أكبر عدد ألقاب دوري الأبطال؟",
+    },
+    opts: {
+      en: ["Geremi (2)", "Eto'o (3)", "Drogba (1)", "Salah (2)"],
+      fr: ["Geremi (2)", "Eto'o (3)", "Drogba (1)", "Salah (2)"],
+      ar: ["جيريمي (2)", "إيتو (3)", "دروغبا (1)", "صلاح (2)"],
+    },
+    correct: 1,
+    category: { en: "Africa", fr: "Afrique", ar: "إفريقيا" },
+  },
 
-  // ===== NEW GIRLS CONTENT - Love & Relationships =====
-  { q: { en: "What type of boyfriend fits you?", fr: "Quel type de petit ami te convient?", ar: "أي نوع من الأصدقاء يناسبك؟" }, opts: { en: ["Romantic", "Funny", "Loyal", "Adventurous"], fr: ["Romantique", "Drôle", "Loyal", "Aventureux"], ar: ["رومانسي", "مضحك", "مخلص", "مغامر"] }, correct: 0, category: { en: 'Love', fr: 'Amour', ar: 'حب' } },
-  { q: { en: "Are you ready for a relationship?", fr: "Es-tu prête pour une relation?", ar: "هل أنت جاهزة لعلاقة؟" }, opts: { en: ["Yes", "No", "Maybe", "Not sure"], fr: ["Oui", "Non", "Peut-être", "Pas sûr"], ar: ["نعم", "لا", "ربما", "لست متأكدة"] }, correct: 0, category: { en: 'Love', fr: 'Amour', ar: 'حب' } },
-  { q: { en: "What is your flirting style?", fr: "Quel est ton style de flirt?", ar: "ما هو أسلوب تدليعك؟" }, opts: { en: ["Playful", "Shy", "Confident", "Subtle"], fr: ["Joueur", "Timide", "Confiant", "Subtil"], ar: ["مرح", "خجول", "واثق", "دقيق"] }, correct: 0, category: { en: 'Love', fr: 'Amour', ar: 'حب' } },
-  { q: { en: "How jealous are you?", fr: "À quel point es-tu jalouse?", ar: "ما مدى غيرتك؟" }, opts: { en: ["Very", "Sometimes", "Rarely", "Never"], fr: ["Très", "Parfois", "Rarement", "Jamais"], ar: ["كثيراً", "أحياناً", "نادراً", "أبداً"] }, correct: 0, category: { en: 'Love', fr: 'Amour', ar: 'حب' } },
-  { q: { en: "Are you a loyal partner?", fr: "Es-tu une partenaire loyale?", ar: "هل أنت شريكة مخلصة؟" }, opts: { en: ["Yes", "Mostly", "Sometimes", "Not really"], fr: ["Oui", "Principalement", "Parfois", "Pas vraiment"], ar: ["نعم", "غالباً", "أحياناً", "ليس حقاً"] }, correct: 0, category: { en: 'Love', fr: 'Amour', ar: 'حب' } },
-  { q: { en: "What type of friend are you?", fr: "Quel type d'amie es-tu?", ar: "أي نوع من الصديقات أنت؟" }, opts: { en: ["Supportive", "Funny", "Reliable", "Adventurous"], fr: ["Soutenante", "Drôle", "Fiable", "Aventureuse"], ar: ["داعمة", "مضحكة", "موثوقة", "مغامرة"] }, correct: 0, category: { en: 'Personality', fr: 'Personnalité', ar: 'شخصية' } },
-  { q: { en: "Are you emotionally available?", fr: "Es-tu émotionnellement disponible?", ar: "هل أنت متاحة عاطفياً؟" }, opts: { en: ["Yes", "No", "Sometimes", "Not sure"], fr: ["Oui", "Non", "Parfois", "Pas sûr"], ar: ["نعم", "لا", "أحياناً", "لست متأكدة"] }, correct: 0, category: { en: 'Love', fr: 'Amour', ar: 'حب' } },
-
-  // ===== NEW GIRLS CONTENT - Movies, Anime & Series =====
-  { q: { en: "Which movie heroine are you?", fr: "Quelle héroïne de film es-tu?", ar: "أي بطلة أفلام أنت؟" }, opts: { en: ["Wonder Woman", "Hermione Granger", "Katniss Everdeen", "Black Widow"], fr: ["Wonder Woman", "Hermione Granger", "Katniss Everdeen", "Black Widow"], ar: ["المرأة المعجزة", "هيرميون جرانجر", "كاتنيس إيفردين", "الأرملة السوداء"] }, correct: 0, category: { en: 'Movies', fr: 'Films', ar: 'أفلام' } },
-  { q: { en: "Which Disney princess are you?", fr: "Quelle princesse Disney es-tu?", ar: "أي أميرة ديزني أنت؟" }, opts: { en: ["Cinderella", "Belle", "Ariel", "Elsa"], fr: ["Cendrillon", "Belle", "Ariel", "Elsa"], ar: ["سندريلا", "بيل", "أريل", "إلسا"] }, correct: 0, category: { en: 'Disney', fr: 'Disney', ar: 'ديزني' } },
-  { q: { en: "Which anime girl are you?", fr: "Quelle fille d'anime es-tu?", ar: "أي فتاة أنمي أنت؟" }, opts: { en: ["Sailor Moon", "Sakura", "Mikasa", "Nezuko"], fr: ["Sailor Moon", "Sakura", "Mikasa", "Nezuko"], ar: ["سيلور مون", "ساكورا", "ميكاسا", "نيزوكو"] }, correct: 0, category: { en: 'Anime', fr: 'Anime', ar: 'أنمي' } },
-  { q: { en: "What K-Drama fits your life?", fr: "Quel K-Drama correspond à ta vie?", ar: "أي دراما كورية تناسب حياتك؟" }, opts: { en: ["Crash Landing On You", "Goblin", "Start-Up", "Itaewon Class"], fr: ["Crash Landing On You", "Goblin", "Start-Up", "Itaewon Class"], ar: ["هبوط اضطراري عليك", "العفريت", "ستارت أب", "صف إتايون"] }, correct: 0, category: { en: 'Movies', fr: 'Films', ar: 'أفلام' } },
-  { q: { en: "Which series matches your vibe?", fr: "Quelle série correspond à ton vibe?", ar: "أي مسلسل يناسب جوهرك؟" }, opts: { en: ["Friends", "Stranger Things", "Euphoria", "Sex Education"], fr: ["Friends", "Stranger Things", "Euphoria", "Sex Education"], ar: ["أصدقاء", "أشياء غريبة", "النشوة", "تثقيف جنسي"] }, correct: 0, category: { en: 'Movies', fr: 'Films', ar: 'أفلام' } },
-  { q: { en: "Are you Wednesday or Enid?", fr: "Es-tu Wednesday ou Enid?", ar: "هل أنت وينزداي أم إينيد؟" }, opts: { en: ["Wednesday", "Enid", "Both", "Neither"], fr: ["Wednesday", "Enid", "Les deux", "Aucun"], ar: ["وينزداي", "إينيد", "كلاهما", "لا شيء"] }, correct: 0, category: { en: 'Movies', fr: 'Films', ar: 'أفلام' } },
-  { q: { en: "Which Studio Ghibli character are you?", fr: "Quel personnage de Studio Ghibli es-tu?", ar: "أي شخصية من استوديو جيبلي أنت؟" }, opts: { en: ["Chihiro", "Kiki", "Sophie", "San"], fr: ["Chihiro", "Kiki", "Sophie", "San"], ar: ["تشيهيرو", "كيكي", "صوفي", "سان"] }, correct: 0, category: { en: 'Movies', fr: 'Films', ar: 'أفلام' } },
-
-  // ===== NEW GIRLS CONTENT - Music & Lifestyle =====
-  { q: { en: "What music genre matches your soul?", fr: "Quel genre musical correspond à ton âme?", ar: "أي نوع موسيقى يطابق روحك؟" }, opts: { en: ["Pop", "Rock", "R&B", "Classical"], fr: ["Pop", "Rock", "R&B", "Classique"], ar: ["بوب", "روك", "آر أند بي", "كلاسيكي"] }, correct: 0, category: { en: 'Music', fr: 'Musique', ar: 'موسيقى' } },
-  { q: { en: "Which artist represents your mood?", fr: "Quel artiste représente ton humeur?", ar: "أي فنان يمثل مزاجك؟" }, opts: { en: ["Taylor Swift", "Beyoncé", "Billie Eilish", "Adele"], fr: ["Taylor Swift", "Beyoncé", "Billie Eilish", "Adele"], ar: ["تايلور سويفت", "بيونسيه", "بيلي آيليش", "أديل"] }, correct: 0, category: { en: 'Music', fr: 'Musique', ar: 'موسيقى' } },
-  { q: { en: "What is your daily vibe?", fr: "Quelle est ton ambiance quotidienne?", ar: "ما هو جوهرك اليومي؟" }, opts: { en: ["Energetic", "Calm", "Focused", "Creative"], fr: ["Énergique", "Calme", "Concentré", "Créatif"], ar: ["نشيط", "هادئ", "مركز", "خلاق"] }, correct: 0, category: { en: 'Lifestyle', fr: 'Mode de vie', ar: 'أسلوب حياة' } },
-  { q: { en: "What is your weekend personality?", fr: "Quelle est ta personnalité de weekend?", ar: "ما هي شخصية عطلة نهاية الأسبوع لديك؟" }, opts: { en: ["Party Lover", "Homebody", "Explorer", "Relaxed"], fr: ["Fêtard", "Casanier", "Explorateur", "Détendu"], ar: ["محب للحفلات", "منزلي", "مستكشف", "مسترخي"] }, correct: 0, category: { en: 'Lifestyle', fr: 'Mode de vie', ar: 'أسلوب حياة' } },
-  { q: { en: "Are you an introvert or extrovert?", fr: "Es-tu introvertie ou extravertie?", ar: "هل أنت منطوية أم منفتحة؟" }, opts: { en: ["Introvert", "Extrovert", "Ambivert", "Depends"], fr: ["Introverti", "Extraverti", "Ambivert", "Ça dépend"], ar: ["منطوية", "منفتحة", "وسطية", "يعتمد"] }, correct: 0, category: { en: 'Personality', fr: 'Personnalité', ar: 'شخصية' } },
-  { q: { en: "What is your sleeping personality?", fr: "Quelle est ta personnalité de sommeil?", ar: "ما هي شخصية نومك؟" }, opts: { en: ["Early Bird", "Night Owl", "Light Sleeper", "Deep Sleeper"], fr: ["Lève-tôt", "Couche-tard", "Dormeur léger", "Dormeur profond"], ar: ["مبكرة", "بومة ليل", "نوم خفيف", "نوم عميق"] }, correct: 0, category: { en: 'Lifestyle', fr: 'Mode de vie', ar: 'أسلوب حياة' } },
-
-  // ===== NEW GIRLS CONTENT - Fun & Social Media =====
-  { q: { en: "How dramatic are you?", fr: "À quel point es-tu dramatique?", ar: "ما مدى دراميتك؟" }, opts: { en: ["Very", "Sometimes", "Rarely", "Not at all"], fr: ["Très", "Parfois", "Rarement", "Pas du tout"], ar: ["كثيراً", "أحياناً", "نادراً", "لا على الإطلاق"] }, correct: 0, category: { en: 'Personality', fr: 'Personnalité', ar: 'شخصية' } },
-  { q: { en: "Are you a good secret keeper?", fr: "Es-tu bonne pour garder des secrets?", ar: "هل أنت جيدة في حفظ الأسرار؟" }, opts: { en: ["Yes", "No", "Sometimes", "Depends"], fr: ["Oui", "Non", "Parfois", "Ça dépend"], ar: ["نعم", "لا", "أحياناً", "يعتمد"] }, correct: 0, category: { en: 'Personality', fr: 'Personnalité', ar: 'شخصية' } },
-  { q: { en: "Are you an angel or troublemaker?", fr: "Es-tu un ange ou une fauteuse de troubles?", ar: "هل أنت ملاك أم محبكة مشاكل؟" }, opts: { en: ["Angel", "Troublemaker", "Both", "Neither"], fr: ["Ange", "Fauteur de troubles", "Les deux", "Aucun"], ar: ["ملاك", "محبكة مشاكل", "كلاهما", "لا شيء"] }, correct: 0, category: { en: 'Personality', fr: 'Personnalité', ar: 'شخصية' } },
-  { q: { en: "What is your mental age?", fr: "Quel est ton âge mental?", ar: "ما هو عمرك العقلي؟" }, opts: { en: ["Young", "Mature", "Wise", "Playful"], fr: ["Jeune", "Mature", "Sage", "Joueur"], ar: ["شاب", "ناضج", "حكيم", "مرح"] }, correct: 0, category: { en: 'Personality', fr: 'Personnalité', ar: 'شخصية' } },
-  { q: { en: "What is your emotional intelligence?", fr: "Quelle est ton intelligence émotionnelle?", ar: "ما هي ذكاؤك العاطفي؟" }, opts: { en: ["High", "Average", "Low", "Unknown"], fr: ["Élevé", "Moyen", "Faible", "Inconnu"], ar: ["عالي", "متوسط", "منخفض", "مجهول"] }, correct: 0, category: { en: 'Personality', fr: 'Personnalité', ar: 'شخصية' } },
-  { q: { en: "Are you lucky or unlucky?", fr: "Es-tu chanceuse ou malchanceuse?", ar: "هل أنت محظوظة أم غير محظوظة؟" }, opts: { en: ["Lucky", "Unlucky", "Sometimes lucky", "Don't believe in luck"], fr: ["Chanceuse", "Malchanceuse", "Parfois chanceuse", "Je ne crois pas à la chance"], ar: ["محظوظة", "غير محظوظة", "محظوظة أحياناً", "لا أؤمن بالحظ"] }, correct: 0, category: { en: 'Personality', fr: 'Personnalité', ar: 'شخصية' } },
-  { q: { en: "What decade matches you?", fr: "Quelle décennie te correspond?", ar: "أي عقد يناسبك؟" }, opts: { en: ["60s", "70s", "80s", "90s"], fr: ["Années 60", "Années 70", "Années 80", "Années 90"], ar: ["الستينيات", "السبعينيات", "الثمانينيات", "التسعينيات"] }, correct: 0, category: { en: 'Lifestyle', fr: 'Mode de vie', ar: 'أسلوب حياة' } },
-  { q: { en: "What is your spirit animal?", fr: "Quel est ton animal spirituel?", ar: "ما هو حيوانك الروحي؟" }, opts: { en: ["Wolf", "Cat", "Butterfly", "Dolphin"], fr: ["Loup", "Chat", "Papillon", "Dauphin"], ar: ["ذئب", "قط", "فراشة", "دلفين"] }, correct: 0, category: { en: 'Personality', fr: 'Personnalité', ar: 'شخصية' } },
-  { q: { en: "What type of TikTok girl are you?", fr: "Quel type de fille TikTok es-tu?", ar: "أي نوع من فتيات تيك توك أنت؟" }, opts: { en: ["Dancer", "Comedian", "Fashionista", "Singer"], fr: ["Danseuse", "Comédienne", "Fashionista", "Chanteuse"], ar: ["راقصة", "ممثلة كوميدية", "خبيرة أزياء", "مغنية"] }, correct: 0, category: { en: 'Social Media', fr: 'Réseaux sociaux', ar: 'تواصل اجتماعي' } },
-  { q: { en: "What is your Instagram vibe?", fr: "Quelle est ton ambiance Instagram?", ar: "ما هو جوهرك على انستغرام؟" }, opts: { en: ["Aesthetic", "Funny", "Inspirational", "Casual"], fr: ["Esthétique", "Drôle", "Inspirant", "Décontracté"], ar: ["جمالي", "مضحك", "ملهم", "عادي"] }, correct: 0, category: { en: 'Social Media', fr: 'Réseaux sociaux', ar: 'تواصل اجتماعي' } }
+  // === TRIVIA & CURIOSITIES ===
+  {
+    q: {
+      en: "Which country invented football?",
+      fr: "Quel pays a inventé le football?",
+      ar: "أي دولة اخترعت كرة القدم؟",
+    },
+    opts: {
+      en: ["England", "Brazil", "Italy", "Greece"],
+      fr: ["Angleterre", "Brésil", "Italie", "Grèce"],
+      ar: ["إنجلترا", "البرازيل", "إيطاليا", "اليونان"],
+    },
+    correct: 0,
+    category: { en: "Trivia", fr: "Trivia", ar: "معلومات" },
+  },
+  {
+    q: {
+      en: "First World Cup with VAR technology?",
+      fr: "Première Coupe du Monde avec la technologie VAR?",
+      ar: "أول كأس عالم بتقنية الـVAR؟",
+    },
+    opts: {
+      en: ["2018", "2014", "2010", "2022"],
+      fr: ["2018", "2014", "2010", "2022"],
+      ar: ["2018", "2014", "2010", "2022"],
+    },
+    correct: 0,
+    category: { en: "Trivia", fr: "Trivia", ar: "معلومات" },
+  },
+  {
+    q: {
+      en: "Only player to win WC as player and manager?",
+      fr: "Seul joueur à gagner la CM comme joueur et manager?",
+      ar: "اللاعب الوحيد الذي فاز بكأس العالم كلاعب ومدرب؟",
+    },
+    opts: {
+      en: [
+        "Franz Beckenbauer",
+        "Mário Zagallo",
+        "Didier Deschamps",
+        "Carlos Alberto Parreira",
+      ],
+      fr: [
+        "Franz Beckenbauer",
+        "Mário Zagallo",
+        "Didier Deschamps",
+        "Carlos Alberto Parreira",
+      ],
+      ar: [
+        "فرانز بيكنباور",
+        "ماريو زاغالو",
+        "ديديه ديشان",
+        "كارلوس ألبرتو باريرا",
+      ],
+    },
+    correct: 1,
+    category: { en: "Trivia", fr: "Trivia", ar: "معلومات" },
+  },
+  {
+    q: {
+      en: "Most red cards in a single World Cup match?",
+      fr: "Plus de cartons rouges dans un seul match de CM?",
+      ar: "أكبر عدد بطاقات حمراء في مباراة كأس عالم واحدة؟",
+    },
+    opts: {
+      en: [
+        "4 (Portugal vs Netherlands 2006)",
+        "3 (Brazil vs Chile 1998)",
+        "2 (Argentina vs England 1998)",
+        "5 (Cameroon vs Germany 2002)",
+      ],
+      fr: [
+        "4 (Portugal vs Pays-Bas 2006)",
+        "3 (Brésil vs Chili 1998)",
+        "2 (Argentine vs Angleterre 1998)",
+        "5 (Cameroun vs Allemagne 2002)",
+      ],
+      ar: [
+        "4 (البرتغال ضد هولندا 2006)",
+        "3 (البرازيل ضد تشيلي 1998)",
+        "2 (الأرجنتين ضد إنجلترا 1998)",
+        "5 (الكاميرون ضد ألمانيا 2002)",
+      ],
+    },
+    correct: 0,
+    category: { en: "Trivia", fr: "Trivia", ar: "معلومات" },
+  },
+  {
+    q: {
+      en: "First player to score in 5 different World Cups?",
+      fr: "Premier joueur à marquer dans 5 Coupes du Monde différentes?",
+      ar: "أول لاعب يسجل في 5 كؤوس عالم مختلفة؟",
+    },
+    opts: {
+      en: ["Marta (women)", "Cristiano Ronaldo", "Miroslav Klose", "Pelé"],
+      fr: ["Marta (femmes)", "Cristiano Ronaldo", "Miroslav Klose", "Pelé"],
+      ar: ["مارتا (نساء)", "كريستيانو رونالدو", "ميروسلاف كلوزه", "بيليه"],
+    },
+    correct: 1,
+    category: { en: "Trivia", fr: "Trivia", ar: "معلومات" },
+  },
+  {
+    q: {
+      en: "Fastest substitution in football history?",
+      fr: "Remplacement le plus rapide de l'histoire du football?",
+      ar: "أسرع تبديل في تاريخ كرة القدم؟",
+    },
+    opts: {
+      en: [
+        "6 seconds (Kempes 2006)",
+        "13 seconds (Barton 2006)",
+        "45 seconds (Diaby 2015)",
+        "1:30 (Salah 2018)",
+      ],
+      fr: [
+        "6 secondes (Kempes 2006)",
+        "13 secondes (Barton 2006)",
+        "45 secondes (Diaby 2015)",
+        "1:30 (Salah 2018)",
+      ],
+      ar: [
+        "6 ثوان (كامبيس 2006)",
+        "13 ثانية (بارتون 2006)",
+        "45 ثانية (ديابي 2015)",
+        "1:30 (صلاح 2018)",
+      ],
+    },
+    correct: 0,
+    category: { en: "Trivia", fr: "Trivia", ar: "معلومات" },
+  },
+  {
+    q: {
+      en: "Highest scoring World Cup match ever?",
+      fr: "Match de CM avec le plus de buts?",
+      ar: "أعلى مباراة سجلاً في تاريخ كأس العالم؟",
+    },
+    opts: {
+      en: [
+        "12 goals (Austria 7-5 Switzerland 1954)",
+        "11 goals (Brazil 6-5 Poland 1938)",
+        "10 goals (Hungary 8-2 Sweden 1938)",
+        "9 goals (Portugal 5-4 N.Korea 2010)",
+      ],
+      fr: [
+        "12 buts (Autriche 7-5 Suisse 1954)",
+        "11 buts (Brésil 6-5 Pologne 1938)",
+        "10 buts (Hongrie 8-2 Suède 1938)",
+        "9 buts (Portugal 5-4 N.Korea 2010)",
+      ],
+      ar: [
+        "12 هدف (النمسا 7-5 سويسرا 1954)",
+        "11 هدف (البرازيل 6-5 بولندا 1938)",
+        "10 أهداف (هنغاريا 8-2 السويد 1938)",
+        "9 أهداف (البرتغال 5-4 كوريا الشمالية 2010)",
+      ],
+    },
+    correct: 0,
+    category: { en: "Trivia", fr: "Trivia", ar: "معلومات" },
+  },
 ];
 
 const MAX_LEVELS = 50;
@@ -200,26 +1200,34 @@ const QUESTIONS_PER_LEVEL = 10;
 
 // Helper to generate a level with either real questions or math filler
 const generateLevel = (questionsSource, level, poolIndex) => {
-  const difficulty = level <= 15 ? 'Easy' : level <= 30 ? 'Medium' : level <= 45 ? 'Hard' : 'Expert';
-  
+  const difficulty =
+    level <= 15
+      ? "Easy"
+      : level <= 30
+      ? "Medium"
+      : level <= 45
+      ? "Hard"
+      : "Expert";
+
   const levelQuestions = [];
-  
+
   // Try to grab up to 10 questions from source
   for (let i = 0; i < QUESTIONS_PER_LEVEL; i++) {
-    const qIndex = (poolIndex + i) % questionsSource.length; 
-    levelQuestions.push(questionsSource[qIndex]); 
+    const qIndex = (poolIndex + i) % questionsSource.length;
+    levelQuestions.push(questionsSource[qIndex]);
   }
-  
+
   return {
     difficulty,
-    questions: levelQuestions
+    questions: levelQuestions,
   };
 };
 
-export const getQuestions = (gender) => {
+export const getQuestions = () => {
   const levels = {};
-  const source = gender === 'female' ? femaleQuestions : maleQuestions;
-  
+  // Using maleQuestions as the single source for all users
+  const source = maleQuestions;
+
   let poolIndex = 0;
   for (let level = 1; level <= MAX_LEVELS; level++) {
     levels[level] = generateLevel(source, level, poolIndex);
