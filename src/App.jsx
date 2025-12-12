@@ -10,9 +10,10 @@ function AppContent() {
   const navigate = useNavigate();
 
   const [userName, setUserName] = useState("");
+  const [gender, setGender] = useState("");
   const [theme, setTheme] = useState("dark");
-  const [lang, setLang] = useState("en");
-  const [totalStars, setTotalStars] = useState(0); 
+  const [lang, setLang] = useState("ar");
+  const [totalStars, setTotalStars] = useState(0);
 
   const [progress, setProgress] = useState({
     unlockedLevels: 1,
@@ -21,9 +22,9 @@ function AppContent() {
     history: []
   });
 
-  // Charger les données au démarrage
   useEffect(() => {
     const savedName = localStorage.getItem("quizUserName");
+    const savedGender = localStorage.getItem("quizGender");
     const savedTheme = localStorage.getItem("theme");
     const savedProgress = localStorage.getItem("quizProgress");
     const savedLang = localStorage.getItem("quizLang");
@@ -32,20 +33,26 @@ function AppContent() {
     if (savedTheme) setTheme(savedTheme);
     if (savedLang) setLang(savedLang);
     if (savedStars) setTotalStars(parseInt(savedStars));
-    if (savedProgress) setProgress(JSON.parse(savedProgress));
-    
-    if (savedName) {
-      setUserName(savedName);
+    if (savedProgress) {
+      const parsed = JSON.parse(savedProgress);
+      setProgress({
+        unlockedLevels: 1,
+        levelScores: {},
+        achievements: [],
+        history: [],
+        ...parsed
+      });
     }
+    
+    if (savedName) setUserName(savedName);
+    if (savedGender) setGender(savedGender);
   }, []);
 
-  // Sauvegarder le thème
   useEffect(() => {
     localStorage.setItem("theme", theme);
-    document.body.className = theme;
+    document.documentElement.setAttribute('data-theme', theme);
   }, [theme]);
 
-  // Sauvegarder la langue et la direction
   useEffect(() => {
     localStorage.setItem("quizLang", lang);
     if (lang === 'ar') {
@@ -59,31 +66,32 @@ function AppContent() {
     }
   }, [lang]);
 
-  // Sauvegarder les étoiles
   useEffect(() => {
     localStorage.setItem("quizStars", totalStars);
   }, [totalStars]);
 
-  // Sauvegarder la progression
   useEffect(() => {
     localStorage.setItem("quizProgress", JSON.stringify(progress));
   }, [progress]);
 
-  const handleStart = (name) => {
-    if (!name.trim()) return;
+  const handleStart = (name, selectedGender) => {
+    if (!name.trim() || !selectedGender) return;
     setUserName(name);
+    setGender(selectedGender);
     localStorage.setItem("quizUserName", name);
+    localStorage.setItem("quizGender", selectedGender);
     navigate("/home");
   };
 
   const handleChangeName = () => {
     localStorage.removeItem("quizUserName");
+    localStorage.removeItem("quizGender");
     setUserName("");
+    setGender("");
     navigate("/");
   };
 
   const handleLevelComplete = (level, score, earnedStars) => {
-    // Mise à jour des étoiles globales
     setTotalStars(prev => prev + earnedStars);
 
     setProgress(prev => {
@@ -155,13 +163,13 @@ function AppContent() {
               setTotalStars={setTotalStars}
               t={t}
               lang={lang}
+              gender={gender}
             />
           ) : (
             <Navigate to="/" />
           )
         }
       />
-
 
       <Route
         path="/stats"
@@ -181,7 +189,6 @@ function AppContent() {
     </Routes>
   );
 }
-
 export default function App() {
   return (
     <BrowserRouter>
