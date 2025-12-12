@@ -75,19 +75,6 @@ export default function HomePage({
               )}
             </div>
           </div>
-
-          <div className="nav-right">
-            <div className="stars-wallet">
-              <span>⭐ {totalStars}</span>
-            </div>
-            
-            <button
-              className="theme-btn"
-              onClick={() => setLang(lang === "en" ? "fr" : lang === "fr" ? "ar" : "en")}
-            >
-              🌐 {lang.toUpperCase()}
-            </button>
-
             <button
               className="theme-btn"
               onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
