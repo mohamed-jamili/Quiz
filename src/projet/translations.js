@@ -3,9 +3,6 @@ export const translations = {
     welcome: "Welcome to QuizMaster Pro",
     start: "Start Quiz",
     enterName: "Enter your name",
-    selectGender: "Select your gender",
-    male: "Male",
-    female: "Female",
     selectLevel: "Choose Your Level",
     level: "Level",
     score: "Score",
@@ -41,15 +38,16 @@ export const translations = {
     gameOver: "Game Over",
     perfect: "Perfect Score!",
     goodJob: "Good Job!",
-    tryAgainMsg: "Don't give up!"
+    tryAgainMsg: "Don't give up!",
+    achievements: "Achievements",
+    average: "Average Score",
+    levels: "Levels Completed",
+    recentActivity: "Recent Activity"
   },
   fr: {
     welcome: "Bienvenue à QuizMaster Pro",
     start: "Commencer",
     enterName: "Entrez votre nom",
-    selectGender: "Sélectionnez votre genre",
-    male: "Homme",
-    female: "Femme",
     selectLevel: "Choisissez votre niveau",
     level: "Niveau",
     score: "Score",
@@ -86,15 +84,16 @@ export const translations = {
     perfect: "Score Parfait!",
     goodJob: "Bien joué!",
     tryAgainMsg: "N'abandonnez pas!",
-    back: "Retour"
+    back: "Retour",
+    achievements: "Réalisations",
+    average: "Score Moyen",
+    levels: "Niveaux Complétés",
+    recentActivity: "Activité Récente"
   },
   ar: {
     welcome: "مرحبا بك في QuizMaster Pro",
     start: "ابدأ الاختبار",
     enterName: "أدخل اسمك",
-    selectGender: "اختر جنسك",
-    male: "ذكر",
-    female: "أنثى",
     selectLevel: "اختر المستوى",
     level: "المستوى",
     score: "النقاط",
@@ -130,6 +129,10 @@ export const translations = {
     gameOver: "انتهت اللعبة",
     perfect: "نتيجة مثالية!",
     goodJob: "عمل جيد!",
-    tryAgainMsg: "لا تستسلم!"
+    tryAgainMsg: "لا تستسلم!",
+    achievements: "الإنجازات",
+    average: "المعدل",
+    levels: "المستويات المكتملة",
+    recentActivity: "النشاط الأخير"
   },
 };
