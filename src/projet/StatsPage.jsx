@@ -12,72 +12,56 @@ export default function StatsPage({ progress, t }) {
     <div className="app-container">
       <nav className="navbar">
         <div className="nav-content">
-          <button onClick={() => navigate('/home')} className="home-btn">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
-              <path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
-              <polyline points="9 22 9 12 15 12 15 22"></polyline>
-            </svg>
-            <span>{t.home}</span>
-          </button>
-          <h1 className="stats-title">{t.stats}</h1>
+          <div className="nav-left">
+            <button onClick={() => navigate('/home')} className="theme-btn">
+              🏠 {t.home}
+            </button>
+          </div>
+          <div className="nav-center">
+             <h1 style={{fontSize: '1.2rem', fontWeight: 'bold'}}>{t.stats}</h1>
+          </div>
+          <div className="nav-right">
+             {/* Empty for balance or could add something later */}
+          </div>
         </div>
       </nav>
 
-      <div className="stats-content">
+      <div className="main-content">
         <div className="stats-grid">
           <div className="stat-card">
-            <div className="stat-icon">🎯</div>
-            <div className="stat-value">{completedLevels}/{totalLevels}</div>
-            <div className="stat-label">{t.level}s Completed</div>
+             <div className="stat-icon icon-gold">🏆</div>
+             <div className="stat-value text-red">{progress.achievements.length}</div>
+             <div className="stat-label">Achievements</div>
           </div>
 
           <div className="stat-card">
-            <div className="stat-icon">⭐</div>
-            <div className="stat-value">{totalScore}</div>
-            <div className="stat-label">Total {t.score}</div>
+            <div className="stat-icon icon-blue">📊</div>
+            <div className="stat-value text-red">{avgScore}</div>
+            <div className="stat-label">Average</div>
+          </div>
+          
+          <div className="stat-card">
+            <div className="stat-icon icon-yellow">⭐</div>
+            <div className="stat-value text-red">{totalScore}</div>
+            <div className="stat-label">{t.score}</div>
           </div>
 
           <div className="stat-card">
-            <div className="stat-icon">📊</div>
-            <div className="stat-value">{avgScore}</div>
-            <div className="stat-label">Average {t.score}</div>
-          </div>
-
-          <div className="stat-card">
-            <div className="stat-icon">🏆</div>
-            <div className="stat-value">{progress.achievements.length}</div>
-            <div className="stat-label">Achievements</div>
+            <div className="stat-icon icon-red">🎯</div>
+            <div className="stat-value text-red">{completedLevels}/50</div>
+            <div className="stat-label">{t.level}s</div>
           </div>
         </div>
 
         {progress.history.length > 0 && (
-          <div className="history-section">
-            <h2 className="section-title">Recent Activity</h2>
+          <div className="history-section" style={{marginTop: '40px'}}>
+            <h2 style={{marginBottom: '20px', fontSize: '1.5rem'}}>Recent Activity</h2>
             <div className="history-list">
               {progress.history.slice(0, 10).map((item, idx) => (
                 <div key={idx} className="history-item">
-                  <div className="history-info">
-                    <span className="history-level">{t.level} {item.level}</span>
-                    <span className="history-score">{item.score}/10</span>
-                  </div>
-                  <div className="history-stars">
-                    {Array.from({ length: item.stars }).map((_, i) => (
-                      <span key={i}>⭐</span>
-                    ))}
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        )}
-
-        {progress.achievements.length > 0 && (
-          <div className="achievements-section">
-            <h2 className="section-title">Achievements</h2>
-            <div className="achievements-list">
-              {progress.achievements.map((achievement, idx) => (
-                <div key={idx} className="achievement-badge">
-                  🏅 {achievement}
+                  <span style={{fontWeight: 'bold'}}>{t.level} {item.level}</span>
+                  <span className="text-red" style={{fontWeight: 'bold'}}>{item.score}/10</span>
+                  <span>{'⭐'.repeat(item.stars)}</span>
                 </div>
               ))}
             </div>
