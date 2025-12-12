@@ -11,7 +11,7 @@ export default function HomePage({
   lang,
   setLang,
   totalStars,
-  t,
+  t
 }) {
   const [showMenu, setShowMenu] = useState(false);
   const navigate = useNavigate();
@@ -24,63 +24,56 @@ export default function HomePage({
   };
 
   return (
-    <div className="app-container">
+    <div className={`app-container home-page`}>
       <nav className="navbar">
         <div className="nav-content">
-          <div className="nav-left nav-logo">
-             <h1 style={{ cursor: "pointer", color: '#ef4444', marginRight: '10px' }} onClick={() => navigate("/home")}>
-              QuizByJamili
+          <div className="nav-left nav-logo" onClick={() => navigate("/home")}>
+             <h1 className="nav-logo-text">
+              <span className="brand-main">QuizByJamili</span>
             </h1>
-            <svg
-              className="trophy-icon"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="#ef4444"
-            >
-              <path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6" />
-              <path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18" />
-              <path d="M4 22h16" />
-              <path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22" />
-              <path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22" />
-              <path d="M18 2H6v7a6 6 0 0 0 12 0V2Z" />
-            </svg>
           </div>
 
-          <div className="nav-center user-info" onClick={() => setShowMenu(!showMenu)}>
-            <span className="user-name">{userName}</span>
-             <div className="user-avatar">{userName[0]?.toUpperCase()}</div>
-             <svg className="dropdown-icon" viewBox="0 0 24 24">
-                <polyline points="6 9 12 15 18 9"></polyline>
-              </svg>
-             
-             {showMenu && (
-              <div className="dropdown-menu">
-                <div
-                  className="menu-item"
-                  onClick={() => {
-                    onChangeName();
-                    setShowMenu(false);
-                  }}
-                >
-                  <svg viewBox="0 0 24 24">
-                    <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7" />
-                  </svg>
-                  {t.changeName}
+          <div className="nav-center">
+            <div className="user-info" onClick={() => setShowMenu(!showMenu)}>
+              <span className="user-name">{userName}</span>
+               <div className="user-avatar">{userName[0]?.toUpperCase()}</div>
+               <svg className="dropdown-icon" viewBox="0 0 24 24">
+                  <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+               
+               {showMenu && (
+                <div className="dropdown-menu">
+                  <div
+                    className="menu-item"
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      onChangeName();
+                      setShowMenu(false);
+                    }}
+                  >
+                    <svg viewBox="0 0 24 24" className="menu-icon">
+                      <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7" />
+                    </svg>
+                    {t('changeName')}
+                  </div>
+                  <div className="menu-item-info">
+                    <svg viewBox="0 0 24 24" className="menu-icon">
+                      <rect x="3" y="11" width="18" height="11" rx="2" ry="2" />
+                    </svg>
+                    {t('level')}: {progress.unlockedLevels}/50
+                  </div>
+                  <div className="menu-item" onClick={(e) => {
+                      e.stopPropagation();
+                      navigate("/stats");
+                    }}>
+                    <svg viewBox="0 0 24 24" className="menu-icon">
+                      <path d="M3 3v18h18" />
+                    </svg>
+                    {t('stats')}
+                  </div>
                 </div>
-                <div className="menu-item">
-                  <svg viewBox="0 0 24 24">
-                    <rect x="3" y="11" width="18" height="11" rx="2" ry="2" />
-                  </svg>
-                  {t.level}: {progress.unlockedLevels}/50
-                </div>
-                <div className="menu-item" onClick={() => navigate("/stats")}>
-                  <svg viewBox="0 0 24 24">
-                    <path d="M3 3v18h18" />
-                  </svg>
-                  {t.stats}
-                </div>
-              </div>
-            )}
+              )}
+            </div>
           </div>
 
           <div className="nav-right">
@@ -90,7 +83,7 @@ export default function HomePage({
             
             <button
               className="theme-btn"
-              onClick={() => setLang(lang === "en" ? "fr" : "en")}
+              onClick={() => setLang(lang === "en" ? "fr" : lang === "fr" ? "ar" : "en")}
             >
               🌐 {lang.toUpperCase()}
             </button>
@@ -107,8 +100,8 @@ export default function HomePage({
 
       <div className="main-content">
         <div className="header-section">
-          <h2 className="main-title">{t.selectLevel}</h2>
-          <p className="main-subtitle">{t.unlockNext}</p>
+          <h2 className="main-title">{t('selectLevel')}</h2>
+          <p className="main-subtitle">{t('unlockNext')}</p>
         </div>
 
         <div className="levels-grid">
@@ -120,7 +113,7 @@ export default function HomePage({
             return (
               <div
                 key={level}
-                className={`level-card ${isUnlocked ? "unlocked" : "locked"}`}
+                className={`level-card ${isUnlocked ? "unlocked" : "locked"} difficulty-${difficulty.toLowerCase()}`}
                 onClick={() => isUnlocked && onStartLevel(level)}
               >
                 {!isUnlocked && (
@@ -138,10 +131,8 @@ export default function HomePage({
 
                 <div className="card-content">
                   <div className="level-number">#{level}</div>
-                  <div
-                    className={`difficulty-badge difficulty-${difficulty.toLowerCase()}`}
-                  >
-                    {t[difficulty.toLowerCase()]}
+                  <div className="difficulty-badge">
+                    {t(difficulty.toLowerCase())}
                   </div>
                   {score !== undefined && (
                     <div className="score-display">
