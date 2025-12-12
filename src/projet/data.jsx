@@ -1,381 +1,229 @@
-export const questionsData = {};
+// ==========================================
+// MALE QUESTIONS DATABASE - EXPANDED
+// ==========================================
+
+export const maleQuestions = [
+  // ===== ANIME =====
+  { q: { en: 'Who is the main character in Naruto?', fr: 'Qui est le personnage principal de Naruto?', ar: 'من هو الشخصية الرئيسية في ناروتو؟' }, opts: { en: ['Sasuke', 'Kakashi', 'Naruto Uzumaki', 'Sakura'], fr: ['Sasuke', 'Kakashi', 'Naruto Uzumaki', 'Sakura'], ar: ['ساسكي', 'كاكاشي', 'ناروتو أوزوماكي', 'ساكورا'] }, correct: 2, category: { en: 'Anime', fr: 'Anime', ar: 'أنمي' } },
+  { q: { en: 'Which anime has "Sharingan"?', fr: 'Quel anime a "Sharingan"?', ar: 'أي أنمي يحتوي على "الشارينغان"؟' }, opts: { en: ['Bleach', 'Naruto', 'One Piece', 'Dragon Ball'], fr: ['Bleach', 'Naruto', 'One Piece', 'Dragon Ball'], ar: ['بليتش', 'ناروتو', 'ون بيس', 'دراغون بول'] }, correct: 1, category: { en: 'Anime', fr: 'Anime', ar: 'أنمي' } },
+  { q: { en: 'Luffy\'s power in One Piece?', fr: 'Le pouvoir de Luffy dans One Piece?', ar: 'قوة لوفي في ون بيس؟' }, opts: { en: ['Fire', 'Rubber', 'Ice', 'Lightning'], fr: ['Feu', 'Caoutchouc', 'Glace', 'Foudre'], ar: ['نار', 'مطاط', 'ثلج', 'برق'] }, correct: 1, category: { en: 'Anime', fr: 'Anime', ar: 'أنمي' } },
+  { q: { en: 'What is the name of Goku\'s signature attack?', fr: 'Quel est le nom de l\'attaque signature de Goku?', ar: 'ما اسم هجوم غوكو المميز؟' }, opts: { en: ['Rasengan', 'Kamehameha', 'Hadouken', 'Spirit Bomb'], fr: ['Rasengan', 'Kamehameha', 'Hadouken', 'Boule d\'énergie'], ar: ['راسينغان', 'كاميهاميها', 'هادوكين', 'قنبلة الروح'] }, correct: 1, category: { en: 'Anime', fr: 'Anime', ar: 'أنمي' } },
+  { q: { en: 'Who is the captain of the Survey Corps in Attack on Titan?', fr: 'Qui est le capitaine du Bataillon d\'exploration?', ar: 'من هو قائد فيلق الاستكشاف في هجوم العمالقة؟' }, opts: { en: ['Erwin', 'Levi', 'Eren', 'Mikasa'], fr: ['Erwin', 'Levi', 'Eren', 'Mikasa'], ar: ['إروين', 'ليفاي', 'إيرين', 'ميكاسا'] }, correct: 1, category: { en: 'Anime', fr: 'Anime', ar: 'أنمي' } },
+
+  // ===== MOVIES =====
+  { q: { en: 'Who directed Inception?', fr: 'Qui a réalisé Inception?', ar: 'من أخرج فيلم Inception؟' }, opts: { en: ['Spielberg', 'Nolan', 'Cameron', 'Tarantino'], fr: ['Spielberg', 'Nolan', 'Cameron', 'Tarantino'], ar: ['سبيلبرغ', 'نولان', 'كاميرون', 'تارانتينو'] }, correct: 1, category: { en: 'Movies', fr: 'Films', ar: 'أفلام' } },
+  { q: { en: 'Which movie won Best Picture 2020?', fr: 'Quel film a gagné en 2020?', ar: 'أي فيلم فاز بجائزة أفضل فيلم 2020؟' }, opts: { en: ['1917', 'Joker', 'Parasite', 'Once Upon'], fr: ['1917', 'Joker', 'Parasite', 'Once Upon'], ar: ['1917', 'جوكر', 'باراسايت', 'Once Upon'] }, correct: 2, category: { en: 'Movies', fr: 'Films', ar: 'أفلام' } },
+  { q: { en: 'Who played Iron Man in the MCU?', fr: 'Qui a joué Iron Man?', ar: 'من لعب دور آيرون مان في MCU؟' }, opts: { en: ['Chris Evans', 'Robert Downey Jr', 'Chris Hemsworth', 'Mark Ruffalo'], fr: ['Chris Evans', 'Robert Downey Jr', 'Chris Hemsworth', 'Mark Ruffalo'], ar: ['كريس إيفانز', 'روبرت داوني جونيور', 'كريس هيمسوورث', 'مارك روفالو'] }, correct: 1, category: { en: 'Movies', fr: 'Films', ar: 'أفلام' } },
+  { q: { en: 'What year was The Matrix released?', fr: 'En quelle année Matrix est-il sorti?', ar: 'في أي سنة صدر فيلم ذا ماتريكس؟' }, opts: { en: ['1997', '1998', '1999', '2000'], fr: ['1997', '1998', '1999', '2000'], ar: ['1997', '1998', '1999', '2000'] }, correct: 2, category: { en: 'Movies', fr: 'Films', ar: 'أفلام' } },
+
+  // ===== GEOGRAPHY & CAPITALS =====
+  { q: { en: 'Capital of Morocco?', fr: 'Capitale du Maroc?', ar: 'عاصمة المغرب؟' }, opts: { en: ['Casablanca', 'Rabat', 'Marrakech', 'Fes'], fr: ['Casablanca', 'Rabat', 'Marrakech', 'Fès'], ar: ['الدار البيضاء', 'الرباط', 'مراكش', 'فاس'] }, correct: 1, category: { en: 'Geography', fr: 'Géographie', ar: 'جغرافيا' } },
+  { q: { en: 'Capital of Japan?', fr: 'Capitale du Japon?', ar: 'عاصمة اليابان؟' }, opts: { en: ['Osaka', 'Kyoto', 'Tokyo', 'Hiroshima'], fr: ['Osaka', 'Kyoto', 'Tokyo', 'Hiroshima'], ar: ['أوساكا', 'كيوتو', 'طوكيو', 'هيروشيما'] }, correct: 2, category: { en: 'Geography', fr: 'Géographie', ar: 'جغرافيا' } },
+  { q: { en: 'Capital of Germany?', fr: 'Capitale de l\'Allemagne?', ar: 'عاصمة ألمانيا؟' }, opts: { en: ['Munich', 'Hamburg', 'Berlin', 'Frankfurt'], fr: ['Munich', 'Hambourg', 'Berlin', 'Francfort'], ar: ['ميونخ', 'هامبورغ', 'برلين', 'فرانكفورت'] }, correct: 2, category: { en: 'Geography', fr: 'Géographie', ar: 'جغرافيا' } },
+  { q: { en: 'Capital of Spain?', fr: 'Capitale de l\'Espagne?', ar: 'عاصمة إسبانيا؟' }, opts: { en: ['Barcelona', 'Madrid', 'Valencia', 'Seville'], fr: ['Barcelone', 'Madrid', 'Valence', 'Séville'], ar: ['برشلونة', 'مدريد', 'فالنسيا', 'إشبيلية'] }, correct: 1, category: { en: 'Geography', fr: 'Géographie', ar: 'جغرافيا' } },
+  { q: { en: 'Capital of Saudi Arabia?', fr: 'Capitale de l\'Arabie Saoudite?', ar: 'عاصمة السعودية؟' }, opts: { en: ['Jeddah', 'Riyadh', 'Mecca', 'Medina'], fr: ['Djeddah', 'Riyad', 'La Mecque', 'Médine'], ar: ['جدة', 'الرياض', 'مكة', 'المدينة'] }, correct: 1, category: { en: 'Geography', fr: 'Géographie', ar: 'جغرافيا' } },
+
+  // ===== TECHNOLOGY =====
+  { q: { en: 'What does CPU stand for?', fr: 'Que signifie CPU?', ar: 'ماذا يعني CPU؟' }, opts: { en: ['Central Processing Unit', 'Computer Personal Unit', 'Central Program', 'Core Processing'], fr: ['Unité Centrale', 'Unité Personnelle', 'Programme Central', 'Traitement Core'], ar: ['وحدة المعالجة المركزية', 'وحدة الحاسوب الشخصية', 'البرنامج المركزي', 'معالج النواة'] }, correct: 0, category: { en: 'Technology', fr: 'Technologie', ar: 'تكنولوجيا' } },
+  { q: { en: 'Who founded Apple?', fr: 'Qui a fondé Apple?', ar: 'من أسس شركة أبل؟' }, opts: { en: ['Bill Gates', 'Steve Jobs', 'Elon Musk', 'Mark Zuckerberg'], fr: ['Bill Gates', 'Steve Jobs', 'Elon Musk', 'Mark Zuckerberg'], ar: ['بيل غيتس', 'ستيف جوبز', 'إيلون ماسك', 'مارك زوكربيرغ'] }, correct: 1, category: { en: 'Technology', fr: 'Technologie', ar: 'تكنولوجيا' } },
+
+  // ===== SCIENCE =====
+  { q: { en: 'Speed of light?', fr: 'Vitesse de la lumière?', ar: 'سرعة الضوء؟' }, opts: { en: ['300,000 km/s', '150,000 km/s', '500,000 km/s', '100,000 km/s'], fr: ['300 000 km/s', '150 000 km/s', '500 000 km/s', '100 000 km/s'], ar: ['300,000 كم/ث', '150,000 كم/ث', '500,000 كم/ث', '100,000 كم/ث'] }, correct: 0, category: { en: 'Science', fr: 'Science', ar: 'علوم' } },
+  { q: { en: 'How many planets in solar system?', fr: 'Combien de planètes dans le système solaire?', ar: 'كم عدد الكواكب في النظام الشمسي؟' }, opts: { en: ['7', '8', '9', '10'], fr: ['7', '8', '9', '10'], ar: ['7', '8', '9', '10'] }, correct: 1, category: { en: 'Science', fr: 'Science', ar: 'علوم' } },
+
+  // ===== HISTORY =====
+  { q: { en: 'When did WW2 end?', fr: 'Quand la 2e GM s\'est terminée?', ar: 'متى انتهت الحرب العالمية الثانية؟' }, opts: { en: ['1943', '1944', '1945', '1946'], fr: ['1943', '1944', '1945', '1946'], ar: ['1943', '1944', '1945', '1946'] }, correct: 2, category: { en: 'History', fr: 'Histoire', ar: 'تاريخ' } },
+
+  // ===== GAMING =====
+  { q: { en: 'Year Minecraft released?', fr: 'Année de sortie de Minecraft?', ar: 'سنة إصدار ماينكرافت؟' }, opts: { en: ['2009', '2010', '2011', '2012'], fr: ['2009', '2010', '2011', '2012'], ar: ['2009', '2010', '2011', '2012'] }, correct: 2, category: { en: 'Gaming', fr: 'Jeux', ar: 'ألعاب' } },
+  { q: { en: 'Who is Mario\'s brother?', fr: 'Qui est le frère de Mario?', ar: 'من هو أخو ماريو؟' }, opts: { en: ['Wario', 'Luigi', 'Yoshi', 'Toad'], fr: ['Wario', 'Luigi', 'Yoshi', 'Toad'], ar: ['واريو', 'لويجي', 'يوشي', 'تود'] }, correct: 1, category: { en: 'Gaming', fr: 'Jeux', ar: 'ألعاب' } },
+
+  // ===== SPORTS =====
+  { q: { en: 'Players in football team?', fr: 'Joueurs dans une équipe?', ar: 'عدد اللاعبين في فريق كرة القدم؟' }, opts: { en: ['9', '10', '11', '12'], fr: ['9', '10', '11', '12'], ar: ['9', '10', '11', '12'] }, correct: 2, category: { en: 'Sport', fr: 'Sport', ar: 'رياضة' } },
+  { q: { en: 'Olympic rings count?', fr: 'Nombre d\'anneaux olympiques?', ar: 'عدد حلقات الأولمبياد؟' }, opts: { en: ['4', '5', '6', '7'], fr: ['4', '5', '6', '7'], ar: ['4', '5', '6', '7'] }, correct: 1, category: { en: 'Sport', fr: 'Sport', ar: 'رياضة' } },
+  { q: { en: 'Messi nationality?', fr: 'Nationalité de Messi?', ar: 'جنسية ميسي؟' }, opts: { en: ['Brazil', 'Argentina', 'Spain', 'Portugal'], fr: ['Brésil', 'Argentine', 'Espagne', 'Portugal'], ar: ['البرازيل', 'الأرجنتين', 'إسبانيا', 'البرتغال'] }, correct: 1, category: { en: 'Sport', fr: 'Sport', ar: 'رياضة' } },
+  { q: { en: 'Which country hosted 2022 World Cup?', fr: 'Quel pays a accueilli la Coupe du monde 2022?', ar: 'أي بلد استضاف كأس العالم 2022؟' }, opts: { en: ['Russia', 'Brazil', 'Qatar', 'UAE'], fr: ['Russie', 'Brésil', 'Qatar', 'Émirats'], ar: ['روسيا', 'البرازيل', 'قطر', 'الإمارات'] }, correct: 2, category: { en: 'Sport', fr: 'Sport', ar: 'رياضة' } },
+  { q: { en: 'Ronaldo first club?', fr: 'Premier club de Ronaldo?', ar: 'أول نادي لرونالدو؟' }, opts: { en: ['Real Madrid', 'Manchester United', 'Sporting CP', 'Juventus'], fr: ['Real Madrid', 'Manchester United', 'Sporting CP', 'Juventus'], ar: ['ريال مدريد', 'مانشستر يونايتد', 'سبورتينغ', 'يوفنتوس'] }, correct: 2, category: { en: 'Sport', fr: 'Sport', ar: 'رياضة' } },
+  
+  // ===== NEW BOYS CONTENT - Personality & Lifestyle =====
+  { q: { en: 'What type of guy are you?', fr: 'Quel type de gars es-tu?', ar: 'أي نوع من الرجال أنت؟' }, opts: { en: ["Leader", "Thinker", "Adventurer", "Loyal Friend"], fr: ["Leader", "Penseur", "Aventurier", "Ami loyal"], ar: ["قائد", "مفكر", "مغامر", "صديق مخلص"] }, correct: 0, category: { en: 'Personality', fr: 'Personnalité', ar: 'شخصية' } },
+  { q: { en: 'What motivates you the most?', fr: 'Qu\'est-ce qui te motive le plus?', ar: 'ما الذي يحفزك أكثر؟' }, opts: { en: ["Success", "Family", "Adventure", "Knowledge"], fr: ["Succès", "Famille", "Aventure", "Savoir"], ar: ["النجاح", "العائلة", "المغامرة", "المعرفة"] }, correct: 0, category: { en: 'Personality', fr: 'Personnalité', ar: 'شخصية' } },
+  { q: { en: 'Are you Sigma, Alpha, or Beta?', fr: 'Es-tu Sigma, Alpha ou Beta?', ar: 'هل أنت سيجما، ألفا، أم بيتا؟' }, opts: { en: ["Sigma", "Alpha", "Beta", "None"], fr: ["Sigma", "Alpha", "Beta", "Aucun"], ar: ["سيجما", "ألفا", "بيتا", "لا شيء"] }, correct: 0, category: { en: 'Personality', fr: 'Personnalité', ar: 'شخصية' } },
+  { q: { en: 'What is your real personality?', fr: 'Quelle est ta vraie personnalité?', ar: 'ما هي شخصيتك الحقيقية؟' }, opts: { en: ["Optimistic", "Pessimistic", "Realistic", "Idealistic"], fr: ["Optimiste", "Pessimiste", "Réaliste", "Idéaliste"], ar: ["متفائل", "متشائم", "واقعي", "مثالي"] }, correct: 0, category: { en: 'Personality', fr: 'Personnalité', ar: 'شخصية' } },
+  { q: { en: 'What is your hidden strength?', fr: 'Quelle est ta force cachée?', ar: 'ما هي قوتك الخفية؟' }, opts: { en: ["Patience", "Creativity", "Courage", "Empathy"], fr: ["Patience", "Créativité", "Courage", "Empathie"], ar: ["الصبر", "الإبداع", "الشجاعة", "التعاطف"] }, correct: 0, category: { en: 'Personality', fr: 'Personnalité', ar: 'شخصية' } },
+  { q: { en: 'Are you introvert or extrovert?', fr: 'Es-tu introverti ou extraverti?', ar: 'هل أنت منطوي أم منفتح؟' }, opts: { en: ["Introvert", "Extrovert", "Ambivert", "Depends on mood"], fr: ["Introverti", "Extraverti", "Ambivert", "Ça dépend"], ar: ["منطوي", "منفتح", "وسطي", "يعتمد على المزاج"] }, correct: 0, category: { en: 'Personality', fr: 'Personnalité', ar: 'شخصية' } },
+  { q: { en: 'What is your life energy level?', fr: 'Quel est ton niveau d\'énergie?', ar: 'ما هو مستوى طاقتك؟' }, opts: { en: ["High", "Medium", "Low", "Varies"], fr: ["Élevé", "Moyen", "Faible", "Variable"], ar: ["عالي", "متوسط", "منخفض", "متغير"] }, correct: 0, category: { en: 'Personality', fr: 'Personnalité', ar: 'شخصية' } },
+  { q: { en: 'Are you more emotional or logical?', fr: 'Es-tu plus émotionnel ou logique?', ar: 'هل أنت عاطفي أم منطقي أكثر؟' }, opts: { en: ["Emotional", "Logical", "Balanced", "Depends on situation"], fr: ["Émotionnel", "Logique", "Équilibré", "Ça dépend"], ar: ["عاطفي", "منطقي", "متوازن", "يعتمد على الموقف"] }, correct: 0, category: { en: 'Personality', fr: 'Personnalité', ar: 'شخصية' } },
+  { q: { en: 'What is your mindset type?', fr: 'Quel est ton type d\'état d\'esprit?', ar: 'ما هو نوع عقليتك؟' }, opts: { en: ["Growth", "Fixed", "Creative", "Analytical"], fr: ["Croissance", "Fixe", "Créatif", "Analytique"], ar: ["نمو", "ثابت", "إبداعي", "تحليلي"] }, correct: 0, category: { en: 'Personality', fr: 'Personnalité', ar: 'شخصية' } },
+  { q: { en: 'How confident are you?', fr: 'Quelle est ta confiance en toi?', ar: 'ما مدى ثقتك بنفسك؟' }, opts: { en: ["Very confident", "Somewhat confident", "Not confident", "Unsure"], fr: ["Très confiant", "Assez confiant", "Peu confiant", "Incertain"], ar: ["واثق جداً", "واثق إلى حد ما", "غير واثق", "غير متأكد"] }, correct: 0, category: { en: 'Personality', fr: 'Personnalité', ar: 'شخصية' } },
+
+  // ===== NEW BOYS CONTENT - Sports & Fitness =====
+  { q: { en: 'Which sport fits your personality?', fr: 'Quel sport te correspond?', ar: 'أي رياضة تناسب شخصيتك؟' }, opts: { en: ["Football", "Basketball", "Swimming", "Martial Arts"], fr: ["Football", "Basket", "Natation", "Arts martiaux"], ar: ["كرة القدم", "كرة السلة", "السباحة", "فنون قتالية"] }, correct: 0, category: { en: 'Sport', fr: 'Sport', ar: 'رياضة' } },
+  { q: { en: 'Which legendary player are you?', fr: 'Quel joueur de légende es-tu?', ar: 'أي لاعب أسطوري أنت؟' }, opts: { en: ["Messi", "Ronaldo", "Neymar", "Mbappe"], fr: ["Messi", "Ronaldo", "Neymar", "Mbappe"], ar: ["ميسي", "رونالدو", "نيمار", "مبابي"] }, correct: 0, category: { en: 'Sport', fr: 'Sport', ar: 'رياضة' } },
+  { q: { en: 'Are you a natural athlete?', fr: 'Es-tu un athlète né?', ar: 'هل أنت رياضي بالفطرة؟' }, opts: { en: ["Yes", "No", "Sometimes", "Not sure"], fr: ["Oui", "Non", "Parfois", "Pas sûr"], ar: ["نعم", "لا", "أحياناً", "لست متأكداً"] }, correct: 0, category: { en: 'Sport', fr: 'Sport', ar: 'رياضة' } },
+  { q: { en: 'What is your football IQ level?', fr: 'Quel est ton QI footballistique?', ar: 'ما هو مستوى ذكائك الكروي؟' }, opts: { en: ["High", "Medium", "Low", "Beginner"], fr: ["Élevé", "Moyen", "Faible", "Débutant"], ar: ["عالي", "متوسط", "منخفض", "مبتدئ"] }, correct: 0, category: { en: 'Sport', fr: 'Sport', ar: 'رياضة' } },
+  { q: { en: 'Are you built for gym or calisthenics?', fr: 'Es-tu fait pour la gym ou la calisthénie?', ar: 'هل أنت مناسب للجيم أم تمارين وزن الجسم؟' }, opts: { en: ["Gym", "Calisthenics", "Both", "Neither"], fr: ["Gym", "Calisthénie", "Les deux", "Aucun"], ar: ["جيم", "تمارين وزن الجسم", "كلاهما", "لا شيء"] }, correct: 0, category: { en: 'Sport', fr: 'Sport', ar: 'رياضة' } },
+  { q: { en: 'What is your fitness discipline level?', fr: 'Quel est ton niveau de discipline sportive?', ar: 'ما هو مستوى انضباطك الرياضي؟' }, opts: { en: ["High", "Medium", "Low", "Inconsistent"], fr: ["Élevé", "Moyen", "Faible", "Inconstant"], ar: ["عالي", "متوسط", "منخفض", "غير منتظم"] }, correct: 0, category: { en: 'Sport', fr: 'Sport', ar: 'رياضة' } },
+  { q: { en: 'Which position fits you in football?', fr: 'Quelle position te convient au football?', ar: 'أي مركز يناسبك في كرة القدم؟' }, opts: { en: ["Forward", "Midfielder", "Defender", "Goalkeeper"], fr: ["Attaquant", "Milieu", "Défenseur", "Gardien"], ar: ["مهاجم", "وسط", "مدافع", "حارس مرمى"] }, correct: 0, category: { en: 'Sport', fr: 'Sport', ar: 'رياضة' } },
+  { q: { en: 'Are you fast, strong, or technical?', fr: 'Es-tu rapide, fort ou technique?', ar: 'هل أنت سريع، قوي، أم تقني؟' }, opts: { en: ["Fast", "Strong", "Technical", "All"], fr: ["Rapide", "Fort", "Technique", "Tout"], ar: ["سريع", "قوي", "تقني", "كل شيء"] }, correct: 0, category: { en: 'Sport', fr: 'Sport', ar: 'رياضة' } },
+  { q: { en: 'What sport should you master?', fr: 'Quel sport devrais-tu maîtriser?', ar: 'أي رياضة يجب أن تتقنها؟' }, opts: { en: ["Football", "Tennis", "Boxing", "Skateboarding"], fr: ["Football", "Tennis", "Boxe", "Skateboard"], ar: ["كرة القدم", "التنس", "الملاكمة", "التزلج"] }, correct: 0, category: { en: 'Sport', fr: 'Sport', ar: 'رياضة' } },
+  { q: { en: 'What is your competitive level?', fr: 'Quel est ton niveau de compétitivité?', ar: 'ما هو مستوى تنافسيتك؟' }, opts: { en: ["Very Competitive", "Somewhat Competitive", "Not Competitive", "Casual"], fr: ["Très compétitif", "Assez compétitif", "Peu compétitif", "Loisir"], ar: ["تنافسي جداً", "تنافسي إلى حد ما", "غير تنافسي", "عادي"] }, correct: 0, category: { en: 'Sport', fr: 'Sport', ar: 'رياضة' } },
+
+  // ===== NEW BOYS CONTENT - Movies, Anime & Gaming =====
+  { q: { en: 'Which anime character are you?', fr: 'Quel personnage d\'anime es-tu?', ar: 'أي شخصية أنمي أنت؟' }, opts: { en: ["Naruto", "Luffy", "Goku", "Ichigo"], fr: ["Naruto", "Luffy", "Goku", "Ichigo"], ar: ["ناروتو", "لوفي", "غوكو", "إيتشيغو"] }, correct: 0, category: { en: 'Anime', fr: 'Anime', ar: 'أنمي' } },
+  { q: { en: 'Are you more Naruto, Luffy, or Goku?', fr: 'Es-tu plus Naruto, Luffy ou Goku?', ar: 'هل أنت أشبه بناروتو، لوفي، أم غوكو؟' }, opts: { en: ["Naruto", "Luffy", "Goku", "None"], fr: ["Naruto", "Luffy", "Goku", "Aucun"], ar: ["ناروتو", "لوفي", "غوكو", "لا شيء"] }, correct: 0, category: { en: 'Anime', fr: 'Anime', ar: 'أنمي' } },
+  { q: { en: 'What gaming style fits you?', fr: 'Quel style de jeu te convient?', ar: 'أي أسلوب ألعاب يناسبك؟' }, opts: { en: ["Strategist", "Aggressive", "Support", "Casual"], fr: ["Stratège", "Agressif", "Support", "Casual"], ar: ["استراتيجي", "عدواني", "داعم", "عادي"] }, correct: 0, category: { en: 'Gaming', fr: 'Jeux', ar: 'ألعاب' } },
+  { q: { en: 'What video game character matches you?', fr: 'Quel personnage de jeu vidéo te correspond?', ar: 'أي شخصية ألعاب فيديو تشبهك؟' }, opts: { en: ["Mario", "Link", "Master Chief", "Kratos"], fr: ["Mario", "Link", "Master Chief", "Kratos"], ar: ["ماريو", "لينك", "ماستر شيف", "كراتوس"] }, correct: 0, category: { en: 'Gaming', fr: 'Jeux', ar: 'ألعاب' } },
+  { q: { en: 'Which movie hero represents you?', fr: 'Quel héros de film te représente?', ar: 'أي بطل أفلام يمثلك؟' }, opts: { en: ["Iron Man", "Batman", "Spider-Man", "Captain America"], fr: ["Iron Man", "Batman", "Spider-Man", "Captain America"], ar: ["الرجل الحديدي", "باتمان", "الرجل العنكبوت", "كابتن أمريكا"] }, correct: 0, category: { en: 'Movies', fr: 'Films', ar: 'أفلام' } },
+  { q: { en: 'Are you a strategist or fighter?', fr: 'Es-tu stratège ou combattant?', ar: 'هل أنت استراتيجي أم مقاتل؟' }, opts: { en: ["Strategist", "Fighter", "Both", "Neither"], fr: ["Stratège", "Combattant", "Les deux", "Aucun"], ar: ["استراتيجي", "مقاتل", "كلاهما", "لا شيء"] }, correct: 0, category: { en: 'Personality', fr: 'Personnalité', ar: 'شخصية' } },
+  { q: { en: 'What is your gamer personality?', fr: 'Quelle est ta personnalité de joueur?', ar: 'ما هي شخصيتك كلاعب؟' }, opts: { en: ["Casual", "Competitive", "Streamer", "Explorer"], fr: ["Casual", "Compétitif", "Streamer", "Explorateur"], ar: ["عادي", "تنافسي", "بث مباشر", "مستكشف"] }, correct: 0, category: { en: 'Gaming', fr: 'Jeux', ar: 'ألعاب' } },
+  { q: { en: 'What anime arc describes your life?', fr: 'Quel arc d\'anime décrit ta vie?', ar: 'أي قوس أنمي يصف حياتك؟' }, opts: { en: ["Chunin Exam", "Marineford", "Frieza Saga", "Hunter Exam"], fr: ["Examen Chunin", "Marineford", "Saga Frieza", "Examen des Chasseurs"], ar: ["امتحان التشونين", "مارينفورد", "ملحمة فريزا", "امتحان الصيادين"] }, correct: 0, category: { en: 'Anime', fr: 'Anime', ar: 'أنمي' } },
+  { q: { en: 'Which villain are you?', fr: 'Quel méchant es-tu?', ar: 'أي شرير أنت؟' }, opts: { en: ["Joker", "Frieza", "Dio", "Light Yagami"], fr: ["Joker", "Frieza", "Dio", "Light Yagami"], ar: ["الجوكر", "فريزا", "ديو", "لايت ياغامي"] }, correct: 0, category: { en: 'Movies', fr: 'Films', ar: 'أفلام' } },
+  { q: { en: 'What is your power level?', fr: 'Quel est ton niveau de puissance?', ar: 'ما هو مستوى قوتك؟' }, opts: { en: ["Over 9000", "Average", "Below Average", "Unknown"], fr: ["Plus de 9000", "Moyen", "En dessous", "Inconnu"], ar: ["أكثر من 9000", "متوسط", "أقل من المتوسط", "مجهول"] }, correct: 0, category: { en: 'Anime', fr: 'Anime', ar: 'أنمي' } },
+
+  // ===== NEW BOYS CONTENT - Future & Ambition =====
+  { q: { en: 'What career fits you best?', fr: 'Quelle carrière te convient?', ar: 'أي مهنة تناسبك؟' }, opts: { en: ["Entrepreneur", "Engineer", "Artist", "Scientist"], fr: ["Entrepreneur", "Ingénieur", "Artiste", "Scientifique"], ar: ["ريادي", "مهندس", "فنان", "عالم"] }, correct: 0, category: { en: 'Career', fr: 'Carrière', ar: 'مسار مهني' } },
+  { q: { en: 'Are you entrepreneurial or traditional?', fr: 'Es-tu entrepreneurial ou traditionnel?', ar: 'هل أنت ريادي أم تقليدي؟' }, opts: { en: ["Entrepreneurial", "Traditional", "Hybrid", "Undecided"], fr: ["Entrepreneurial", "Traditionnel", "Hybride", "Indécis"], ar: ["ريادي", "تقليدي", "هجين", "غير محدد"] }, correct: 0, category: { en: 'Career', fr: 'Carrière', ar: 'مسار مهني' } },
+  { q: { en: 'What is your financial mindset?', fr: 'Quelle est ta mentalité financière?', ar: 'ما هي عقلية المال لديك؟' }, opts: { en: ["Saver", "Spender", "Investor", "Avoider"], fr: ["Épargnant", "Dépensier", "Investisseur", "Évitant"], ar: ["مدخر", "مصرف", "مستثمر", "متجنب"] }, correct: 0, category: { en: 'Career', fr: 'Carrière', ar: 'مسار مهني' } },
+  { q: { en: 'How ambitious are you really?', fr: 'À quel point es-tu ambitieux?', ar: 'ما مدى طموحك حقاً؟' }, opts: { en: ["Very", "Somewhat", "Not much", "Unsure"], fr: ["Très", "Assez", "Pas beaucoup", "Incertain"], ar: ["كثيراً", "إلى حد ما", "قليلاً", "غير متأكد"] }, correct: 0, category: { en: 'Career', fr: 'Carrière', ar: 'مسار مهني' } },
+  { q: { en: 'Are you a leader or follower?', fr: 'Es-tu leader ou suiveur?', ar: 'هل أنت قائد أم تابع؟' }, opts: { en: ["Leader", "Follower", "Both", "Neither"], fr: ["Leader", "Suiveur", "Les deux", "Aucun"], ar: ["قائد", "تابع", "كلاهما", "لا شيء"] }, correct: 0, category: { en: 'Personality', fr: 'Personnalité', ar: 'شخصية' } },
+  { q: { en: 'What is your future lifestyle?', fr: 'Quel sera ton style de vie futur?', ar: 'ما هو أسلوب حياتك المستقبلي؟' }, opts: { en: ["Luxurious", "Simple", "Adventurous", "Balanced"], fr: ["Luxueux", "Simple", "Aventureux", "Équilibré"], ar: ["فاخر", "بسيط", "مغامر", "متوازن"] }, correct: 0, category: { en: 'Career', fr: 'Carrière', ar: 'مسار مهني' } },
+  { q: { en: 'How disciplined are you?', fr: 'Quelle est ta discipline?', ar: 'ما مدى انضباطك؟' }, opts: { en: ["Highly Disciplined", "Somewhat Disciplined", "Undisciplined", "Inconsistent"], fr: ["Très discipliné", "Assez discipliné", "Indiscipliné", "Inconstant"], ar: ["منضبط جداً", "منضبط إلى حد ما", "غير منضبط", "غير منتظم"] }, correct: 0, category: { en: 'Personality', fr: 'Personnalité', ar: 'شخصية' } },
+  { q: { en: 'What is your long-term potential?', fr: 'Quel est ton potentiel à long terme?', ar: 'ما هي قدراتك طويلة المدى؟' }, opts: { en: ["High", "Medium", "Low", "Unknown"], fr: ["Élevé", "Moyen", "Faible", "Inconnu"], ar: ["عالي", "متوسط", "منخفض", "مجهول"] }, correct: 0, category: { en: 'Career', fr: 'Carrière', ar: 'مسار مهني' } },
+  { q: { en: 'How smart are you really?', fr: 'À quel point es-tu intelligent?', ar: 'ما مدى ذكائك حقاً؟' }, opts: { en: ["Very Smart", "Average", "Below Average", "Don't Know"], fr: ["Très intelligent", "Moyen", "En dessous", "Je ne sais pas"], ar: ["ذكي جداً", "متوسط", "أقل من المتوسط", "لا أعرف"] }, correct: 0, category: { en: 'Personality', fr: 'Personnalité', ar: 'شخصية' } },
+  { q: { en: 'What is your success path?', fr: 'Quel est ton chemin vers le succès?', ar: 'ما هو طريقك للنجاح؟' }, opts: { en: ["Hard Work", "Luck", "Connections", "Talent"], fr: ["Travail dur", "Chance", "Relations", "Talent"], ar: ["العمل الجاد", "الحظ", "العلاقات", "الموهبة"] }, correct: 0, category: { en: 'Career', fr: 'Carrière', ar: 'مسار مهني' } },
+
+  // ===== NEW BOYS CONTENT - Relationships =====
+  { q: { en: 'What type of boyfriend are you?', fr: 'Quel genre de petit ami es-tu?', ar: 'أي نوع من الأصدقاء أنت؟' }, opts: { en: ["Romantic", "Funny", "Loyal", "Protective"], fr: ["Romantique", "Drôle", "Loyal", "Protecteur"], ar: ["رومانسي", "مضحك", "مخلص", "حامي"] }, correct: 0, category: { en: 'Relationships', fr: 'Relations', ar: 'علاقات' } },
+  { q: { en: 'Are you loyal or toxic?', fr: 'Es-tu loyal ou toxique?', ar: 'هل أنت مخلص أم سام؟' }, opts: { en: ["Loyal", "Toxic", "Sometimes Toxic", "Not Sure"], fr: ["Loyal", "Toxique", "Parfois toxique", "Pas sûr"], ar: ["مخلص", "سام", "سام أحياناً", "لست متأكداً"] }, correct: 0, category: { en: 'Relationships', fr: 'Relations', ar: 'علاقات' } },
+  { q: { en: 'How romantic are you?', fr: 'À quel point es-tu romantique?', ar: 'ما مدى رومانسيتك؟' }, opts: { en: ["Very", "Somewhat", "Not romantic", "Unsure"], fr: ["Très", "Assez", "Peu romantique", "Incertain"], ar: ["كثيراً", "إلى حد ما", "غير رومانسي", "غير متأكد"] }, correct: 0, category: { en: 'Relationships', fr: 'Relations', ar: 'علاقات' } },
+  { q: { en: 'What is your flirting style?', fr: 'Quel est ton style de flirt?', ar: 'ما هو أسلوب تدليعك؟' }, opts: { en: ["Playful", "Serious", "Shy", "Confident"], fr: ["Joueur", "Sérieux", "Timide", "Confiant"], ar: ["مرح", "جاد", "خجول", "واثق"] }, correct: 0, category: { en: 'Relationships', fr: 'Relations', ar: 'علاقات' } },
+  { q: { en: 'Are you emotionally stable?', fr: 'Es-tu émotionnellement stable?', ar: 'هل أنت مستقر عاطفياً؟' }, opts: { en: ["Yes", "No", "Sometimes", "Not sure"], fr: ["Oui", "Non", "Parfois", "Pas sûr"], ar: ["نعم", "لا", "أحياناً", "لست متأكداً"] }, correct: 0, category: { en: 'Relationships', fr: 'Relations', ar: 'علاقات' } },
+  { q: { en: 'Do you fall in love fast?', fr: 'Tombes-tu amoureux vite?', ar: 'هل تقع في الحب بسرعة؟' }, opts: { en: ["Yes", "No", "Sometimes", "Rarely"], fr: ["Oui", "Non", "Parfois", "Rarement"], ar: ["نعم", "لا", "أحياناً", "نادراً"] }, correct: 0, category: { en: 'Relationships', fr: 'Relations', ar: 'علاقات' } },
+  { q: { en: 'What type of girl fits you?', fr: 'Quel type de fille te convient?', ar: 'أي نوع من الفتيات يناسبك؟' }, opts: { en: ["Kind", "Independent", "Funny", "Supportive"], fr: ["Gentille", "Indépendante", "Drôle", "Soutien"], ar: ["لطيفة", "مستقلة", "مضحكة", "داعمة"] }, correct: 0, category: { en: 'Relationships', fr: 'Relations', ar: 'علاقات' } },
+  { q: { en: 'Are you ready for a relationship?', fr: 'Es-tu prêt pour une relation?', ar: 'هل أنت جاهز لعلاقة؟' }, opts: { en: ["Yes", "No", "Maybe", "Not sure"], fr: ["Oui", "Non", "Peut-être", "Pas sûr"], ar: ["نعم", "لا", "ربما", "لست متأكداً"] }, correct: 0, category: { en: 'Relationships', fr: 'Relations', ar: 'علاقات' } },
+  { q: { en: 'What makes you attractive?', fr: 'Qu\'est-ce qui te rend attirant?', ar: 'ما الذي يجعلك جذاباً؟' }, opts: { en: ["Personality", "Looks", "Sense of Humor", "Confidence"], fr: ["Personnalité", "Apparence", "Sens de l\'humour", "Confiance"], ar: ["الشخصية", "المظهر", "حس الدعابة", "الثقة"] }, correct: 0, category: { en: 'Relationships', fr: 'Relations', ar: 'علاقات' } },
+  { q: { en: 'Are you overprotective or chill?', fr: 'Es-tu surprotecteur ou détendu?', ar: 'هل أنت شديد الحماية أم مسترخي؟' }, opts: { en: ["Overprotective", "Chill", "Depends", "Neither"], fr: ["Surprotecteur", "Détendu", "Ça dépend", "Aucun"], ar: ["شديد الحماية", "مسترخي", "يعتمد", "لا شيء"] }, correct: 0, category: { en: 'Relationships', fr: 'Relations', ar: 'علاقات' } },
+];
+
+export const femaleQuestions = [
+  // ===== PERSONALITY =====
+  { q: { en: 'What personality type is creative and spontaneous?', fr: 'Quel type est créatif et spontané?', ar: 'أي نوع شخصية إبداعي وعفوي؟' }, opts: { en: ['INTJ', 'ENFP', 'ISTJ', 'ESTP'], fr: ['INTJ', 'ENFP', 'ISTJ', 'ESTP'], ar: ['INTJ', 'ENFP', 'ISTJ', 'ESTP'] }, correct: 1, category: { en: 'Personality', fr: 'Personnalité', ar: 'شخصية' } },
+  { q: { en: 'Introvert vs Extrovert?', fr: 'Introverti vs Extraverti?', ar: 'منطوي مقابل منفتح؟' }, opts: { en: ['Energy from inside', 'Energy from outside', 'Both', 'Neither'], fr: ['Énergie intérieure', 'Énergie extérieure', 'Les deux', 'Aucun'], ar: ['طاقة من الداخل', 'طاقة من الخارج', 'كلاهما', 'لا شيء'] }, correct: 0, category: { en: 'Personality', fr: 'Personnalité', ar: 'شخصية' } },
+
+  // ===== LOVE =====
+  { q: { en: 'Love language: Acts of service?', fr: 'Langage d\'amour: Services?', ar: 'لغة الحب: أفعال الخدمة؟' }, opts: { en: ['Doing things', 'Words', 'Gifts', 'Touch'], fr: ['Faire des choses', 'Mots', 'Cadeaux', 'Contact'], ar: ['فعل الأشياء', 'الكلمات', 'الهدايا', 'اللمس'] }, correct: 0, category: { en: 'Love', fr: 'Amour', ar: 'حب' } },
+  { q: { en: 'Best first date idea?', fr: 'Meilleure idée de premier rendez-vous?', ar: 'أفضل فكرة للموعد الأول؟' }, opts: { en: ['Coffee', 'Movies', 'Walk', 'Dinner'], fr: ['Café', 'Cinéma', 'Promenade', 'Dîner'], ar: ['قهوة', 'سينما', 'مشي', 'عشاء'] }, correct: 0, category: { en: 'Love', fr: 'Amour', ar: 'حب' } },
+
+  // ===== FASHION =====
+  { q: { en: 'What is haute couture?', fr: 'Qu\'est-ce que la haute couture?', ar: 'ما هي الأزياء الراقية؟' }, opts: { en: ['High fashion', 'Casual wear', 'Sportswear', 'Vintage'], fr: ['Haute mode', 'Décontracté', 'Sportif', 'Vintage'], ar: ['الموضة الراقية', 'ملابس عادية', 'ملابس رياضية', 'قديم'] }, correct: 0, category: { en: 'Fashion', fr: 'Mode', ar: 'موضة' } },
+  { q: { en: 'Little black dress icon?', fr: 'Icône de la petite robe noire?', ar: 'أيقونة الفستان الأسود الصغير؟' }, opts: { en: ['Chanel', 'Dior', 'Prada', 'Gucci'], fr: ['Chanel', 'Dior', 'Prada', 'Gucci'], ar: ['شانيل', 'ديور', 'برادا', 'غوتشي'] }, correct: 0, category: { en: 'Fashion', fr: 'Mode', ar: 'موضة' } },
+
+  // ===== BEAUTY =====
+  { q: { en: 'What is contouring?', fr: 'Qu\'est-ce que le contouring?', ar: 'ما هو الكونتور؟' }, opts: { en: ['Face shaping makeup', 'Lip color', 'Eye shadow', 'Nail art'], fr: ['Maquillage sculptant', 'Rouge à lèvres', 'Ombre à paupières', 'Nail art'], ar: ['مكياج لتشكيل الوجه', 'لون الشفاه', 'ظل العيون', 'فن الأظافر'] }, correct: 0, category: { en: 'Beauty', fr: 'Beauté', ar: 'جمال' } },
+  { q: { en: 'SPF in skincare protects from?', fr: 'SPF protège de quoi?', ar: 'SPF في العناية بالبشرة يحمي من؟' }, opts: { en: ['Sun', 'Wind', 'Cold', 'Heat'], fr: ['Soleil', 'Vent', 'Froid', 'Chaleur'], ar: ['الشمس', 'الرياح', 'البرد', 'الحرارة'] }, correct: 0, category: { en: 'Beauty', fr: 'Beauté', ar: 'جمال' } },
+
+  // ===== K-POP =====
+  { q: { en: 'BTS stands for?', fr: 'BTS signifie?', ar: 'BTS تعني؟' }, opts: { en: ['Bangtan Sonyeondan', 'Best Time Songs', 'Big Time Stars', 'Beyond The Stars'], fr: ['Bangtan Sonyeondan', 'Best Time Songs', 'Big Time Stars', 'Beyond The Stars'], ar: ['بانغتان سونيوندان', 'أفضل وقت الأغاني', 'نجوم الوقت الكبير', 'ما وراء النجوم'] }, correct: 0, category: { en: 'K-pop', fr: 'K-pop', ar: 'كيه بوب' } },
+  { q: { en: 'Blackpink member count?', fr: 'Nombre de membres Blackpink?', ar: 'عدد أعضاء بلاك بينك؟' }, opts: { en: ['3', '4', '5', '6'], fr: ['3', '4', '5', '6'], ar: ['3', '4', '5', '6'] }, correct: 1, category: { en: 'K-pop', fr: 'K-pop', ar: 'كيه بوب' } },
+
+  // ===== DISNEY =====
+  { q: { en: 'First Disney princess?', fr: 'Première princesse Disney?', ar: 'أول أميرة ديزني؟' }, opts: { en: ['Cinderella', 'Snow White', 'Aurora', 'Ariel'], fr: ['Cendrillon', 'Blanche-Neige', 'Aurore', 'Ariel'], ar: ['سندريلا', 'سنو وايت', 'أورورا', 'أريل'] }, correct: 1, category: { en: 'Disney', fr: 'Disney', ar: 'ديزني' } },
+  { q: { en: 'Elsa\'s sister name?', fr: 'Nom de la sœur d\'Elsa?', ar: 'اسم أخت إلسا؟' }, opts: { en: ['Anna', 'Belle', 'Jasmine', 'Rapunzel'], fr: ['Anna', 'Belle', 'Jasmine', 'Raiponce'], ar: ['آنا', 'بيل', 'ياسمين', 'رابونزل'] }, correct: 0, category: { en: 'Disney', fr: 'Disney', ar: 'ديزني' } },
+
+  // ===== FOOD & OTHERS =====
+  { q: { en: 'Sushi originated in?', fr: 'Origine des sushis?', ar: 'أصل السوشي؟' }, opts: { en: ['China', 'Japan', 'Korea', 'Thailand'], fr: ['Chine', 'Japon', 'Corée', 'Thaïlande'], ar: ['الصين', 'اليابان', 'كوريا', 'تايلاند'] }, correct: 1, category: { en: 'Food', fr: 'Nourriture', ar: 'طعام' } },
+
+  // ===== NEW GIRLS CONTENT - Personality & Aesthetic =====
+  { q: { en: "What type of girl are you?", fr: "Quel type de fille es-tu?", ar: "أي نوع من الفتيات أنت؟" }, opts: { en: ["Creative", "Adventurous", "Shy", "Confident"], fr: ["Créative", "Aventureuse", "Timide", "Confiante"], ar: ["مبدعة", "مغامرة", "خجولة", "واثقة"] }, correct: 0, category: { en: 'Personality', fr: 'Personnalité', ar: 'شخصية' } },
+  { q: { en: "What is your aesthetic?", fr: "Quelle est ton esthétique?", ar: "ما هو ذوقك الجمالي؟" }, opts: { en: ["Vintage", "Minimalist", "Boho", "Glam"], fr: ["Vintage", "Minimaliste", "Bohème", "Glamour"], ar: ["أنتيك", "بسيط", "بوهيمي", "جذاب"] }, correct: 0, category: { en: 'Fashion', fr: 'Mode', ar: 'موضة' } },
+  { q: { en: "What is your love language?", fr: "Quel est ton langage d'amour?", ar: "ما هي لغة الحب الخاصة بك؟" }, opts: { en: ["Words of Affirmation", "Acts of Service", "Receiving Gifts", "Physical Touch", "Quality Time"], fr: ["Paroles valorisantes", "Actes de service", "Recevoir des cadeaux", "Contact physique", "Temps de qualité"], ar: ["كلمات التشجيع", "أفعال الخدمة", "تلقي الهدايا", "اللمس الجسدي", "الوقت النوعي"] }, correct: 0, category: { en: 'Love', fr: 'Amour', ar: 'حب' } },
+  { q: { en: "Which flower matches your personality?", fr: "Quelle fleur correspond à ta personnalité?", ar: "أي زهرة تطابق شخصيتك؟" }, opts: { en: ["Rose", "Sunflower", "Lily", "Orchid"], fr: ["Rose", "Tournesol", "Lys", "Orchidée"], ar: ["وردة", "عباد الشمس", "زنبق", "أوركيد"] }, correct: 0, category: { en: 'Personality', fr: 'Personnalité', ar: 'شخصية' } },
+  { q: { en: "What hairstyle fits you?", fr: "Quelle coiffure te va?", ar: "أي تسريحة تناسبك؟" }, opts: { en: ["Long and Wavy", "Short Bob", "Curly Afro", "Straight and Sleek"], fr: ["Long et ondulé", "Bob court", "Afro bouclé", "Lisse et brillant"], ar: ["طويل ومموج", "بوب قصير", "أفرو مجعد", "ناعم ومستقيم"] }, correct: 0, category: { en: 'Beauty', fr: 'Beauté', ar: 'جمال' } },
+  { q: { en: "What color represents your soul?", fr: "Quelle couleur représente ton âme?", ar: "أي لون يمثل روحك؟" }, opts: { en: ["Blue", "Red", "Purple", "Green"], fr: ["Bleu", "Rouge", "Violet", "Vert"], ar: ["أزرق", "أحمر", "بنفسجي", "أخضر"] }, correct: 0, category: { en: 'Personality', fr: 'Personnalité', ar: 'شخصية' } },
+  { q: { en: "What is your hidden personality?", fr: "Quelle est ta personnalité cachée?", ar: "ما هي شخصيتك الخفية؟" }, opts: { en: ["Introverted", "Optimistic", "Mysterious", "Energetic"], fr: ["Introverti", "Optimiste", "Mystérieux", "Énergique"], ar: ["منطوي", "متفائل", "غامض", "نشيط"] }, correct: 0, category: { en: 'Personality', fr: 'Personnalité', ar: 'شخصية' } },
+  { q: { en: "How romantic are you?", fr: "À quel point es-tu romantique?", ar: "ما مدى رومانسيتك؟" }, opts: { en: ["Very Romantic", "Somewhat Romantic", "Not Romantic", "I Don't Know"], fr: ["Très romantique", "Assez romantique", "Pas romantique", "Je ne sais pas"], ar: ["رومانسي جداً", "رومانسي بعض الشيء", "غير رومانسي", "لا أعرف"] }, correct: 0, category: { en: 'Personality', fr: 'Personnalité', ar: 'شخصية' } },
+  { q: { en: "What is your emotional type?", fr: "Quel est ton type émotionnel?", ar: "ما هو نوعك العاطفي؟" }, opts: { en: ["Sensitive", "Stable", "Moody", "Calm"], fr: ["Sensible", "Stable", "De mauvaise humeur", "Calme"], ar: ["حساس", "مستقر", "متقلب المزاج", "هادئ"] }, correct: 0, category: { en: 'Personality', fr: 'Personnalité', ar: 'شخصية' } },
+  { q: { en: "Are you soft girl or baddie?", fr: "Es-tu soft girl ou baddie?", ar: "هل أنت فتاة ناعمة أم فتاة قوية؟" }, opts: { en: ["Soft Girl", "Baddie", "Both", "Neither"], fr: ["Soft Girl", "Baddie", "Les deux", "Aucun"], ar: ["فتاة ناعمة", "فتاة قوية", "كلاهما", "لا شيء"] }, correct: 0, category: { en: 'Personality', fr: 'Personnalité', ar: 'شخصية' } },
+
+  // ===== NEW GIRLS CONTENT - Fashion & Makeup =====
+  { q: { en: "What makeup style suits you?", fr: "Quel maquillage te va?", ar: "أي مكياج يناسبك؟" }, opts: { en: ["Natural", "Glam", "Bold", "Minimal"], fr: ["Naturel", "Glamour", "Audacieux", "Minimal"], ar: ["طبيعي", "جذاب", "جريء", "بسيط"] }, correct: 0, category: { en: 'Beauty', fr: 'Beauté', ar: 'جمال' } },
+  { q: { en: "What is your fashion style?", fr: "Quel est ton style vestimentaire?", ar: "ما هو أسلوبك في الملابس؟" }, opts: { en: ["Casual", "Chic", "Sporty", "Bohemian"], fr: ["Décontracté", "Chic", "Sportif", "Bohème"], ar: ["عادي", "أنيق", "رياضي", "بوهيمي"] }, correct: 0, category: { en: 'Fashion', fr: 'Mode', ar: 'موضة' } },
+  { q: { en: "Which perfume describes you?", fr: "Quel parfum te décrit?", ar: "أي عطر يصفك؟" }, opts: { en: ["Floral", "Citrus", "Woody", "Fresh"], fr: ["Floral", "Citronné", "Boisé", "Fraîcheur"], ar: ["زهور", "حمضيات", "خشبي", "منعش"] }, correct: 0, category: { en: 'Beauty', fr: 'Beauté', ar: 'جمال' } },
+  { q: { en: "What nail style matches your vibe?", fr: "Quel style d'ongles correspond à ton vibe?", ar: "أي أسلوب أظافر يناسب جوهرك؟" }, opts: { en: ["French Tips", "Matte", "Glitter", "Short & Natural"], fr: ["French Tips", "Mat", "Paillettes", "Court et naturel"], ar: ["فرنسي", "غير لامع", "لامع", "قصير وطبيعي"] }, correct: 0, category: { en: 'Beauty', fr: 'Beauté', ar: 'جمال' } },
+  { q: { en: "Which outfit fits your mood?", fr: "Quelle tenue correspond à ton humeur?", ar: "أي زي يناسب مزاجك؟" }, opts: { en: ["Dress", "Jeans & T-shirt", "Athleisure", "Skirt & Blouse"], fr: ["Robe", "Jeans & T-shirt", "Athleisure", "Jupe & Chemisier"], ar: ["فستان", "جينز وتي شيرت", "رياضي", "تنورة وبلوزة"] }, correct: 0, category: { en: 'Fashion', fr: 'Mode', ar: 'موضة' } },
+  { q: { en: "Which accessories fit your personality?", fr: "Quels accessoires correspondent à ta personnalité?", ar: "أي إكسسوارات تناسب شخصيتك؟" }, opts: { en: ["Statement Earrings", "Delicate Necklace", "Bracelets", "Rings"], fr: ["Boucles d'oreilles voyantes", "Collier délicat", "Bracelets", "Bagues"], ar: ["أقراط بارزة", "قلادة رقيقة", "أساور", "خواتم"] }, correct: 0, category: { en: 'Fashion', fr: 'Mode', ar: 'موضة' } },
+  { q: { en: "Are you vintage, modern, or classy?", fr: "Es-tu vintage, moderne ou classe?", ar: "هل أنت أنتيك، عصري، أم أنيق؟" }, opts: { en: ["Vintage", "Modern", "Classy", "Eclectic"], fr: ["Vintage", "Moderne", "Classe", "Éclectique"], ar: ["أنتيك", "عصري", "أنيق", "متنوع"] }, correct: 0, category: { en: 'Fashion', fr: 'Mode', ar: 'موضة' } },
+  { q: { en: "Which fashion era are you?", fr: "De quelle époque de mode es-tu?", ar: "من أي عصر موضة أنت؟" }, opts: { en: ["70s", "80s", "90s", "2000s"], fr: ["Années 70", "Années 80", "Années 90", "Années 2000"], ar: ["السبعينيات", "الثمانينيات", "التسعينيات", "الألفية"] }, correct: 0, category: { en: 'Fashion', fr: 'Mode', ar: 'موضة' } },
+
+  // ===== NEW GIRLS CONTENT - Love & Relationships =====
+  { q: { en: "What type of boyfriend fits you?", fr: "Quel type de petit ami te convient?", ar: "أي نوع من الأصدقاء يناسبك؟" }, opts: { en: ["Romantic", "Funny", "Loyal", "Adventurous"], fr: ["Romantique", "Drôle", "Loyal", "Aventureux"], ar: ["رومانسي", "مضحك", "مخلص", "مغامر"] }, correct: 0, category: { en: 'Love', fr: 'Amour', ar: 'حب' } },
+  { q: { en: "Are you ready for a relationship?", fr: "Es-tu prête pour une relation?", ar: "هل أنت جاهزة لعلاقة؟" }, opts: { en: ["Yes", "No", "Maybe", "Not sure"], fr: ["Oui", "Non", "Peut-être", "Pas sûr"], ar: ["نعم", "لا", "ربما", "لست متأكدة"] }, correct: 0, category: { en: 'Love', fr: 'Amour', ar: 'حب' } },
+  { q: { en: "What is your flirting style?", fr: "Quel est ton style de flirt?", ar: "ما هو أسلوب تدليعك؟" }, opts: { en: ["Playful", "Shy", "Confident", "Subtle"], fr: ["Joueur", "Timide", "Confiant", "Subtil"], ar: ["مرح", "خجول", "واثق", "دقيق"] }, correct: 0, category: { en: 'Love', fr: 'Amour', ar: 'حب' } },
+  { q: { en: "How jealous are you?", fr: "À quel point es-tu jalouse?", ar: "ما مدى غيرتك؟" }, opts: { en: ["Very", "Sometimes", "Rarely", "Never"], fr: ["Très", "Parfois", "Rarement", "Jamais"], ar: ["كثيراً", "أحياناً", "نادراً", "أبداً"] }, correct: 0, category: { en: 'Love', fr: 'Amour', ar: 'حب' } },
+  { q: { en: "Are you a loyal partner?", fr: "Es-tu une partenaire loyale?", ar: "هل أنت شريكة مخلصة؟" }, opts: { en: ["Yes", "Mostly", "Sometimes", "Not really"], fr: ["Oui", "Principalement", "Parfois", "Pas vraiment"], ar: ["نعم", "غالباً", "أحياناً", "ليس حقاً"] }, correct: 0, category: { en: 'Love', fr: 'Amour', ar: 'حب' } },
+  { q: { en: "What type of friend are you?", fr: "Quel type d'amie es-tu?", ar: "أي نوع من الصديقات أنت؟" }, opts: { en: ["Supportive", "Funny", "Reliable", "Adventurous"], fr: ["Soutenante", "Drôle", "Fiable", "Aventureuse"], ar: ["داعمة", "مضحكة", "موثوقة", "مغامرة"] }, correct: 0, category: { en: 'Personality', fr: 'Personnalité', ar: 'شخصية' } },
+  { q: { en: "Are you emotionally available?", fr: "Es-tu émotionnellement disponible?", ar: "هل أنت متاحة عاطفياً؟" }, opts: { en: ["Yes", "No", "Sometimes", "Not sure"], fr: ["Oui", "Non", "Parfois", "Pas sûr"], ar: ["نعم", "لا", "أحياناً", "لست متأكدة"] }, correct: 0, category: { en: 'Love', fr: 'Amour', ar: 'حب' } },
+
+  // ===== NEW GIRLS CONTENT - Movies, Anime & Series =====
+  { q: { en: "Which movie heroine are you?", fr: "Quelle héroïne de film es-tu?", ar: "أي بطلة أفلام أنت؟" }, opts: { en: ["Wonder Woman", "Hermione Granger", "Katniss Everdeen", "Black Widow"], fr: ["Wonder Woman", "Hermione Granger", "Katniss Everdeen", "Black Widow"], ar: ["المرأة المعجزة", "هيرميون جرانجر", "كاتنيس إيفردين", "الأرملة السوداء"] }, correct: 0, category: { en: 'Movies', fr: 'Films', ar: 'أفلام' } },
+  { q: { en: "Which Disney princess are you?", fr: "Quelle princesse Disney es-tu?", ar: "أي أميرة ديزني أنت؟" }, opts: { en: ["Cinderella", "Belle", "Ariel", "Elsa"], fr: ["Cendrillon", "Belle", "Ariel", "Elsa"], ar: ["سندريلا", "بيل", "أريل", "إلسا"] }, correct: 0, category: { en: 'Disney', fr: 'Disney', ar: 'ديزني' } },
+  { q: { en: "Which anime girl are you?", fr: "Quelle fille d'anime es-tu?", ar: "أي فتاة أنمي أنت؟" }, opts: { en: ["Sailor Moon", "Sakura", "Mikasa", "Nezuko"], fr: ["Sailor Moon", "Sakura", "Mikasa", "Nezuko"], ar: ["سيلور مون", "ساكورا", "ميكاسا", "نيزوكو"] }, correct: 0, category: { en: 'Anime', fr: 'Anime', ar: 'أنمي' } },
+  { q: { en: "What K-Drama fits your life?", fr: "Quel K-Drama correspond à ta vie?", ar: "أي دراما كورية تناسب حياتك؟" }, opts: { en: ["Crash Landing On You", "Goblin", "Start-Up", "Itaewon Class"], fr: ["Crash Landing On You", "Goblin", "Start-Up", "Itaewon Class"], ar: ["هبوط اضطراري عليك", "العفريت", "ستارت أب", "صف إتايون"] }, correct: 0, category: { en: 'Movies', fr: 'Films', ar: 'أفلام' } },
+  { q: { en: "Which series matches your vibe?", fr: "Quelle série correspond à ton vibe?", ar: "أي مسلسل يناسب جوهرك؟" }, opts: { en: ["Friends", "Stranger Things", "Euphoria", "Sex Education"], fr: ["Friends", "Stranger Things", "Euphoria", "Sex Education"], ar: ["أصدقاء", "أشياء غريبة", "النشوة", "تثقيف جنسي"] }, correct: 0, category: { en: 'Movies', fr: 'Films', ar: 'أفلام' } },
+  { q: { en: "Are you Wednesday or Enid?", fr: "Es-tu Wednesday ou Enid?", ar: "هل أنت وينزداي أم إينيد؟" }, opts: { en: ["Wednesday", "Enid", "Both", "Neither"], fr: ["Wednesday", "Enid", "Les deux", "Aucun"], ar: ["وينزداي", "إينيد", "كلاهما", "لا شيء"] }, correct: 0, category: { en: 'Movies', fr: 'Films', ar: 'أفلام' } },
+  { q: { en: "Which Studio Ghibli character are you?", fr: "Quel personnage de Studio Ghibli es-tu?", ar: "أي شخصية من استوديو جيبلي أنت؟" }, opts: { en: ["Chihiro", "Kiki", "Sophie", "San"], fr: ["Chihiro", "Kiki", "Sophie", "San"], ar: ["تشيهيرو", "كيكي", "صوفي", "سان"] }, correct: 0, category: { en: 'Movies', fr: 'Films', ar: 'أفلام' } },
+
+  // ===== NEW GIRLS CONTENT - Music & Lifestyle =====
+  { q: { en: "What music genre matches your soul?", fr: "Quel genre musical correspond à ton âme?", ar: "أي نوع موسيقى يطابق روحك؟" }, opts: { en: ["Pop", "Rock", "R&B", "Classical"], fr: ["Pop", "Rock", "R&B", "Classique"], ar: ["بوب", "روك", "آر أند بي", "كلاسيكي"] }, correct: 0, category: { en: 'Music', fr: 'Musique', ar: 'موسيقى' } },
+  { q: { en: "Which artist represents your mood?", fr: "Quel artiste représente ton humeur?", ar: "أي فنان يمثل مزاجك؟" }, opts: { en: ["Taylor Swift", "Beyoncé", "Billie Eilish", "Adele"], fr: ["Taylor Swift", "Beyoncé", "Billie Eilish", "Adele"], ar: ["تايلور سويفت", "بيونسيه", "بيلي آيليش", "أديل"] }, correct: 0, category: { en: 'Music', fr: 'Musique', ar: 'موسيقى' } },
+  { q: { en: "What is your daily vibe?", fr: "Quelle est ton ambiance quotidienne?", ar: "ما هو جوهرك اليومي؟" }, opts: { en: ["Energetic", "Calm", "Focused", "Creative"], fr: ["Énergique", "Calme", "Concentré", "Créatif"], ar: ["نشيط", "هادئ", "مركز", "خلاق"] }, correct: 0, category: { en: 'Lifestyle', fr: 'Mode de vie', ar: 'أسلوب حياة' } },
+  { q: { en: "What is your weekend personality?", fr: "Quelle est ta personnalité de weekend?", ar: "ما هي شخصية عطلة نهاية الأسبوع لديك؟" }, opts: { en: ["Party Lover", "Homebody", "Explorer", "Relaxed"], fr: ["Fêtard", "Casanier", "Explorateur", "Détendu"], ar: ["محب للحفلات", "منزلي", "مستكشف", "مسترخي"] }, correct: 0, category: { en: 'Lifestyle', fr: 'Mode de vie', ar: 'أسلوب حياة' } },
+  { q: { en: "Are you an introvert or extrovert?", fr: "Es-tu introvertie ou extravertie?", ar: "هل أنت منطوية أم منفتحة؟" }, opts: { en: ["Introvert", "Extrovert", "Ambivert", "Depends"], fr: ["Introverti", "Extraverti", "Ambivert", "Ça dépend"], ar: ["منطوية", "منفتحة", "وسطية", "يعتمد"] }, correct: 0, category: { en: 'Personality', fr: 'Personnalité', ar: 'شخصية' } },
+  { q: { en: "What is your sleeping personality?", fr: "Quelle est ta personnalité de sommeil?", ar: "ما هي شخصية نومك؟" }, opts: { en: ["Early Bird", "Night Owl", "Light Sleeper", "Deep Sleeper"], fr: ["Lève-tôt", "Couche-tard", "Dormeur léger", "Dormeur profond"], ar: ["مبكرة", "بومة ليل", "نوم خفيف", "نوم عميق"] }, correct: 0, category: { en: 'Lifestyle', fr: 'Mode de vie', ar: 'أسلوب حياة' } },
+
+  // ===== NEW GIRLS CONTENT - Fun & Social Media =====
+  { q: { en: "How dramatic are you?", fr: "À quel point es-tu dramatique?", ar: "ما مدى دراميتك؟" }, opts: { en: ["Very", "Sometimes", "Rarely", "Not at all"], fr: ["Très", "Parfois", "Rarement", "Pas du tout"], ar: ["كثيراً", "أحياناً", "نادراً", "لا على الإطلاق"] }, correct: 0, category: { en: 'Personality', fr: 'Personnalité', ar: 'شخصية' } },
+  { q: { en: "Are you a good secret keeper?", fr: "Es-tu bonne pour garder des secrets?", ar: "هل أنت جيدة في حفظ الأسرار؟" }, opts: { en: ["Yes", "No", "Sometimes", "Depends"], fr: ["Oui", "Non", "Parfois", "Ça dépend"], ar: ["نعم", "لا", "أحياناً", "يعتمد"] }, correct: 0, category: { en: 'Personality', fr: 'Personnalité', ar: 'شخصية' } },
+  { q: { en: "Are you an angel or troublemaker?", fr: "Es-tu un ange ou une fauteuse de troubles?", ar: "هل أنت ملاك أم محبكة مشاكل؟" }, opts: { en: ["Angel", "Troublemaker", "Both", "Neither"], fr: ["Ange", "Fauteur de troubles", "Les deux", "Aucun"], ar: ["ملاك", "محبكة مشاكل", "كلاهما", "لا شيء"] }, correct: 0, category: { en: 'Personality', fr: 'Personnalité', ar: 'شخصية' } },
+  { q: { en: "What is your mental age?", fr: "Quel est ton âge mental?", ar: "ما هو عمرك العقلي؟" }, opts: { en: ["Young", "Mature", "Wise", "Playful"], fr: ["Jeune", "Mature", "Sage", "Joueur"], ar: ["شاب", "ناضج", "حكيم", "مرح"] }, correct: 0, category: { en: 'Personality', fr: 'Personnalité', ar: 'شخصية' } },
+  { q: { en: "What is your emotional intelligence?", fr: "Quelle est ton intelligence émotionnelle?", ar: "ما هي ذكاؤك العاطفي؟" }, opts: { en: ["High", "Average", "Low", "Unknown"], fr: ["Élevé", "Moyen", "Faible", "Inconnu"], ar: ["عالي", "متوسط", "منخفض", "مجهول"] }, correct: 0, category: { en: 'Personality', fr: 'Personnalité', ar: 'شخصية' } },
+  { q: { en: "Are you lucky or unlucky?", fr: "Es-tu chanceuse ou malchanceuse?", ar: "هل أنت محظوظة أم غير محظوظة؟" }, opts: { en: ["Lucky", "Unlucky", "Sometimes lucky", "Don't believe in luck"], fr: ["Chanceuse", "Malchanceuse", "Parfois chanceuse", "Je ne crois pas à la chance"], ar: ["محظوظة", "غير محظوظة", "محظوظة أحياناً", "لا أؤمن بالحظ"] }, correct: 0, category: { en: 'Personality', fr: 'Personnalité', ar: 'شخصية' } },
+  { q: { en: "What decade matches you?", fr: "Quelle décennie te correspond?", ar: "أي عقد يناسبك؟" }, opts: { en: ["60s", "70s", "80s", "90s"], fr: ["Années 60", "Années 70", "Années 80", "Années 90"], ar: ["الستينيات", "السبعينيات", "الثمانينيات", "التسعينيات"] }, correct: 0, category: { en: 'Lifestyle', fr: 'Mode de vie', ar: 'أسلوب حياة' } },
+  { q: { en: "What is your spirit animal?", fr: "Quel est ton animal spirituel?", ar: "ما هو حيوانك الروحي؟" }, opts: { en: ["Wolf", "Cat", "Butterfly", "Dolphin"], fr: ["Loup", "Chat", "Papillon", "Dauphin"], ar: ["ذئب", "قط", "فراشة", "دلفين"] }, correct: 0, category: { en: 'Personality', fr: 'Personnalité', ar: 'شخصية' } },
+  { q: { en: "What type of TikTok girl are you?", fr: "Quel type de fille TikTok es-tu?", ar: "أي نوع من فتيات تيك توك أنت؟" }, opts: { en: ["Dancer", "Comedian", "Fashionista", "Singer"], fr: ["Danseuse", "Comédienne", "Fashionista", "Chanteuse"], ar: ["راقصة", "ممثلة كوميدية", "خبيرة أزياء", "مغنية"] }, correct: 0, category: { en: 'Social Media', fr: 'Réseaux sociaux', ar: 'تواصل اجتماعي' } },
+  { q: { en: "What is your Instagram vibe?", fr: "Quelle est ton ambiance Instagram?", ar: "ما هو جوهرك على انستغرام؟" }, opts: { en: ["Aesthetic", "Funny", "Inspirational", "Casual"], fr: ["Esthétique", "Drôle", "Inspirant", "Décontracté"], ar: ["جمالي", "مضحك", "ملهم", "عادي"] }, correct: 0, category: { en: 'Social Media', fr: 'Réseaux sociaux', ar: 'تواصل اجتماعي' } }
+];
 
 const MAX_LEVELS = 50;
 const QUESTIONS_PER_LEVEL = 10;
 
-// ==========================================
-// STATIC DATABASE (Imported & Cleaned)
-// ==========================================
-
-const level1Questions = [
-  { q: 'How many players in a football team?', opts: ['9', '10', '11', '12'], correct: 2, category: 'Sport' },
-  { q: 'What is 5 + 5?', opts: ['8', '9', '10', '11'], correct: 2, category: 'General' },
-  { q: 'What does CPU stand for?', opts: ['Central Processing Unit', 'Computer Personal Unit', 'Central Program Utility', 'Core Processing Unit'], correct: 0, category: 'Hardware' },
-  { q: 'What is HTML?', opts: ['Programming Language', 'Markup Language', 'Database', 'Operating System'], correct: 1, category: 'Software' },
-  { q: 'Who is the main character in Naruto?', opts: ['Sasuke', 'Kakashi', 'Naruto Uzumaki', 'Sakura'], correct: 2, category: 'Anime' },
-  { q: 'What year was Minecraft released?', opts: ['2009', '2010', '2011', '2012'], correct: 2, category: 'Gaming' },
-  { q: 'How many continents are there?', opts: ['5', '6', '7', '8'], correct: 2, category: 'General' },
-  { q: 'What is RAM?', opts: ['Random Access Memory', 'Read Access Memory', 'Run Access Memory', 'Real Access Memory'], correct: 0, category: 'Hardware' },
-  { q: 'What is Python?', opts: ['Snake', 'Programming Language', 'Game', 'Database'], correct: 1, category: 'Software' },
-  { q: 'How many rings in Olympic logo?', opts: ['4', '5', '6', '7'], correct: 1, category: 'Sport' }
-];
-
-// Large pool of questions from user input (Medium -> Hard -> Very Hard -> Impossible etc)
-// I have flattened them to distribute evenly.
-const pooledQuestions = [
-  // Medium / General
-  { q: 'Capital of Italy?', opts: ['Milan', 'Rome', 'Naples', 'Venice'], correct: 1, category: 'General' },
-  { q: '20 + 30 = ?', opts: ['40', '50', '60', '70'], correct: 1, category: 'Math' },
-  { q: 'HTTP stands for?', opts: ['HyperText Transfer Protocol', 'High Transfer Text', 'Hyper Tool', 'None'], correct: 0, category: 'Software' },
-  { q: 'CPU speed measured in?', opts: ['GB', 'GHz', 'MB', 'Volt'], correct: 1, category: 'Hardware' },
-  { q: 'Creator of One Piece?', opts: ['Oda', 'Kubo', 'Toriyama', 'Kishimoto'], correct: 0, category: 'Anime' },
-  { q: 'Gas needed for breathing?', opts: ['CO2', 'Oxygen', 'Nitrogen', 'Hydrogen'], correct: 1, category: 'Science' },
-  { q: '9 × 7 = ?', opts: ['56', '63', '72', '54'], correct: 1, category: 'Math' },
-  { q: 'JS file extension?', opts: ['.java', '.js', '.jsx', '.script'], correct: 1, category: 'Software' },
-  { q: 'HDD used for?', opts: ['Processing', 'Storage', 'Cooling', 'Display'], correct: 1, category: 'Hardware' },
-  { q: 'Goku race?', opts: ['Human', 'Saiyan', 'God', 'Alien'], correct: 1, category: 'Anime' },
-  { q: 'Sun is a?', opts: ['Planet', 'Star', 'Moon', 'Comet'], correct: 1, category: 'Science' },
-  { q: '100 ÷ 10 = ?', opts: ['5', '10', '20', '50'], correct: 1, category: 'Math' },
-  { q: 'React is?', opts: ['Language', 'Library', 'OS', 'DB'], correct: 1, category: 'Software' },
-  { q: 'Motherboard connects?', opts: ['Components', 'Internet', 'Power', 'Cooling'], correct: 0, category: 'Hardware' },
-  { q: 'Zoro uses?', opts: ['1 sword', '2 swords', '3 swords', '4 swords'], correct: 2, category: 'Anime' },
-  { q: 'Boiling point of water?', opts: ['90°C', '100°C', '80°C', '120°C'], correct: 1, category: 'Science' },
-  { q: '6 × 8 = ?', opts: ['42', '46', '48', '52'], correct: 2, category: 'Math' },
-  { q: 'Node.js runs on?', opts: ['Browser', 'Server', 'GPU', 'DB'], correct: 1, category: 'Software' },
-  { q: 'PSU provides?', opts: ['Data', 'Cooling', 'Power', 'Graphics'], correct: 2, category: 'Hardware' },
-  { q: 'Sharingan anime?', opts: ['Bleach', 'Naruto', 'DBZ', 'OP'], correct: 1, category: 'Anime' },
-  
-  // More Medium
-  { q: 'Capital of Spain?', opts: ['Madrid', 'Barcelona', 'Lisbon', 'Rome'], correct: 0, category: 'General' },
-  { q: '10 + 15 = ?', opts: ['20', '25', '30', '15'], correct: 1, category: 'Math' },
-  { q: 'HTML used for?', opts: ['Styling', 'Logic', 'Structure', 'Database'], correct: 2, category: 'Software' },
-  { q: 'RAM stands for?', opts: ['Random Access Memory', 'Read Access Memory', 'Rapid Access Module', 'None'], correct: 0, category: 'Hardware' },
-  { q: 'Creator of Dragon Ball?', opts: ['Oda', 'Toriyama', 'Kubo', 'Kishimoto'], correct: 1, category: 'Anime' },
-  { q: 'Smallest planet?', opts: ['Earth', 'Mars', 'Mercury', 'Venus'], correct: 2, category: 'Science' },
-  { q: '5 × 6 = ?', opts: ['30', '25', '35', '40'], correct: 0, category: 'Math' },
-  { q: 'CSS used for?', opts: ['Logic', 'Database', 'Styling', 'Server'], correct: 2, category: 'Software' },
-  { q: 'GPU main role?', opts: ['Storage', 'Graphics', 'Memory', 'Network'], correct: 1, category: 'Hardware' },
-  { q: 'Luffy power?', opts: ['Fire', 'Rubber', 'Ice', 'Lightning'], correct: 1, category: 'Anime' },
-  { q: 'Water chemical formula?', opts: ['H2O', 'CO2', 'O2', 'HO'], correct: 0, category: 'Science' },
-  { q: '12 ÷ 3 = ?', opts: ['2', '3', '4', '6'], correct: 2, category: 'Math' },
-  { q: 'JS mainly runs on?', opts: ['Browser', 'CPU', 'RAM', 'SSD'], correct: 0, category: 'Software' },
-  { q: 'SSD faster than?', opts: ['RAM', 'CPU', 'HDD', 'GPU'], correct: 2, category: 'Hardware' },
-  { q: 'Naruto village?', opts: ['Sand', 'Mist', 'Leaf', 'Cloud'], correct: 2, category: 'Anime' },
-  { q: 'Earth satellite?', opts: ['Mars', 'Sun', 'Moon', 'Venus'], correct: 2, category: 'Science' },
-  { q: '7 + 8 = ?', opts: ['13', '14', '15', '16'], correct: 2, category: 'Math' },
-  { q: 'Bootstrap is?', opts: ['Language', 'Framework', 'DB', 'OS'], correct: 1, category: 'Software' },
-  { q: 'CPU brain of?', opts: ['Monitor', 'Computer', 'Keyboard', 'Mouse'], correct: 1, category: 'Hardware' },
-  { q: 'Death Note owner?', opts: ['L', 'Light', 'Ryuk', 'Near'], correct: 2, category: 'Anime' },
-
-  // Hard
-  { q: 'Capital of Germany?', opts: ['Munich', 'Berlin', 'Hamburg', 'Bonn'], correct: 1, category: 'General' },
-  { q: '15 × 4 = ?', opts: ['40', '50', '60', '70'], correct: 2, category: 'Math' },
-  { q: 'SQL used for?', opts: ['Design', 'Databases', 'Styling', 'Gaming'], correct: 1, category: 'Software' },
-  { q: 'GPU used mainly for?', opts: ['Logic', 'Graphics', 'Storage', 'Sound'], correct: 1, category: 'Hardware' },
-  { q: 'Ichigo anime?', opts: ['Naruto', 'Bleach', 'OP', 'DB'], correct: 1, category: 'Anime' },
-  { q: 'Earth shape?', opts: ['Flat', 'Round', 'Cube', 'Triangle'], correct: 1, category: 'Science' },
-  { q: '81 ÷ 9 = ?', opts: ['7', '8', '9', '10'], correct: 2, category: 'Math' },
-  { q: 'CSS framework?', opts: ['React', 'Bootstrap', 'Node', 'Mongo'], correct: 1, category: 'Software' },
-  { q: 'RAM volatile?', opts: ['Yes', 'No', 'Sometimes', 'Depends'], correct: 0, category: 'Hardware' },
-  { q: 'Titan anime?', opts: ['One Piece', 'AOT', 'Naruto', 'Bleach'], correct: 1, category: 'Anime' },
-  { q: 'Human blood color?', opts: ['Blue', 'Green', 'Red', 'Black'], correct: 2, category: 'Science' },
-  { q: '7² = ?', opts: ['42', '48', '49', '56'], correct: 2, category: 'Math' },
-  { q: 'API meaning?', opts: ['App Program Interface', 'Advanced Protocol', 'None', 'Access Panel'], correct: 0, category: 'Software' },
-  { q: 'SSD advantage?', opts: ['Noise', 'Speed', 'Heat', 'Size'], correct: 1, category: 'Hardware' },
-  { q: 'Light Yagami uses?', opts: ['Book', 'Sword', 'Ring', 'Gun'], correct: 0, category: 'Anime' },
-  { q: 'Gravity discovered by?', opts: ['Einstein', 'Newton', 'Galileo', 'Tesla'], correct: 1, category: 'Science' },
-  { q: '9 + 11 = ?', opts: ['18', '19', '20', '21'], correct: 2, category: 'Math' },
-  { q: 'Framework for JS?', opts: ['Laravel', 'Django', 'Angular', 'Flask'], correct: 2, category: 'Software' },
-  { q: 'PC cooling uses?', opts: ['Fans', 'Speakers', 'RAM', 'SSD'], correct: 0, category: 'Hardware' },
-  { q: 'Vegeta pride?', opts: ['Human', 'Saiyan', 'God', 'Alien'], correct: 1, category: 'Anime' },
-
-  // Hard+
-  { q: 'Which country uses Yen?', opts: ['China', 'Japan', 'Korea', 'Thailand'], correct: 1, category: 'General' },
-  { q: 'Square root of 169?', opts: ['11', '12', '13', '14'], correct: 2, category: 'Math' },
-  { q: 'FTP stands for?', opts: ['File Transfer Protocol', 'Fast Transfer Process', 'File Text Protocol', 'Free Transfer Port'], correct: 0, category: 'Software' },
-  { q: 'What does BIOS initialize?', opts: ['Memory only', 'Hardware at boot', 'Internet', 'Filesystem'], correct: 1, category: 'Hardware' },
-  { q: 'Author of Naruto?', opts: ['Masashi Kishimoto', 'Eiichiro Oda', 'Tite Kubo', 'Akira Toriyama'], correct: 0, category: 'Anime' },
-  { q: 'Light year measures?', opts: ['Time', 'Distance', 'Mass', 'Energy'], correct: 1, category: 'Science' },
-  { q: '13 × 7 = ?', opts: ['91', '92', '90', '89'], correct: 0, category: 'Math' },
-  { q: 'Promise in JS used for?', opts: ['Styling', 'Async handling', 'Database', 'Routing'], correct: 1, category: 'Software' },
-  { q: 'PCIe lane used for?', opts: ['Audio', 'Network', 'High-speed peripheral', 'Power'], correct: 2, category: 'Hardware' },
-  { q: 'Which anime has Titans?', opts: ['Naruto', 'Bleach', 'Attack on Titan', 'One Piece'], correct: 2, category: 'Anime' },
-  { q: 'pH < 7 indicates?', opts: ['Base', 'Acid', 'Neutral', 'Salt'], correct: 1, category: 'Science' },
-  { q: 'Factorial of 5 (5!) = ?', opts: ['60', '120', '24', '720'], correct: 1, category: 'Math' },
-  { q: 'REST stands for?', opts: ['Representational State Transfer', 'Remote State Transfer', 'Random Server Tech', 'None'], correct: 0, category: 'Software' },
-  { q: 'Heatsink used for?', opts: ['Sound', 'Cooling', 'Storage', 'Encryption'], correct: 1, category: 'Hardware' },
-  { q: 'Sword Art Online genre?', opts: ['Sports', 'VR Anime', 'Cooking', 'Historical'], correct: 1, category: 'Anime' },
-  { q: 'What causes seasons?', opts: ['Earth rotation', 'Sunspots', 'Tilt of Earth axis', 'Moon orbit'], correct: 2, category: 'Science' },
-  { q: 'Derivative of sin(x)?', opts: ['cos(x)', '-cos(x)', 'sin(x)', '-sin(x)'], correct: 0, category: 'Math' },
-  { q: 'Which is a NoSQL DB?', opts: ['MySQL', 'MongoDB', 'PostgreSQL', 'SQLite'], correct: 1, category: 'Software' },
-  { q: 'Thermal paste placed between?', opts: ['GPU and RAM', 'CPU and Cooler', 'SSD and Motherboard', 'PSU and Fan'], correct: 1, category: 'Hardware' },
-  { q: 'One Piece main protagonist?', opts: ['Naruto', 'Luffy', 'Goku', 'Ichigo'], correct: 1, category: 'Anime' },
-
-  // Very Hard
-  { q: 'Which element has atomic number 6?', opts: ['Nitrogen', 'Oxygen', 'Carbon', 'Helium'], correct: 2, category: 'Science' },
-  { q: 'Log2(256) = ?', opts: ['6', '7', '8', '9'], correct: 2, category: 'Math' },
-  { q: 'Which is a frontend framework?', opts: ['Django', 'React', 'Flask', 'Laravel'], correct: 1, category: 'Software' },
-  { q: 'What is NVMe interface used for?', opts: ['Network', 'Storage', 'Graphics', 'Audio'], correct: 1, category: 'Hardware' },
-  { q: 'Anime "Fullmetal Alchemist" country?', opts: ['Amestris (fictional)', 'Japan', 'USA', 'China'], correct: 0, category: 'Anime' },
-  { q: 'What particle is negatively charged?', opts: ['Proton', 'Neutron', 'Electron', 'Photon'], correct: 2, category: 'Science' },
-  { q: 'Integral of 1/x dx = ?', opts: ['ln|x| + C', '1/x + C', 'x + C', 'e^x + C'], correct: 0, category: 'Math' },
-  { q: 'Which tool manages containers?', opts: ['Docker', 'MySQL', 'Redis', 'Nginx'], correct: 0, category: 'Software' },
-  { q: 'What does S.M.A.R.T. monitor?', opts: ['CPU temp', 'Disk health', 'RAM speed', 'Network latency'], correct: 1, category: 'Hardware' },
-  { q: 'Which anime features alchemy?', opts: ['FMA', 'One Piece', 'Bleach', 'Naruto'], correct: 0, category: 'Anime' },
-  { q: 'Which law relates force, mass, acceleration?', opts: ['Ohm', 'Newton', 'Hooke', 'Kepler'], correct: 1, category: 'Science' },
-  { q: 'Solve: 2x + 3 = 11 → x = ?', opts: ['3', '4', '5', '6'], correct: 1, category: 'Math' },
-  { q: 'Which is a version control?', opts: ['Git', 'Docker', 'Nginx', 'Redis'], correct: 0, category: 'Software' },
-  { q: 'ECC memory provides?', opts: ['Faster speed', 'Error correction', 'More storage', 'Lower power'], correct: 1, category: 'Hardware' },
-  { q: 'Anime with "Titan" theme?', opts: ['AOT', 'OP', 'DB', 'Naruto'], correct: 0, category: 'Anime' },
-  { q: 'What is Doppler effect about?', opts: ['Light intensity', 'Frequency shift', 'Mass change', 'Temperature'], correct: 1, category: 'Science' },
-  { q: 'Prime numbers under 10 count?', opts: ['2', '3', '4', '5'], correct: 2, category: 'Math' },
-  { q: 'Which is a package manager for JS?', opts: ['pip', 'npm', 'gem', 'apt'], correct: 1, category: 'Software' },
-  { q: 'M.2 is form factor for?', opts: ['CPU', 'GPU', 'Storage', 'RAM'], correct: 2, category: 'Hardware' },
-  { q: 'Studio behind "Spirited Away"?', opts: ['Madhouse', 'Bones', 'Ghibli', 'Sunrise'], correct: 2, category: 'Anime' },
-
-  // Extreme
-  { q: 'Which wavelength is visible light?', opts: ['10 nm', '500 nm', '1 mm', '1 m'], correct: 1, category: 'Science' },
-  { q: 'What is 11th Fibonacci number?', opts: ['89', '144', '55', '233'], correct: 0, category: 'Math' },
-  { q: 'CORS is related to?', opts: ['Security', 'Styling', 'Databases', 'Compression'], correct: 0, category: 'Software' },
-  { q: 'What is RAID 1?', opts: ['Striping', 'Mirroring', 'Parity', 'Cache'], correct: 1, category: 'Hardware' },
-  { q: 'Which anime features "All Might"?', opts: ['Mob Psycho', 'One Punch Man', 'My Hero Academia', 'Naruto'], correct: 2, category: 'Anime' },
-  { q: 'Avogadro number approx?', opts: ['6.02×10^23', '3.14×10^2', '9.81', '1.6×10^-19'], correct: 0, category: 'Science' },
-  { q: 'Limit of (1 + 1/n)^n as n→∞ ?', opts: ['e', 'π', '0', '1'], correct: 0, category: 'Math' },
-  { q: 'Which is a reverse proxy?', opts: ['Nginx', 'MySQL', 'Redis', 'Webpack'], correct: 0, category: 'Software' },
-  { q: 'What does CMOS store?', opts: ['User files', 'Boot settings', 'GPU drivers', 'Network configs'], correct: 1, category: 'Hardware' },
-  { q: 'Which anime has "Bankai"?', opts: ['Bleach', 'Naruto', 'One Piece', 'Hunter x Hunter'], correct: 0, category: 'Anime' },
-  { q: 'Which gas is greenhouse?', opts: ['Oxygen', 'Nitrogen', 'Carbon dioxide', 'Argon'], correct: 2, category: 'Science' },
-  { q: 'Solve: integral of 2x dx = ?', opts: ['x^2 + C', '2x + C', 'x + C', 'x^3 + C'], correct: 0, category: 'Math' },
-  { q: 'What is OAuth used for?', opts: ['Authentication', 'Authorization', 'Styling', 'Logging'], correct: 1, category: 'Software' },
-  { q: 'SATA primarily used for?', opts: ['CPU', 'Storage', 'GPU', 'RAM'], correct: 1, category: 'Hardware' },
-  { q: 'Anime with "Nen" power?', opts: ['One Piece', 'Hunter x Hunter', 'Naruto', 'Bleach'], correct: 1, category: 'Anime' },
-
-  // Impossible
-  { q: 'Which constant ≈ 2.71828?', opts: ['π', 'e', 'φ', 'γ'], correct: 1, category: 'Math' },
-  { q: 'Which equation is E=mc^2 by?', opts: ['Newton', 'Einstein', 'Maxwell', 'Galileo'], correct: 1, category: 'Science' },
-  { q: 'Which algorithm is O(n log n)?', opts: ['Bubble sort', 'Merge sort', 'Insertion sort', 'Selection sort'], correct: 1, category: 'CS' },
-  { q: 'What is TLS for?', opts: ['Encryption in transit', 'Database', 'Storage', 'Caching'], correct: 0, category: 'Networking' },
-  { q: 'Which anime has "Alucard"?', opts: ['Hellsing', 'Naruto', 'Bleach', 'One Piece'], correct: 0, category: 'Anime' },
-  { q: 'Planck constant relates to?', opts: ['Mass', 'Quantum energy', 'Temperature', 'Pressure'], correct: 1, category: 'Science' },
-  { q: 'Solve: 3x - 7 = 11 → x = ?', opts: ['4', '6', '5', '3'], correct: 1, category: 'Math' },
-  { q: 'Which is a functional programming language?', opts: ['Haskell', 'HTML', 'CSS', 'SQL'], correct: 0, category: 'Software' },
-  { q: 'What is TDP in CPUs?', opts: ['Thermal Design Power', 'Total Data Path', 'Thread Dispatch', 'Time Delay Process'], correct: 0, category: 'Hardware' },
-  { q: 'Which anime has "Sharingan"?', opts: ['Bleach', 'Naruto', 'One Piece', 'Dragon Ball'], correct: 1, category: 'Anime' },
-  { q: 'Which particle has no mass?', opts: ['Photon', 'Electron', 'Proton', 'Neutron'], correct: 0, category: 'Science' },
-  { q: 'What is prime factorization of 84?', opts: ['2^2 * 3 * 7', '2 * 3 * 7', '2^3 * 7', '3^2 * 7'], correct: 0, category: 'Math' },
-  { q: 'Which DB is column-based?', opts: ['Cassandra', 'MySQL', 'SQLite', 'MongoDB'], correct: 0, category: 'Software' },
-  { q: 'What is form factor ATX related to?', opts: ['Case/motherboard size', 'CPU speed', 'GPU memory', 'Storage type'], correct: 0, category: 'Hardware' },
-  { q: 'Anime with "Sword Art"?', opts: ['SAO', 'OP', 'Naruto', 'Bleach'], correct: 0, category: 'Anime' },
-
-  // Insane
-  { q: 'Which math constant is golden ratio?', opts: ['e', 'π', 'φ', 'γ'], correct: 2, category: 'Math' },
-  { q: 'Schrodinger equation is in which field?', opts: ['Thermodynamics', 'Quantum mechanics', 'Classical mechanics', 'Relativity'], correct: 1, category: 'Science' },
-  { q: 'CAP theorem includes?', opts: ['Consistency, Availability, Partition tolerance', 'Cache, API, Proxy', 'CPU, RAM, PSU', 'Create, Access, Persist'], correct: 0, category: 'CS' },
-  { q: 'What does M.2 NVMe replace commonly?', opts: ['HDD', 'USB', 'RAM', 'PSU'], correct: 0, category: 'Hardware' },
-  { q: 'Which anime features "Alluka"?', opts: ['One Piece', 'Hunter x Hunter', 'Naruto', 'Bleach'], correct: 1, category: 'Anime' },
-  { q: 'Which law is for black body radiation?', opts: ['Planck law', 'Ohm law', 'Hooke law', 'Newton law'], correct: 0, category: 'Science' },
-  { q: 'What is 17 × 13 = ?', opts: ['221', '231', '211', '241'], correct: 0, category: 'Math' },
-  { q: 'Which is used to container orchestration?', opts: ['Kubernetes', 'Redis', 'Postgres', 'Webpack'], correct: 0, category: 'Software' },
-  { q: 'What is LGA in CPUs?', opts: ['Pin grid array', 'Land grid array', 'Liquid cooling', 'Low GHz architecture'], correct: 1, category: 'Hardware' },
-  { q: 'Anime with "Excalibur" gag?', opts: ['One Piece', 'Soul Eater', 'Bleach', 'Naruto'], correct: 0, category: 'Anime' },
-  { q: 'Which telescope famous for deep field?', opts: ['Hubble', 'Spitzer', 'Chandra', 'Kepler'], correct: 0, category: 'Science' },
-  { q: 'Solve: x^2 - 4x + 4 = 0 → x = ?', opts: ['0', '2', '4', '-2'], correct: 1, category: 'Math' },
-  { q: 'What is ACID in DB?', opts: ['Atomicity, Consistency, Isolation, Durability', 'Access, Cache, Index, Data', 'Authenticate, Check, Integrate, Deploy', 'None'], correct: 0, category: 'Software' },
-  { q: 'What is VRM on motherboard?', opts: ['Voltage regulator module', 'Video RAM Module', 'Virtual RAM', 'Very Rapid Memory'], correct: 0, category: 'Hardware' },
-  { q: 'Which anime protagonist is "Guts"?', opts: ['Berserk', 'Naruto', 'Bleach', 'One Piece'], correct: 0, category: 'Anime' },
-
-  // Nightmare
-  { q: 'Which is non-Euclidean geometry pioneer?', opts: ['Gauss', 'Euclid', 'Newton', 'Descartes'], correct: 0, category: 'Math' },
-  { q: 'Which process creates new species over time?', opts: ['Mutation', 'Evolution by natural selection', 'Photosynthesis', 'Fission'], correct: 1, category: 'Science' },
-  { q: 'Which is an eventually consistent DB?', opts: ['Cassandra', 'Postgres', 'MySQL', 'SQLite'], correct: 0, category: 'Software' },
-  { q: 'What is form factor "Mini-ITX"?', opts: ['Huge server board', 'Small motherboard size', 'SSD type', 'GPU slot'], correct: 1, category: 'Hardware' },
-  { q: 'Anime "Serial Experiments Lain" genre?', opts: ['Cyberpunk', 'Romance', 'Sports', 'Cooking'], correct: 0, category: 'Anime' },
-  { q: 'Which principle is Pauli exclusion?', opts: ['Quantum mechanics principle about fermions', 'Relativity principle', 'Thermodynamics law', 'Classical inertia'], correct: 0, category: 'Science' },
-  { q: 'What is gcd(48,18)?', opts: ['6', '12', '3', '9'], correct: 0, category: 'Math' },
-  { q: 'Which is event loop in JS?', opts: ['Concurrency model', 'Database engine', 'CSS parser', 'Image decoder'], correct: 0, category: 'Software' },
-  { q: 'What does POST do in HTTP?', opts: ['Retrieve data', 'Send data to server', 'Delete resource', 'Redirect'], correct: 1, category: 'Software' },
-  { q: 'Anime with "Stand" powers?', opts: ['JoJo\'s Bizarre Adventure', 'Naruto', 'Bleach', 'One Piece'], correct: 0, category: 'Anime' },
-  { q: 'Which particle determines chemical identity?', opts: ['Electron', 'Proton', 'Neutron', 'Photon'], correct: 1, category: 'Science' },
-  { q: 'Solve: 0! = ?', opts: ['0', '1', 'Undefined', 'Infinity'], correct: 1, category: 'Math' },
-  { q: 'Which protocol uses 443 by default?', opts: ['HTTP', 'HTTPS', 'FTP', 'SMTP'], correct: 1, category: 'Networking' },
-  { q: 'What is ECC in storage?', opts: ['Error correcting code', 'Extended caching capacity', 'Extra connection channel', 'External compressed cache'], correct: 0, category: 'Hardware' },
-  { q: 'Which anime is by CLAMP studio?', opts: ['Cardcaptor Sakura', 'Naruto', 'Bleach', 'One Piece'], correct: 0, category: 'Anime' },
-
-  // Mythic
-  { q: 'Which set is uncountable?', opts: ['Integers', 'Rationals', 'Reals', 'Finite sets'], correct: 2, category: 'Math' },
-  { q: 'Heisenberg uncertainty principle relates?', opts: ['Position and velocity', 'Mass and energy', 'Charge and spin', 'Temperature and pressure'], correct: 0, category: 'Science' },
-  { q: 'Which is a message queue?', opts: ['RabbitMQ', 'MongoDB', 'Postgres', 'Nginx'], correct: 0, category: 'Software' },
-  { q: 'What is solder used for?', opts: ['Cooling', 'Electrical connections', 'Storage', 'Mounting fans'], correct: 1, category: 'Hardware' },
-  { q: 'Anime where protagonist is "Light"?', opts: ['Death Note', 'Bleach', 'One Piece', 'Naruto'], correct: 0, category: 'Anime' },
-  { q: 'What is Lorentz factor used in?', opts: ['Quantum tunneling', 'Special relativity', 'Thermodynamics', 'Classical optics'], correct: 1, category: 'Science' },
-  { q: 'Which is a prime number?', opts: ['21', '29', '33', '39'], correct: 1, category: 'Math' },
-  { q: 'Which is an ASGI server for Python?', opts: ['Uvicorn', 'Gunicorn', 'IIS', 'Apache'], correct: 0, category: 'Software' },
-  { q: 'What is dual-channel in RAM?', opts: ['Two sticks for higher bandwidth', 'Two SSDs in RAID', 'Two CPUs', 'Two GPUs'], correct: 0, category: 'Hardware' },
-  { q: 'Anime with "Alchemist" brothers?', opts: ['FMA', 'Bleach', 'Naruto', 'OP'], correct: 0, category: 'Anime' },
-  { q: 'Which phenomenon is quantum entanglement?', opts: ['Classical', 'Quantum correlation across distance', 'Thermal fluctuation', 'Electrostatic'], correct: 1, category: 'Science' },
-  { q: 'What is Euler\'s identity? e^{iπ} + 1 = ?', opts: ['0', '1', '-1', 'i'], correct: 0, category: 'Math' },
-  { q: 'Which cache level is fastest?', opts: ['L1', 'L2', 'L3', 'RAM'], correct: 0, category: 'Hardware' },
-  { q: 'Which is a time complexity class for NP problems?', opts: ['P', 'NP', 'LOG', 'O(1)'], correct: 1, category: 'CS' },
-  { q: 'Which anime features "Homunculi"?', opts: ['FMA', 'Naruto', 'Bleach', 'One Piece'], correct: 0, category: 'Anime' },
-
-  // Legendary
-  { q: 'Which group is symmetry of a square?', opts: ['C3', 'D4', 'S3', 'A4'], correct: 1, category: 'Math' },
-  { q: 'Which force is weakest?', opts: ['Strong nuclear', 'Weak nuclear', 'Electromagnetic', 'Gravity'], correct: 3, category: 'Science' },
-  { q: 'Which DB uses document model?', opts: ['MongoDB', 'MySQL', 'Postgres', 'SQLite'], correct: 0, category: 'Software' },
-  { q: 'What is thermal throttling?', opts: ['Increase in speed', 'Decrease in performance due to heat', 'Better cooling', 'Overclocking'], correct: 1, category: 'Hardware' },
-  { q: 'Which anime has "Devil Fruit"?', opts: ['One Piece', 'Naruto', 'Bleach', 'FMA'], correct: 0, category: 'Anime' },
-  { q: 'What is Hubble\'s law about?', opts: ['Universe expansion', 'Gravity', 'Electromagnetism', 'Quantum fields'], correct: 0, category: 'Science' },
-  { q: 'What is 2^10?', opts: ['512', '1024', '2048', '256'], correct: 1, category: 'Math' },
-  { q: 'Which protocol is stateful SMTP/POP/IMAP?', opts: ['POP', 'DNS', 'ICMP', 'ARP'], correct: 0, category: 'Networking' },
-  { q: 'What is GPU VRAM used for?', opts: ['CPU tasks', 'Graphic frame buffers', 'Network routing', 'Disk caching'], correct: 1, category: 'Hardware' },
-  { q: 'Which anime has "Zanpakuto"?', opts: ['Bleach', 'Naruto', 'One Piece', 'DB'], correct: 0, category: 'Anime' },
-  { q: 'Which is cosmic microwave background remnant of?', opts: ['Big Bang', 'Supernova', 'Black hole', 'Dark matter'], correct: 0, category: 'Science' },
-  { q: 'What is permutation of 3 items?', opts: ['3', '6', '9', '12'], correct: 1, category: 'Math' },
-  { q: 'Which language compiles to bytecode for JVM?', opts: ['Kotlin', 'C', 'Go', 'Rust'], correct: 0, category: 'Software' },
-  { q: 'What is SLI (NVIDIA) for?', opts: ['Overclocking', 'Multi-GPU linking', 'Cooling', 'Audio'], correct: 1, category: 'Hardware' },
-  { q: 'Which anime features "Gomu Gomu"?', opts: ['One Piece', 'Bleach', 'Naruto', 'Dragon Ball'], correct: 0, category: 'Anime' },
-
-  // Godlike
-  { q: 'Which is Riemann hypothesis about?', opts: ['Zeros of zeta function', 'Prime gaps', 'P vs NP', 'Fermat'], correct: 0, category: 'Math' },
-  { q: 'Which effect shows light bending near mass?', opts: ['Doppler', 'Gravitational lensing', 'Photoelectric', 'Compton'], correct: 1, category: 'Science' },
-  { q: 'Which is a distributed SQL DB?', opts: ['CockroachDB', 'MongoDB', 'SQLite', 'Redis'], correct: 0, category: 'Software' },
-  { q: 'What does ECC RAM protect against?', opts: ['Bit flips', 'Slow CPU', 'Disk failure', 'Network loss'], correct: 0, category: 'Hardware' },
-  { q: 'Which anime has "Gear Second"?', opts: ['One Piece', 'Naruto', 'Bleach', 'DB'], correct: 0, category: 'Anime' },
-  { q: 'Which constant is ~1.618?', opts: ['e', 'π', 'φ', 'γ'], correct: 2, category: 'Math' },
-  { q: 'Which principle describes wave-particle duality?', opts: ['Bohr complementarity', 'Hooke', 'Ohm', 'Newton'], correct: 0, category: 'Science' },
-  { q: 'Which is idempotent HTTP method?', opts: ['POST', 'GET', 'PATCH', 'CONNECT'], correct: 1, category: 'Networking' },
-  { q: 'What is UEFI replacing?', opts: ['BIOS', 'CPU', 'GPU', 'RAM'], correct: 0, category: 'Hardware' },
-  { q: 'Which anime protagonist is "Edward Elric"?', opts: ['FMA', 'Naruto', 'Bleach', 'One Piece'], correct: 0, category: 'Anime' },
-  { q: 'Which is an example of chaos theory system?', opts: ['Double pendulum', 'Simple harmonic oscillator', 'Ideal gas', 'Uniform motion'], correct: 0, category: 'Science' },
-  { q: 'What is modular inverse of 3 mod 11?', opts: ['4', '7', '8', '3'], correct: 1, category: 'Math' },
-  { q: 'Which is a graph DB?', opts: ['Neo4j', 'MySQL', 'Postgres', 'MongoDB'], correct: 0, category: 'Software' },
-  { q: 'What is thermal paste composed of mostly?', opts: ['Metal oxides or silicon compounds', 'Plastic', 'Wood', 'Paper'], correct: 0, category: 'Hardware' },
-  { q: 'Which anime features "Bankai"?', opts: ['Bleach', 'Naruto', 'One Piece', 'FMA'], correct: 0, category: 'Anime' },
-
-  // Transcendent
-  { q: 'Which transform is used in signal processing?', opts: ['Laplace', 'Fourier', 'Taylor', 'Legendre'], correct: 1, category: 'Math' },
-  { q: 'Which particle mediates electromagnetic force?', opts: ['Gluon', 'Photon', 'W boson', 'Graviton'], correct: 1, category: 'Science' },
-  { q: 'Which is eventual consistency example?', opts: ['DNS', 'MySQL', 'SQLite', 'FTP'], correct: 0, category: 'Networking' },
-  { q: 'What does MUX do in hardware?', opts: ['Selects between signals', 'Generates power', 'Cools CPU', 'Stores data'], correct: 0, category: 'Hardware' },
-  { q: 'Which anime created by CLAMP?', opts: ['X/1999', 'Naruto', 'One Piece', 'Dragon Ball'], correct: 0, category: 'Anime' },
-  { q: 'Which is a non-linear differential eq example?', opts: ['Logistic equation', 'Simple harmonic oscillator', 'Linear growth', 'None'], correct: 0, category: 'Math' },
-  { q: 'Which is standard model particle?', opts: ['Photon', 'Ether', 'Aether', 'Phlogiston'], correct: 0, category: 'Science' },
-  { q: 'Which tool for infra as code?', opts: ['Terraform', 'Excel', 'Photoshop', 'Word'], correct: 0, category: 'Software' },
-  { q: 'What is solder mask on PCB?', opts: ['Protective layer', 'Power supply', 'Heat sink', 'CPU socket'], correct: 0, category: 'Hardware' },
-  { q: 'Which anime is psychological and surreal?', opts: ['Paranoia Agent', 'Serial Experiments Lain', 'OP', 'DB'], correct: 1, category: 'Anime' },
-  { q: 'What is redshift in astronomy?', opts: ['Objects moving away increasing wavelength', 'Objects getting closer', 'Temperature drop', 'Mass increase'], correct: 0, category: 'Science' },
-  { q: 'Which is true about NP-complete?', opts: ['If one poly-time solves all NP', 'Always easy', 'Subset of P', 'Not related to complexity'], correct: 0, category: 'CS' },
-  { q: 'Which is 64-bit integer max approx?', opts: ['9e18', '3e9', '6e4', '1e12'], correct: 0, category: 'Math' },
-  { q: 'What is TIM in PC building?', opts: ['Thermal interface material', 'Transmission interface module', 'Time index measure', 'Turbo idle mode'], correct: 0, category: 'Hardware' },
-  { q: 'Which anime studio made "Steins;Gate"?', opts: ['White Fox', 'Madhouse', 'Bones', 'Ghibli'], correct: 0, category: 'Anime' },
-
-  // Apex
-  { q: 'Which manifold concept is in topology?', opts: ['Open set', 'Manifold', 'Basis', 'Ring'], correct: 1, category: 'Math' },
-  { q: 'Which telescope orbits Earth observing infrared?', opts: ['Spitzer', 'Hubble', 'Chandra', 'Kepler'], correct: 0, category: 'Science' },
-  { q: 'Which is feature of functional languages?', opts: ['Immutability', 'Pointers', 'Manual memory management', 'Gotos'], correct: 0, category: 'Software' },
-  { q: 'What is BLAS used for?', opts: ['Linear algebra routines', 'Networking', 'Audio', 'File system'], correct: 0, category: 'CS' },
-  { q: 'Which anime has "Gendo Ikari"?', opts: ['Neon Genesis Evangelion', 'Naruto', 'Bleach', 'OP'], correct: 0, category: 'Anime' },
-  { q: 'Which is cosmic inflation theory about?', opts: ['Early rapid expansion of universe', 'Black hole formation', 'Star birth', 'Planetary orbits'], correct: 0, category: 'Science' },
-  { q: 'What is eigenvalue problem for?', opts: ['Linear transformations', 'Sorting', 'Parsing', 'Encryption'], correct: 0, category: 'Math' },
-  { q: 'Which is consensus algorithm?', opts: ['Paxos', 'HTTP', 'FTP', 'SMTP'], correct: 0, category: 'CS' },
-  { q: 'What is die in CPU manufacturing?', opts: ['Individual chip on wafer', 'Cooling system', 'Memory type', 'GPU brand'], correct: 0, category: 'Hardware' },
-  { q: 'Which anime features "Rei Ayanami"?', opts: ['Evangelion', 'Naruto', 'One Piece', 'Bleach'], correct: 0, category: 'Anime' },
-  { q: 'Which is observable in particle accelerators?', opts: ['Quarks directly', 'Collision products like jets', 'Thoughts', 'Dark matter directly'], correct: 1, category: 'Science' },
-  { q: 'Which is NP-hard example?', opts: ['Travelling Salesman', 'Binary search', 'Insertion sort', 'Matrix addition'], correct: 0, category: 'CS' },
-  { q: 'What is LRU in caching?', opts: ['Least Recently Used', 'Largest RAM Used', 'Local Resource Unit', 'Low Response Unit'], correct: 0, category: 'CS' },
-  { q: 'What is base clock (BCLK) related to?', opts: ['CPU core voltage', 'Reference clock for CPU/memory', 'GPU memory', 'Disk speed'], correct: 1, category: 'Hardware' },
-  { q: 'Which anime directed by Satoshi Kon?', opts: ['Perfect Blue', 'Steins;Gate', 'One Piece', 'Naruto'], correct: 0, category: 'Anime' },
-
-  // Cosmic
-  { q: 'Which theorem links flux and circulation in vector calculus?', opts: ['Green', 'Stokes', 'Pythagoras', 'Fermat'], correct: 1, category: 'Math' },
-  { q: 'Which is cosmic background temperature approx?', opts: ['2.7 K', '300 K', '0 K', '273 K'], correct: 0, category: 'Science' },
-  { q: 'Which is an immutable data structure example?', opts: ['String in many languages', 'Mutable array', 'File handle', 'Socket'], correct: 0, category: 'CS' },
-  { q: 'What is BGA in PCB?', opts: ['Ball Grid Array', 'Basic Graphics Adapter', 'Binary Gate Array', 'Bus Ground Array'], correct: 0, category: 'Hardware' },
-  { q: 'Which anime original movie by Miyazaki?', opts: ['Princess Mononoke', 'Evangelion', 'Naruto', 'Bleach'], correct: 0, category: 'Anime' },
-  { q: 'Which is Cherenkov radiation emitted by?', opts: ['Particles faster than light in medium', 'Black holes', 'Neutrinos only', 'Cold atoms'], correct: 0, category: 'Science' },
-  { q: 'What is continued fraction for golden ratio?', opts: ['[1;1,1,1,...]', '[2;2,2]', '[3;3]', '[0;1,2]'], correct: 0, category: 'Math' },
-  { q: 'Which is reactive programming lib for JS?', opts: ['RxJS', 'Lodash', 'Express', 'Bootstrap'], correct: 0, category: 'Software' },
-  { q: 'What is GPU shader stage?', opts: ['Vertex/Fragment/Tessellation', 'BIOS', 'Bootloader', 'Filesystem'], correct: 0, category: 'Hardware' },
-  { q: 'Which anime Studio made "Mononoke"?', opts: ['Ghibli', 'Toei', 'Madhouse', 'Bones'], correct: 2, category: 'Anime' },
-  { q: 'Which effect demonstrates quantum tunneling?', opts: ['Alpha decay', 'Doppler', 'Photoelectric', 'Brownian motion'], correct: 0, category: 'Science' },
-  { q: 'Which is Lanczos algorithm for?', opts: ['Eigenvalues of large matrices', 'Compression', 'Sorting', 'Parsing'], correct: 0, category: 'Math' },
-  { q: 'What is eventual consistency vs strong?', opts: ['Eventual allows temporary divergence', 'Eventual always identical instantly', 'Strong is slower', 'Not related'], correct: 0, category: 'CS' },
-  { q: 'What is MUX vs DEMUX?', opts: ['Selects vs distributes signals', 'Both cooling', 'Both storage', 'Both power'], correct: 0, category: 'Hardware' },
-  { q: 'Which anime is psychological about time travel?', opts: ['Steins;Gate', 'One Piece', 'Naruto', 'Bleach'], correct: 0, category: 'Anime' },
-
-  // Beyond
-  { q: 'Which is Riemann zeta critical line real part?', opts: ['1/2', '1/3', '1', '0'], correct: 0, category: 'Math' },
-  { q: 'What is cosmic inflation energy scale roughly?', opts: ['GUT scale ~10^16 GeV', '1 eV', '1 keV', '100 MeV'], correct: 0, category: 'Science' },
-  { q: 'Which is Byzantine fault tolerant algorithm?', opts: ['PBFT', 'HTTP', 'FTP', 'SMTP'], correct: 0, category: 'CS' },
-  { q: 'What is silicon wafer doping for?', opts: ['Change conductivity', 'Color', 'Size', 'Shape'], correct: 0, category: 'Hardware' },
-  { q: 'Which anime has complex metaphysical themes: "Mushishi" or "OP"?', opts: ['Mushishi', 'One Piece', 'Naruto', 'Bleach'], correct: 0, category: 'Anime' },
-  { q: 'What is Gödel incompleteness about?', opts: ['Limits of formal systems', 'Prime numbers', 'Convergence', 'Thermodynamics'], correct: 0, category: 'Math' },
-  { q: 'Which particle is Majorana fermion hypothetical?', opts: ['Particle equal to its antiparticle', 'Photon', 'Electron', 'Proton'], correct: 0, category: 'Science' },
-  { q: 'Which is CRDT used for?', opts: ['Conflict-free replicated data types', 'Compression', 'Rendering', 'Encryption'], correct: 0, category: 'CS' },
-  { q: 'What is TSV in PCB context?', opts: ['Through-silicon via', 'Top-side voltage', 'Test socket variant', 'Thermal sink valve'], correct: 0, category: 'Hardware' },
-  { q: 'Which anime is by Satoshi Kon and surreal?', opts: ['Perfect Blue', 'Naruto', 'One Piece', 'Bleach'], correct: 0, category: 'Anime' },
-  { q: 'Which math object is a field?', opts: ['Integers (not a field)', 'Rationals', 'Matrices (not field)', 'Rings (not field)'], correct: 1, category: 'Math' },
-  { q: 'Which cosmological parameter is Ω (Omega)?', opts: ['Density parameter', 'Temperature', 'Mass of Sun', 'Planck constant'], correct: 0, category: 'Science' },
-  { q: 'Which is an anti-entropy sync algorithm?', opts: ['Gossip protocol', 'FTP', 'SMTP', 'DNS'], correct: 0, category: 'Networking' },
-  { q: 'What is BCLK overclocking risk?', opts: ['Destabilize system bus', 'Make it quieter', 'Increase storage', 'Improve cooling'], correct: 0, category: 'Hardware' },
-  { q: 'Which anime explores identity and networked selves?', opts: ['Serial Experiments Lain', 'One Piece', 'Naruto', 'Bleach'], correct: 0, category: 'Anime' },
-
-  // Ultimate
-  { q: 'Which unsolved problem is Clay Millennium?', opts: ['Riemann hypothesis', 'P vs NP', 'Goldbach', 'Fermat'], correct: 0, category: 'Math' },
-  { q: 'Which theory unifies gravity and quantum mechanics (unsolved)?', opts: ['Quantum gravity / String theory candidates', 'Relativity', 'Classical mechanics', 'Thermodynamics'], correct: 0, category: 'Science' },
-  { q: 'Which consensus is used by Bitcoin?', opts: ['Proof of Work', 'Proof of Stake', 'PBFT', 'Raft'], correct: 0, category: 'CS' },
-  { q: 'What is EUV lithography used for?', opts: ['Advanced semiconductor patterning', 'Power supply', 'Cooling', 'Packaging'], correct: 0, category: 'Hardware' },
-  { q: 'Which anime deeply explores trauma and philosophy: "Berserk" or "OP"?', opts: ['Berserk', 'One Piece', 'Naruto', 'Bleach'], correct: 0, category: 'Anime' },
-  { q: 'Which constant appears in black hole entropy formula?', opts: ['Boltzmann constant', 'Planck constant', 'e', 'π'], correct: 0, category: 'Science' },
-  { q: 'Which is Hilbert space used in?', opts: ['Quantum mechanics and functional analysis', 'Classical mechanics only', 'Thermodynamics only', 'Number theory only'], correct: 0, category: 'Math' },
-  { q: 'What is zk-SNARKs used for?', opts: ['Zero-knowledge proofs', 'Compression', 'Rendering', 'Caching'], correct: 0, category: 'CS' },
-  { q: 'What is extreme ultraviolet wavelength approx?', opts: ['10–124 nm', '1 m', '1 mm', '1000 nm'], correct: 0, category: 'Science' },
-  { q: 'Which anime is known for dark fantasy and complex characters: "Berserk"?', opts: ['Yes', 'No', 'Maybe', 'None'], correct: 0, category: 'Anime' },
-  { q: 'Which hypothesis links primes distribution to zeros of zeta?', opts: ['Riemann hypothesis', 'Goldbach', 'Twin prime', 'Collatz'], correct: 0, category: 'Math' },
-  { q: 'Which approach aims to quantize gravity?', opts: ['String theory / Loop quantum gravity', 'Classical thermodynamics', 'Newtonian gravity', 'Hydrodynamics'], correct: 0, category: 'Science' },
-  { q: 'Which is BFT property in distributed systems?', opts: ['Tolerance to malicious nodes', 'Faster CPU', 'More storage', 'Better cooling'], correct: 0, category: 'CS' },
-  { q: 'What is Moore\'s law originally about?', opts: ['Transistor density doubling roughly every ~2 years', 'CPU speed doubling daily', 'Memory size constant', 'Disk speed doubling monthly'], correct: 0, category: 'Hardware' },
-  { q: 'Which anime explores human monstrosity and sacrifice: "Berserk"?', opts: ['Yes', 'No', 'Maybe', 'None'], correct: 0, category: 'Anime' }
-];
-
-questionsData[1] = {
-  difficulty: 'Easy',
-  questions: level1Questions
-};
-
-// Distribute pooled questions to Levels 2 to 35 (approx)
-// We have about ~230 pooled questions. 230 / 10 = 23 levels. 
-// Level 2 to 24. 
-// Remaining levels 25-50 will be generated.
-
-let poolIndex = 0;
-
-for (let level = 2; level <= MAX_LEVELS; level++) {
+// Helper to generate a level with either real questions or math filler
+const generateLevel = (questionsSource, level, poolIndex) => {
   const difficulty = level <= 15 ? 'Easy' : level <= 30 ? 'Medium' : level <= 45 ? 'Hard' : 'Expert';
   
-  // If we have static questions left, use them
-  if (poolIndex + QUESTIONS_PER_LEVEL <= pooledQuestions.length) {
-    questionsData[level] = {
-      difficulty,
-      questions: pooledQuestions.slice(poolIndex, poolIndex + QUESTIONS_PER_LEVEL)
-    };
-    poolIndex += QUESTIONS_PER_LEVEL;
-  } else {
-    // Generate questions for remaining levels (Infinite Variety)
-        questionsData[level] = {
-            difficulty,
-            questions: Array.from({ length: QUESTIONS_PER_LEVEL }).map((_, i) => {
-                const a = Math.floor(Math.random() * 50) + level; // harder math
-                const b = Math.floor(Math.random() * 50) + 1;
-                const correctVal = a + b;
-                const opts = [correctVal, correctVal + 1 + Math.floor(Math.random()*5), correctVal - 1 - Math.floor(Math.random()*5), correctVal + 10];
-                return {
-                    q: `Level ${level} Challenge: ${a} + ${b} = ?`,
-                    opts: opts.sort(() => Math.random() - 0.5).map(String),
-                    correct: opts.indexOf(correctVal),
-                    category: 'Math'
-                };
-            })
-        };
+  const levelQuestions = [];
+  
+  // Try to grab up to 10 questions from source
+  for (let i = 0; i < QUESTIONS_PER_LEVEL; i++) {
+    const qIndex = (poolIndex + i) % questionsSource.length; 
+    levelQuestions.push(questionsSource[qIndex]); 
   }
-}
+  
+  return {
+    difficulty,
+    questions: levelQuestions
+  };
+};
+
+export const getQuestions = (gender) => {
+  const levels = {};
+  const source = gender === 'female' ? femaleQuestions : maleQuestions;
+  
+  let poolIndex = 0;
+  for (let level = 1; level <= MAX_LEVELS; level++) {
+    levels[level] = generateLevel(source, level, poolIndex);
+    poolIndex += QUESTIONS_PER_LEVEL;
+  }
+  return levels;
+};
