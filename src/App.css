@@ -413,20 +413,7 @@ body {
 }
 
 /* Header Actions */
-.stars-wallet {
-  background: linear-gradient(135deg, rgba(245, 158, 11, 0.15) 0%, rgba(249, 115, 22, 0.15) 100%);
-  color: var(--diff-medium);
-  padding: 8px 16px;
-  border-radius: 50px;
-  font-weight: bold;
-  font-size: 1rem;
-  border: 2px solid rgba(245, 158, 11, 0.3);
-  white-space: nowrap;
-  display: flex;
-  align-items: center;
-  gap: 4px;
-  box-shadow: 0 2px 8px rgba(245, 158, 11, 0.2);
-}
+
 
 /* =========================================
      5. BUTTONS & INPUTS
