@@ -3,7 +3,6 @@ import { useState } from "react";
 
 export default function WelcomePage({ onStart, t, lang, setLang }) {
   const [name, setName] = useState("");
-  const [gender, setGender] = useState("");
   const [error, setError] = useState("");
 
   const handleStart = () => {
@@ -11,15 +10,12 @@ export default function WelcomePage({ onStart, t, lang, setLang }) {
       setError(t?.enterName || "Please enter your name");
       return;
     }
-    if (!gender) {
-      setError(t?.selectGender || "Please select your gender");
-      return;
-    }
-    onStart(name, gender);
+    // No gender validation needed anymore
+    onStart(name);
   };
 
   return (
-    <div className="app-container">
+    <div className="app-container welcome-page">
       <div className="welcome-container">
         
         <div className="welcome-card">
@@ -59,27 +55,6 @@ export default function WelcomePage({ onStart, t, lang, setLang }) {
               }}
               maxLength={15}
             />
-          </div>
-
-          <div style={{textAlign: 'center', marginBottom: '1rem'}}>
-             <div className="gender-toggle-container">
-                <div 
-                  className={`gender-item ${gender === 'male' ? 'active' : ''}`}
-                  onClick={() => setGender('male')}
-                >
-                   <span style={{fontSize: '1.2rem'}}>👨‍🎓</span> {lang === 'ar' ? 'ولد' : 'Boy'}
-                </div>
-                <div 
-                  className={`gender-item ${gender === 'female' ? 'active' : ''}`}
-                  onClick={() => setGender('female')}
-                >
-                   <span style={{fontSize: '1.2rem'}}>👩‍🎓</span> {lang === 'ar' ? 'بنت' : 'Girl'}
-                </div>
-             </div>
-             
-             <p style={{color: '#ef4444', marginTop: '1rem', fontSize: '0.9rem'}}>
-               {t?.selectGender || "Select your gender"}
-             </p>
           </div>
 
           {error && <p style={{ color: "#ef4444", marginBottom: "1rem" }}>{error}</p>}
