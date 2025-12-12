@@ -27,12 +27,15 @@ export default function HomePage({
     <div className="app-container">
       <nav className="navbar">
         <div className="nav-content">
-          <div className="nav-logo">
+          <div className="nav-left nav-logo">
+             <h1 style={{ cursor: "pointer", color: '#ef4444', marginRight: '10px' }} onClick={() => navigate("/home")}>
+              QuizByJamili
+            </h1>
             <svg
               className="trophy-icon"
               viewBox="0 0 24 24"
               fill="none"
-              stroke="currentColor"
+              stroke="#ef4444"
             >
               <path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6" />
               <path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18" />
@@ -41,39 +44,16 @@ export default function HomePage({
               <path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22" />
               <path d="M18 2H6v7a6 6 0 0 0 12 0V2Z" />
             </svg>
-            <h1 style={{ cursor: "pointer" }} onClick={() => navigate("/home")}>
-              Quiz by JAMILI
-            </h1>
           </div>
 
-          <div className="nav-right">
-            <div className="stars-wallet">
-              <span>⭐ {totalStars}</span>
-            </div>
-
-            <button
-              className="theme-btn"
-              onClick={() => setLang(lang === "en" ? "fr" : "en")}
-            >
-              🌐 {lang.toUpperCase()}
-            </button>
-
-            <button
-              className="theme-btn"
-              onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-            >
-              {theme === "dark" ? "🌙" : "☀️"}
-            </button>
-
-            <div className="user-info" onClick={() => setShowMenu(!showMenu)}>
-              <div className="user-avatar">{userName[0]?.toUpperCase()}</div>
-              <span className="user-name">{userName}</span>
-              <svg className="dropdown-icon" viewBox="0 0 24 24">
+          <div className="nav-center user-info" onClick={() => setShowMenu(!showMenu)}>
+            <span className="user-name">{userName}</span>
+             <div className="user-avatar">{userName[0]?.toUpperCase()}</div>
+             <svg className="dropdown-icon" viewBox="0 0 24 24">
                 <polyline points="6 9 12 15 18 9"></polyline>
               </svg>
-            </div>
-
-            {showMenu && (
+             
+             {showMenu && (
               <div className="dropdown-menu">
                 <div
                   className="menu-item"
@@ -101,6 +81,26 @@ export default function HomePage({
                 </div>
               </div>
             )}
+          </div>
+
+          <div className="nav-right">
+            <div className="stars-wallet">
+              <span>⭐ {totalStars}</span>
+            </div>
+            
+            <button
+              className="theme-btn"
+              onClick={() => setLang(lang === "en" ? "fr" : "en")}
+            >
+              🌐 {lang.toUpperCase()}
+            </button>
+
+            <button
+              className="theme-btn"
+              onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+            >
+              {theme === "dark" ? "🌙" : "☀️"}
+            </button>
           </div>
         </div>
       </nav>
